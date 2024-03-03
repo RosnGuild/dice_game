@@ -1,17 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "Player",
+  "name": "Ticking_Tag",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Entities",
-    "path": "folders/Objects/Entities.yy",
+    "name": "Tags",
+    "path": "folders/Objects/Tags.yy",
   },
   "parentObjectId": {
-    "name": "Entity",
-    "path": "objects/Entity/Entity.yy",
+    "name": "Tag",
+    "path": "objects/Tag/Tag.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
