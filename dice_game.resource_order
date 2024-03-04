@@ -20,14 +20,18 @@
   ],
   "ResourceOrderSettings": [
     {"name":"Loot_Table","order":10,"path":"objects/Loot_Table/Loot_Table.yy",},
+    {"name":"Face_Node","order":11,"path":"objects/Face_Node/Face_Node.yy",},
     {"name":"Encounter_Manager_Scripts","order":2,"path":"scripts/Encounter_Manager_Scripts/Encounter_Manager_Scripts.yy",},
     {"name":"Move_Scripts","order":1,"path":"scripts/Move_Scripts/Move_Scripts.yy",},
     {"name":"Encounter_Manager","order":8,"path":"objects/Encounter_Manager/Encounter_Manager.yy",},
     {"name":"Face","order":6,"path":"objects/Face/Face.yy",},
+    {"name":"Enemy","order":2,"path":"objects/Enemy/Enemy.yy",},
     {"name":"Player","order":1,"path":"objects/Player/Player.yy",},
     {"name":"Move","order":7,"path":"objects/Move/Move.yy",},
     {"name":"Sprite1","order":1,"path":"sprites/Sprite1/Sprite1.yy",},
     {"name":"Ticking_Tag","order":1,"path":"objects/Ticking_Tag/Ticking_Tag.yy",},
     {"name":"Encounter","order":9,"path":"objects/Encounter/Encounter.yy",},
+    {"name":"Die_Graph","order":12,"path":"objects/Die_Graph/Die_Graph.yy",},
+    {"name":"Enemy_Scripts","order":3,"path":"scripts/Enemy_Scripts/Enemy_Scripts.yy",},
   ],
 }
