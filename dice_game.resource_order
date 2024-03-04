@@ -25,9 +25,12 @@
     {"name":"Encounter_Manager","order":8,"path":"objects/Encounter_Manager/Encounter_Manager.yy",},
     {"name":"Face","order":6,"path":"objects/Face/Face.yy",},
     {"name":"Player","order":1,"path":"objects/Player/Player.yy",},
+    {"name":"nick_workspace","order":2,"path":"rooms/nick_workspace/nick_workspace.yy",},
     {"name":"Move","order":7,"path":"objects/Move/Move.yy",},
     {"name":"Sprite1","order":1,"path":"sprites/Sprite1/Sprite1.yy",},
+    {"name":"ev_workspace","order":3,"path":"rooms/ev_workspace/ev_workspace.yy",},
     {"name":"Ticking_Tag","order":1,"path":"objects/Ticking_Tag/Ticking_Tag.yy",},
     {"name":"Encounter","order":9,"path":"objects/Encounter/Encounter.yy",},
+    {"name":"kai_workspace","order":4,"path":"rooms/kai_workspace/kai_workspace.yy",},
   ],
 }
