@@ -17,7 +17,12 @@
     {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+<<<<<<< Updated upstream
     {"name":"Entity Scripts","order":4,"path":"folders/Scripts/Entity Scripts.yy",},
+=======
+    {"name":"UI","order":14,"path":"folders/Objects/UI.yy",},
+    {"name":"Fonts","order":1,"path":"folders/Objects/UI/Fonts.yy",},
+>>>>>>> Stashed changes
   ],
   "ResourceOrderSettings": [
     {"name":"Loot_Table","order":10,"path":"objects/Loot_Table/Loot_Table.yy",},
@@ -29,8 +34,12 @@
     {"name":"Enemy","order":2,"path":"objects/Enemy/Enemy.yy",},
     {"name":"Player","order":1,"path":"objects/Player/Player.yy",},
     {"name":"nick_workspace","order":2,"path":"rooms/nick_workspace/nick_workspace.yy",},
+<<<<<<< Updated upstream
     {"name":"Entity_Scripts","order":1,"path":"scripts/Entity_Scripts/Entity_Scripts.yy",},
     {"name":"Player_Scripts","order":2,"path":"scripts/Player_Scripts/Player_Scripts.yy",},
+=======
+    {"name":"obj_button_test","order":2,"path":"objects/obj_button_test/obj_button_test.yy",},
+>>>>>>> Stashed changes
     {"name":"Move","order":7,"path":"objects/Move/Move.yy",},
     {"name":"Sprite1","order":1,"path":"sprites/Sprite1/Sprite1.yy",},
     {"name":"ev_workspace","order":3,"path":"rooms/ev_workspace/ev_workspace.yy",},
