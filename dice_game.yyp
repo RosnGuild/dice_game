@@ -28,12 +28,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
-<<<<<<< Updated upstream
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Entity Scripts","folderPath":"folders/Scripts/Entity Scripts.yy",},
-=======
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Objects/UI.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Fonts","folderPath":"folders/Objects/UI/Fonts.yy",},
->>>>>>> Stashed changes
   ],
   "IncludedFiles": [],
   "isEcma": false,
@@ -43,13 +38,9 @@
   },
   "resources": [
     {"id":{"name":"Entity","path":"objects/Entity/Entity.yy",},},
-    {"id":{"name":"snd_button_Heros_Trail_Base","path":"sounds/snd_button_Heros_Trail_Base/snd_button_Heros_Trail_Base.yy",},},
     {"id":{"name":"Loot_Table","path":"objects/Loot_Table/Loot_Table.yy",},},
-    {"id":{"name":"spr_button_nine_slice_GUI_Buttons_Visual_Base","path":"sprites/spr_button_nine_slice_GUI_Buttons_Visual_Base/spr_button_nine_slice_GUI_Buttons_Visual_Base.yy",},},
     {"id":{"name":"Face_Node","path":"objects/Face_Node/Face_Node.yy",},},
     {"id":{"name":"Encounter_Manager_Scripts","path":"scripts/Encounter_Manager_Scripts/Encounter_Manager_Scripts.yy",},},
-    {"id":{"name":"fnt_button","path":"fonts/fnt_button/fnt_button.yy",},},
-    {"id":{"name":"obj_button_parent","path":"objects/obj_button_parent/obj_button_parent.yy",},},
     {"id":{"name":"Move_Scripts","path":"scripts/Move_Scripts/Move_Scripts.yy",},},
     {"id":{"name":"Tag","path":"objects/Tag/Tag.yy",},},
     {"id":{"name":"Encounter_Manager","path":"objects/Encounter_Manager/Encounter_Manager.yy",},},
@@ -57,7 +48,6 @@
     {"id":{"name":"Enemy","path":"objects/Enemy/Enemy.yy",},},
     {"id":{"name":"Player","path":"objects/Player/Player.yy",},},
     {"id":{"name":"nick_workspace","path":"rooms/nick_workspace/nick_workspace.yy",},},
-    {"id":{"name":"obj_button_test","path":"objects/obj_button_test/obj_button_test.yy",},},
     {"id":{"name":"Tag_Scripts","path":"scripts/Tag_Scripts/Tag_Scripts.yy",},},
     {"id":{"name":"Entity_Scripts","path":"scripts/Entity_Scripts/Entity_Scripts.yy",},},
     {"id":{"name":"Player_Scripts","path":"scripts/Player_Scripts/Player_Scripts.yy",},},
