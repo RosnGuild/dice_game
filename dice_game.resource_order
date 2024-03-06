@@ -19,6 +19,8 @@
     {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"Faces","order":14,"path":"folders/Objects/Faces.yy",},
+    {"name":"Player_Moves","order":15,"path":"folders/Objects/Player_Moves.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"Loot_Table_Scripts","order":5,"path":"scripts/Loot_Table_Scripts/Loot_Table_Scripts.yy",},
