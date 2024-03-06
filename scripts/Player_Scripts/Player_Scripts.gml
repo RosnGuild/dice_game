@@ -90,6 +90,4 @@ function generate_die(player_id) {
 	ds_list_add(face_array[20].adjacent_nodes, face_array[8]);
 	ds_list_add(face_array[20].adjacent_nodes, face_array[14]);
 	
-	
-	}
 }
