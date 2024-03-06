@@ -12,6 +12,7 @@ function generate_loot(_highest_rarity){
 }
 
 function generate_common(){
+	
 }
 
 function generate_uncommon(){
