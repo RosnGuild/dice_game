@@ -54,6 +54,7 @@
     {"id":{"name":"nick_workspace","path":"rooms/nick_workspace/nick_workspace.yy",},},
     {"id":{"name":"Tag_Scripts","path":"scripts/Tag_Scripts/Tag_Scripts.yy",},},
     {"id":{"name":"Entity_Scripts","path":"scripts/Entity_Scripts/Entity_Scripts.yy",},},
+    {"id":{"name":"fnt_button","path":"fonts/fnt_button/fnt_button.yy",},},
     {"id":{"name":"Player_Scripts","path":"scripts/Player_Scripts/Player_Scripts.yy",},},
     {"id":{"name":"Move","path":"objects/Move/Move.yy",},},
     {"id":{"name":"Sprite1","path":"sprites/Sprite1/Sprite1.yy",},},
