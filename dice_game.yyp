@@ -42,6 +42,7 @@
     {"id":{"name":"Entity","path":"objects/Entity/Entity.yy",},},
     {"id":{"name":"Loot_Table","path":"objects/Loot_Table/Loot_Table.yy",},},
     {"id":{"name":"Face_Node","path":"objects/Face_Node/Face_Node.yy",},},
+    {"id":{"name":"obj_button_test","path":"objects/obj_button_test/obj_button_test.yy",},},
     {"id":{"name":"spr_button_nine_slice_GUI_Buttons_Visual_Base","path":"sprites/spr_button_nine_slice_GUI_Buttons_Visual_Base/spr_button_nine_slice_GUI_Buttons_Visual_Base.yy",},},
     {"id":{"name":"Encounter_Manager_Scripts","path":"scripts/Encounter_Manager_Scripts/Encounter_Manager_Scripts.yy",},},
     {"id":{"name":"obj_button_parent","path":"objects/obj_button_parent/obj_button_parent.yy",},},
