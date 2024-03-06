@@ -37,6 +37,7 @@
     "IDEVersion": "2023.11.1.129",
   },
   "resources": [
+    {"id":{"name":"Loot_Table_Scripts","path":"scripts/Loot_Table_Scripts/Loot_Table_Scripts.yy",},},
     {"id":{"name":"Entity","path":"objects/Entity/Entity.yy",},},
     {"id":{"name":"Loot_Table","path":"objects/Loot_Table/Loot_Table.yy",},},
     {"id":{"name":"Face_Node","path":"objects/Face_Node/Face_Node.yy",},},

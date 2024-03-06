@@ -20,6 +20,7 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"Loot_Table_Scripts","order":5,"path":"scripts/Loot_Table_Scripts/Loot_Table_Scripts.yy",},
     {"name":"Loot_Table","order":10,"path":"objects/Loot_Table/Loot_Table.yy",},
     {"name":"Face_Node","order":11,"path":"objects/Face_Node/Face_Node.yy",},
     {"name":"Encounter_Manager_Scripts","order":2,"path":"scripts/Encounter_Manager_Scripts/Encounter_Manager_Scripts.yy",},
