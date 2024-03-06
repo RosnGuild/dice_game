@@ -1,5 +1,14 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+// Scripts for handling all move abilities.
+
+// Handles decrementing all cooldowns
 function cooldown_handler(){
+	
+}
+
+//function strike_handler(_target_id, _striker_id){
+	//_target_id.
+//}
+
+function block_handler(_blocker_id){
 	
 }
