@@ -24,6 +24,7 @@
     {"name":"Loot_Table_Scripts","order":5,"path":"scripts/Loot_Table_Scripts/Loot_Table_Scripts.yy",},
     {"name":"Loot_Table","order":10,"path":"objects/Loot_Table/Loot_Table.yy",},
     {"name":"Face_Node","order":11,"path":"objects/Face_Node/Face_Node.yy",},
+    {"name":"obj_button_test","order":1,"path":"objects/obj_button_test/obj_button_test.yy",},
     {"name":"Encounter_Manager_Scripts","order":2,"path":"scripts/Encounter_Manager_Scripts/Encounter_Manager_Scripts.yy",},
     {"name":"Move_Scripts","order":1,"path":"scripts/Move_Scripts/Move_Scripts.yy",},
     {"name":"Encounter_Manager","order":8,"path":"objects/Encounter_Manager/Encounter_Manager.yy",},
