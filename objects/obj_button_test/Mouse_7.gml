@@ -1,8 +1,14 @@
-/// @DnDAction : YoYo Games.Drawing.Draw_Value
+/// @DnDAction : YoYo Games.Instances.Inherit_Event
 /// @DnDVersion : 1
-/// @DnDHash : 2FC4D1F6
-/// @DnDArgument : "x_relative" "1"
-/// @DnDArgument : "y" "15"
-/// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "caption" ""Tested!""
-draw_text(x + 0, y + 15, string("Tested!") + "");
+/// @DnDHash : 6023A74D
+event_inherited();
+
+/// @DnDAction : YoYo Games.Instances.Create_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 4D6D5778
+/// @DnDArgument : "xpos_relative" "1"
+/// @DnDArgument : "ypos" "sprite_height + 10"
+/// @DnDArgument : "ypos_relative" "1"
+/// @DnDArgument : "objectid" "obj_button_test"
+/// @DnDSaveInfo : "objectid" "obj_button_test"
+instance_create_layer(x + 0, y + sprite_height + 10, "Instances", obj_button_test);
