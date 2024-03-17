@@ -25,6 +25,7 @@
   "ResourceOrderSettings": [
     {"name":"Loot_Table_Scripts","order":5,"path":"scripts/Loot_Table_Scripts/Loot_Table_Scripts.yy",},
     {"name":"Loot_Table","order":10,"path":"objects/Loot_Table/Loot_Table.yy",},
+    {"name":"obj_button_strike_test","order":2,"path":"objects/obj_button_strike_test/obj_button_strike_test.yy",},
     {"name":"Face_Node","order":11,"path":"objects/Face_Node/Face_Node.yy",},
     {"name":"obj_button_test","order":1,"path":"objects/obj_button_test/obj_button_test.yy",},
     {"name":"test_enemy","order":3,"path":"objects/test_enemy/test_enemy.yy",},
@@ -34,6 +35,7 @@
     {"name":"Face","order":6,"path":"objects/Face/Face.yy",},
     {"name":"Enemy","order":2,"path":"objects/Enemy/Enemy.yy",},
     {"name":"Player","order":1,"path":"objects/Player/Player.yy",},
+    {"name":"obj_button_block_test","order":3,"path":"objects/obj_button_block_test/obj_button_block_test.yy",},
     {"name":"Entity_Scripts","order":1,"path":"scripts/Entity_Scripts/Entity_Scripts.yy",},
     {"name":"Player_Scripts","order":2,"path":"scripts/Player_Scripts/Player_Scripts.yy",},
     {"name":"Move","order":7,"path":"objects/Move/Move.yy",},
