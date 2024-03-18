@@ -10,6 +10,14 @@ draw_self();
 /// @DnDSaveInfo : "font" "fnt_button"
 draw_set_font(fnt_button);
 
+/// @DnDAction : YoYo Games.Drawing.Set_Color
+/// @DnDVersion : 1
+/// @DnDHash : 447B1279
+/// @DnDArgument : "color" "$FF000000"
+draw_set_colour($FF000000 & $ffffff);
+var l447B1279_0=($FF000000 >> 24);
+draw_set_alpha(l447B1279_0 / $ff);
+
 /// @DnDAction : YoYo Games.Drawing.Set_Alignment
 /// @DnDVersion : 1.1
 /// @DnDHash : 14D489C8

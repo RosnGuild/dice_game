@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Player_Scripts",
+  "name": "scr_Entity",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

@@ -16,5 +16,28 @@ text = "Block!";
 /// @DnDArgument : "funcName" "activate_button"
 function activate_button() 
 {
-
+	/// @DnDAction : YoYo Games.Common.If_Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 65A449E8
+	/// @DnDParent : 0C425035
+	/// @DnDArgument : "var" "obj_Encounter_Manager.state"
+	/// @DnDArgument : "value" "STATES.PLAYER_MOVE_CHOICE"
+	if(obj_Encounter_Manager.state == STATES.PLAYER_MOVE_CHOICE)
+	{
+		/// @DnDAction : YoYo Games.Instances.Color_Sprite
+		/// @DnDVersion : 1
+		/// @DnDHash : 7F066EED
+		/// @DnDParent : 65A449E8
+		/// @DnDArgument : "colour" "$FFFF5900"
+		image_blend = $FFFF5900 & $ffffff;
+		image_alpha = ($FFFF5900 >> 24) / $ff;
+	
+		/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 7A12B766
+		/// @DnDParent : 65A449E8
+		/// @DnDArgument : "expr" "STATES.PLAYER_ENEMY_SELECT"
+		/// @DnDArgument : "var" "obj_Encounter_Manager.state"
+		obj_Encounter_Manager.state = STATES.PLAYER_ENEMY_SELECT;
+	}
 }

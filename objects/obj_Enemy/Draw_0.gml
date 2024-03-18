@@ -10,6 +10,13 @@ event_inherited();
 /// @DnDSaveInfo : "font" "fnt_enemy"
 draw_set_font(fnt_enemy);
 
+/// @DnDAction : YoYo Games.Drawing.Set_Color
+/// @DnDVersion : 1
+/// @DnDHash : 0C27DC63
+draw_set_colour($FFFFFFFF & $ffffff);
+var l0C27DC63_0=($FFFFFFFF >> 24);
+draw_set_alpha(l0C27DC63_0 / $ff);
+
 /// @DnDAction : YoYo Games.Drawing.Set_Alignment
 /// @DnDVersion : 1.1
 /// @DnDHash : 60BC029A

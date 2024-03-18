@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 switch (state) {
-    case STATES.PLAYER_CHOOSES:
+    case STATES.PLAYER_MOVE_CHOICE:
         // code here
 		// in this state, cards can be selected.
 		// if card requires targets, to go PLAYER_SELECTS.
@@ -10,7 +10,7 @@ switch (state) {
 		// else, go to BLOCKS_RESOLVE.
         break;
 		
-	case STATES.PLAYER_SELECTS:
+	case STATES.PLAYER_ENEMY_SELECT:
 		// 
         // code here
         break;
@@ -20,7 +20,7 @@ switch (state) {
         break;
 	
     default:
-        state = STATES.PLAYER_CHOOSES;
+        state = STATES.PLAYER_MOVE_CHOICE;
         break;
 }
 

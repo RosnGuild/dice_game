@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "script_Tag",
+  "name": "scr_Loot_Table",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

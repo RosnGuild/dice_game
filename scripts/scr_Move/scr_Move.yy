@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "script_Encounter_Manager",
+  "name": "scr_Move",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

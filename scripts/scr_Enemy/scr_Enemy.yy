@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Enemy_Scripts",
+  "name": "scr_Enemy",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
