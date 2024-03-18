@@ -41,6 +41,7 @@
     {"name":"Move","order":7,"path":"objects/Move/Move.yy",},
     {"name":"spr_scuffed_triangle_yellow","order":1,"path":"sprites/spr_scuffed_triangle_yellow/spr_scuffed_triangle_yellow.yy",},
     {"name":"Sprite1","order":1,"path":"sprites/Sprite1/Sprite1.yy",},
+    {"name":"fnt_enemy","order":1,"path":"fonts/fnt_enemy/fnt_enemy.yy",},
     {"name":"Ticking_Tag","order":1,"path":"objects/Ticking_Tag/Ticking_Tag.yy",},
     {"name":"Encounter","order":9,"path":"objects/Encounter/Encounter.yy",},
     {"name":"spr_scuffed_red_to_grey_square","order":2,"path":"sprites/spr_scuffed_red_to_grey_square/spr_scuffed_red_to_grey_square.yy",},

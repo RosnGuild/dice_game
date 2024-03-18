@@ -28,7 +28,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_scuffed_red_to_grey_square",
+    "path": "sprites/spr_scuffed_red_to_grey_square/spr_scuffed_red_to_grey_square.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }
