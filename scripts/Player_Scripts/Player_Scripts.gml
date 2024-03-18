@@ -5,7 +5,7 @@ function generate_die(player_id) {
 	
 	face_array = [];
 	for (var i = 0; i < 20; i++) {
-		current_face = instance_create_layer(0, 0, 1, Face_Node);
+		current_face = instance_create_layer(0, 0, 1, obj_Face_Node);
 		
 		array_insert(face_array, i, current_face);
 	}

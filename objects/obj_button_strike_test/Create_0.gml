@@ -22,7 +22,7 @@ function activate_button()
 	/// @DnDParent : 0C425035
 	/// @DnDArgument : "var" "Encounter_Manager.state"
 	/// @DnDArgument : "value" "STATES.PLAYER_CHOOSES"
-	if(Encounter_Manager.state == STATES.PLAYER_CHOOSES)
+	if(obj_Encounter_Manager.state == STATES.PLAYER_CHOOSES)
 	{
 		/// @DnDAction : YoYo Games.Instances.Color_Sprite
 		/// @DnDVersion : 1
