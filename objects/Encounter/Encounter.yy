@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "pEncounter",
+  "name": "Encounter",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],

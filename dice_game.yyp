@@ -68,7 +68,7 @@
     {"id":{"name":"Sprite1","path":"sprites/Sprite1/Sprite1.yy",},},
     {"id":{"name":"fnt_enemy","path":"fonts/fnt_enemy/fnt_enemy.yy",},},
     {"id":{"name":"Ticking_Tag","path":"objects/Ticking_Tag/Ticking_Tag.yy",},},
-    {"id":{"name":"pEncounter","path":"objects/pEncounter/pEncounter.yy",},},
+    {"id":{"name":"Encounter","path":"objects/Encounter/Encounter.yy",},},
     {"id":{"name":"spr_scuffed_red_to_grey_square","path":"sprites/spr_scuffed_red_to_grey_square/spr_scuffed_red_to_grey_square.yy",},},
     {"id":{"name":"Die_Graph","path":"objects/Die_Graph/Die_Graph.yy",},},
     {"id":{"name":"Enemy_Scripts","path":"scripts/Enemy_Scripts/Enemy_Scripts.yy",},},
