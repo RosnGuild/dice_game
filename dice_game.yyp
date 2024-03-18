@@ -66,6 +66,7 @@
     {"id":{"name":"Move","path":"objects/Move/Move.yy",},},
     {"id":{"name":"spr_scuffed_triangle_yellow","path":"sprites/spr_scuffed_triangle_yellow/spr_scuffed_triangle_yellow.yy",},},
     {"id":{"name":"Sprite1","path":"sprites/Sprite1/Sprite1.yy",},},
+    {"id":{"name":"fnt_enemy","path":"fonts/fnt_enemy/fnt_enemy.yy",},},
     {"id":{"name":"Ticking_Tag","path":"objects/Ticking_Tag/Ticking_Tag.yy",},},
     {"id":{"name":"Encounter","path":"objects/Encounter/Encounter.yy",},},
     {"id":{"name":"spr_scuffed_red_to_grey_square","path":"sprites/spr_scuffed_red_to_grey_square/spr_scuffed_red_to_grey_square.yy",},},

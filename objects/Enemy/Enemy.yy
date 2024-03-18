@@ -2,7 +2,9 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "Enemy",
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":true,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
@@ -31,10 +33,7 @@
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"next_move_list","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":6,},
   ],
   "solid": false,
-  "spriteId": {
-    "name": "spr_scuffed_red_to_grey_square",
-    "path": "sprites/spr_scuffed_red_to_grey_square/spr_scuffed_red_to_grey_square.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }
