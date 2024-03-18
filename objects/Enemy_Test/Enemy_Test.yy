@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "test_enemy",
+  "name": "Enemy_Test",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
