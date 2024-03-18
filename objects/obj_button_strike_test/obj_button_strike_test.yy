@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_scuffed_triangle_yellow",
+    "path": "sprites/spr_scuffed_triangle_yellow/spr_scuffed_triangle_yellow.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }
