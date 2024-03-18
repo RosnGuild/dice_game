@@ -31,7 +31,10 @@
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"next_move_list","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":6,},
   ],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_scuffed_red_to_grey_square",
+    "path": "sprites/spr_scuffed_red_to_grey_square/spr_scuffed_red_to_grey_square.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

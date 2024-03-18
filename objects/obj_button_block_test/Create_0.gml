@@ -6,9 +6,9 @@ event_inherited();
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 4C1A8254
-/// @DnDArgument : "expr" ""Strike!""
+/// @DnDArgument : "expr" ""Block!""
 /// @DnDArgument : "var" "text"
-text = "Strike!";
+text = "Block!";
 
 /// @DnDAction : YoYo Games.Common.Function
 /// @DnDVersion : 1
