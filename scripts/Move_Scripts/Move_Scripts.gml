@@ -5,9 +5,10 @@ function cooldown_handler(){
 	
 }
 
-//function strike_handler(_target_id, _striker_id){
+function hit_handler(_target_id, _value){
+	_target_id.health -= _value;
 	//_target_id.
-//}
+}
 
 function block_handler(_blocker_id){
 	
