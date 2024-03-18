@@ -16,5 +16,20 @@ text = "Strike!";
 /// @DnDArgument : "funcName" "activate_button"
 function activate_button() 
 {
-
+	/// @DnDAction : YoYo Games.Common.If_Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 48463E3E
+	/// @DnDParent : 0C425035
+	/// @DnDArgument : "var" "state"
+	/// @DnDArgument : "value" "PLAYER_CHOOSES"
+	if(state == PLAYER_CHOOSES)
+	{
+		/// @DnDAction : YoYo Games.Instances.Color_Sprite
+		/// @DnDVersion : 1
+		/// @DnDHash : 2B94C638
+		/// @DnDParent : 48463E3E
+		/// @DnDArgument : "colour" "$FF0000FF"
+		image_blend = $FF0000FF & $ffffff;
+		image_alpha = ($FF0000FF >> 24) / $ff;
+	}
 }
