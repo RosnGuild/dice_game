@@ -17,3 +17,5 @@ enum STATES {
 };
 
 state = STATES.SETUP;
+
+selected_face = obj_Face;

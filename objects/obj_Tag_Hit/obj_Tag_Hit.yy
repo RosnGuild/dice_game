@@ -1,15 +1,15 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_move_Hit6",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-  ],
+  "name": "obj_Tag_Hit",
+  "eventList": [],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Tag","path":"objects/obj_Tag/obj_Tag.yy",},"propertyId":{"name":"tag_name","path":"objects/obj_Tag/obj_Tag.yy",},"value":"hit",},
+  ],
   "parent": {
-    "name": "Moves",
-    "path": "folders/Objects/Moves.yy",
+    "name": "Tags",
+    "path": "folders/Objects/Tags.yy",
   },
   "parentObjectId": {
     "name": "obj_Tag",

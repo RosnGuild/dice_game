@@ -39,5 +39,13 @@ function activate_button()
 		/// @DnDArgument : "expr" "STATES.PLAYER_ENEMY_SELECT"
 		/// @DnDArgument : "var" "obj_Encounter_Manager.state"
 		obj_Encounter_Manager.state = STATES.PLAYER_ENEMY_SELECT;
+	
+		/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 64DA1EF0
+		/// @DnDParent : 65A449E8
+		/// @DnDArgument : "expr" "obj_face_Block"
+		/// @DnDArgument : "var" "obj_Encounter_Manager.selected_action"
+		obj_Encounter_Manager.selected_face = obj_face_Block;
 	}
 }
