@@ -48,6 +48,7 @@
     {"name":"Sprite1","order":1,"path":"sprites/Sprite1/Sprite1.yy",},
     {"name":"fnt_enemy","order":1,"path":"fonts/fnt_enemy/fnt_enemy.yy",},
     {"name":"obj_Ticking_Tag","order":1,"path":"objects/obj_Ticking_Tag/obj_Ticking_Tag.yy",},
+    {"name":"scr_Move_Parser","order":7,"path":"scripts/scr_Move_Parser/scr_Move_Parser.yy",},
     {"name":"obj_Encounter","order":9,"path":"objects/obj_Encounter/obj_Encounter.yy",},
     {"name":"spr_scuffed_red_to_grey_square","order":2,"path":"sprites/spr_scuffed_red_to_grey_square/spr_scuffed_red_to_grey_square.yy",},
     {"name":"obj_Die_Graph","order":12,"path":"objects/obj_Die_Graph/obj_Die_Graph.yy",},
