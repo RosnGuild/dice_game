@@ -29,8 +29,8 @@ function activate_button()
 		/// @DnDHash : 7F066EED
 		/// @DnDParent : 65A449E8
 		/// @DnDArgument : "colour" "$FFFF5900"
-		/// @DnDArgument : "alpha" "false"
 		image_blend = $FFFF5900 & $ffffff;
+		image_alpha = ($FFFF5900 >> 24) / $ff;
 	
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
