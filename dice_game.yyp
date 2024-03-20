@@ -49,6 +49,7 @@
     {"id":{"name":"obj_button_test","path":"objects/obj_button_test/obj_button_test.yy",},},
     {"id":{"name":"spr_button_nine_slice_GUI_Buttons_Visual_Base","path":"sprites/spr_button_nine_slice_GUI_Buttons_Visual_Base/spr_button_nine_slice_GUI_Buttons_Visual_Base.yy",},},
     {"id":{"name":"obj_Enemy_Test","path":"objects/obj_Enemy_Test/obj_Enemy_Test.yy",},},
+    {"id":{"name":"scr_Die_Graph","path":"scripts/scr_Die_Graph/scr_Die_Graph.yy",},},
     {"id":{"name":"obj_face_Block","path":"objects/obj_face_Block/obj_face_Block.yy",},},
     {"id":{"name":"scr_Encounter_Manager","path":"scripts/scr_Encounter_Manager/scr_Encounter_Manager.yy",},},
     {"id":{"name":"obj_move_Hit6","path":"objects/obj_move_Hit6/obj_move_Hit6.yy",},},
