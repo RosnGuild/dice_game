@@ -40,9 +40,11 @@
     "IDEVersion": "2023.11.1.129",
   },
   "resources": [
+    {"id":{"name":"scr_Initialize_Tag_List","path":"scripts/scr_Initialize_Tag_List/scr_Initialize_Tag_List.yy",},},
     {"id":{"name":"scr_Loot_Table","path":"scripts/scr_Loot_Table/scr_Loot_Table.yy",},},
     {"id":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},},
     {"id":{"name":"obj_Loot_Table","path":"objects/obj_Loot_Table/obj_Loot_Table.yy",},},
+    {"id":{"name":"obj_Startup","path":"objects/obj_Startup/obj_Startup.yy",},},
     {"id":{"name":"obj_face_Strike","path":"objects/obj_face_Strike/obj_face_Strike.yy",},},
     {"id":{"name":"obj_button_strike_test","path":"objects/obj_button_strike_test/obj_button_strike_test.yy",},},
     {"id":{"name":"obj_Face_Node","path":"objects/obj_Face_Node/obj_Face_Node.yy",},},
