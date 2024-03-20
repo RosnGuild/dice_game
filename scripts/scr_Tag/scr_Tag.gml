@@ -6,3 +6,7 @@ function decrement_value(_tag_id) {
 		instance_destroy(_tag_id, true);
 	}
 }
+
+function apply_tag() {
+	
+}
