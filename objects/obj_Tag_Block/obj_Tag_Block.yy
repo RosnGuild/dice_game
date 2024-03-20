@@ -5,10 +5,10 @@
   "eventList": [],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Tag","path":"objects/obj_Tag/obj_Tag.yy",},"propertyId":{"name":"variable_name","path":"objects/obj_Tag/obj_Tag.yy",},"value":"0",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Tag","path":"objects/obj_Tag/obj_Tag.yy",},"propertyId":{"name":"tag_value","path":"objects/obj_Tag/obj_Tag.yy",},"value":"0",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Tag","path":"objects/obj_Tag/obj_Tag.yy",},"propertyId":{"name":"tag_id","path":"objects/obj_Tag/obj_Tag.yy",},"value":"0",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Tag","path":"objects/obj_Tag/obj_Tag.yy",},"propertyId":{"name":"tag_name","path":"objects/obj_Tag/obj_Tag.yy",},"value":"0",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Tag","path":"objects/obj_Tag/obj_Tag.yy",},"propertyId":{"name":"requires_targeting","path":"objects/obj_Tag/obj_Tag.yy",},"value":"False",},
   ],
   "parent": {
     "name": "Tags",

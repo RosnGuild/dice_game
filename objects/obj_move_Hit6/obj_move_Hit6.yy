@@ -6,14 +6,16 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Move","path":"objects/obj_Move/obj_Move.yy",},"propertyId":{"name":"tag_list","path":"objects/obj_Move/obj_Move.yy",},"value":"_hit6 = instance_create_layer(x,y, layer, obj_Tag_Hit, ",},
+  ],
   "parent": {
     "name": "Moves",
     "path": "folders/Objects/Moves.yy",
   },
   "parentObjectId": {
-    "name": "obj_Tag",
-    "path": "objects/obj_Tag/obj_Tag.yy",
+    "name": "obj_Move",
+    "path": "objects/obj_Move/obj_Move.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

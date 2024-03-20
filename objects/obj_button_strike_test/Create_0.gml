@@ -34,18 +34,18 @@ function activate_button()
 	
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
-		/// @DnDHash : 41E0F988
-		/// @DnDParent : 48463E3E
-		/// @DnDArgument : "expr" "STATES.PLAYER_ENEMY_SELECT"
-		/// @DnDArgument : "var" "obj_Encounter_Manager.state"
-		obj_Encounter_Manager.state = STATES.PLAYER_ENEMY_SELECT;
-	
-		/// @DnDAction : YoYo Games.Common.Variable
-		/// @DnDVersion : 1
 		/// @DnDHash : 047FDF4C
 		/// @DnDParent : 48463E3E
 		/// @DnDArgument : "expr" "obj_face_Strike"
-		/// @DnDArgument : "var" "obj_Encounter_Manager.selected_action"
+		/// @DnDArgument : "var" "obj_Encounter_Manager.selected_face"
 		obj_Encounter_Manager.selected_face = obj_face_Strike;
+	
+		/// @DnDAction : YoYo Games.Common.Function_Call
+		/// @DnDVersion : 1
+		/// @DnDHash : 6B09EF95
+		/// @DnDParent : 48463E3E
+		/// @DnDArgument : "function" "parse_face"
+		/// @DnDArgument : "arg" "obj_Encounter_Manager.selected_face"
+		parse_face(obj_Encounter_Manager.selected_face);
 	}
 }
