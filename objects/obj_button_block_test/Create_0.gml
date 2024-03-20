@@ -29,8 +29,8 @@ function activate_button()
 		/// @DnDHash : 7F066EED
 		/// @DnDParent : 65A449E8
 		/// @DnDArgument : "colour" "$FFFF5900"
+		/// @DnDArgument : "alpha" "false"
 		image_blend = $FFFF5900 & $ffffff;
-		image_alpha = ($FFFF5900 >> 24) / $ff;
 	
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
@@ -46,6 +46,6 @@ function activate_button()
 		/// @DnDParent : 65A449E8
 		/// @DnDArgument : "expr" "obj_face_Block"
 		/// @DnDArgument : "var" "obj_Encounter_Manager.selected_action"
-		obj_Encounter_Manager.selected_face = obj_face_Block;
+		obj_Encounter_Manager.selected_action = obj_face_Block;
 	}
 }
