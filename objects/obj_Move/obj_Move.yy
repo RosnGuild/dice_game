@@ -24,7 +24,9 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"tag_list","filters":[],"listItems":[],"multiselect":true,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":6,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"tag_list","filters":[],"listItems":[
+        "_hit6 = instance_create_layer(x,y, layer, obj_Tag_Hit, ",
+      ],"multiselect":true,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":6,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"move_name","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":2,},
   ],
   "solid": false,
