@@ -60,6 +60,8 @@
     {"id":{"name":"scr_Move","path":"scripts/scr_Move/scr_Move.yy",},},
     {"id":{"name":"obj_Tag","path":"objects/obj_Tag/obj_Tag.yy",},},
     {"id":{"name":"obj_Encounter_Manager","path":"objects/obj_Encounter_Manager/obj_Encounter_Manager.yy",},},
+    {"id":{"name":"scr_Initialize_Tag_List","path":"scripts/scr_Initialize_Tag_List/scr_Initialize_Tag_List.yy",},},
+    {"id":{"name":"obj_Startup","path":"objects/obj_Startup/obj_Startup.yy",},},
     {"id":{"name":"obj_Face","path":"objects/obj_Face/obj_Face.yy",},},
     {"id":{"name":"obj_Enemy","path":"objects/obj_Enemy/obj_Enemy.yy",},},
     {"id":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},},

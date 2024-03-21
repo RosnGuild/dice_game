@@ -37,6 +37,8 @@
     {"name":"obj_Tag_Block","order":3,"path":"objects/obj_Tag_Block/obj_Tag_Block.yy",},
     {"name":"scr_Move","order":1,"path":"scripts/scr_Move/scr_Move.yy",},
     {"name":"obj_Encounter_Manager","order":8,"path":"objects/obj_Encounter_Manager/obj_Encounter_Manager.yy",},
+    {"name":"scr_Initialize_Tag_List","order":8,"path":"scripts/scr_Initialize_Tag_List/scr_Initialize_Tag_List.yy",},
+    {"name":"obj_Startup","order":16,"path":"objects/obj_Startup/obj_Startup.yy",},
     {"name":"obj_Face","order":6,"path":"objects/obj_Face/obj_Face.yy",},
     {"name":"obj_Enemy","order":2,"path":"objects/obj_Enemy/obj_Enemy.yy",},
     {"name":"obj_Player","order":1,"path":"objects/obj_Player/obj_Player.yy",},
