@@ -7,16 +7,17 @@ function parse_face(_face){
 	show_debug_message("got here");
 	//var tags = obj_Encounter_Manager.selected_face;
 	show_debug_message("got here two");
-	show_debug_message(hit6);
 	//.face_move.tag_list
-	show_debug_message(obj_Encounter_Manager.selected_tags);
+	show_debug_message(obj_Encounter_Manager.selected_face.face_move);
+	var move = obj_Encounter_Manager.selected_face.face_move
+	show_debug_message(move)
 	
-	
-	var size = ds_list_size(tags);
-	for (var i = 0; i < size; i++) {
-	    var item = ds_list_find_value(tags,i);
-	    if (item.requires_targeting) {
-	        obj_Encounter_Manager.state = obj_Encounter_Manager.STATES.PLAYER_ENEMY_SELECT;
-	    }
+	var tags = array_length(global.move_data[move]);
+	for (var tag = 1; tag < tags; tag++) {
+		if (tag != movedata_BLOCK) {
+			if (global.move_data[move][tag] > 0) {
+				obj_Encounter_Manager.state = STATES.PLAYER_ENEMY_SELECT;
+			}
+		}
 	}
 }

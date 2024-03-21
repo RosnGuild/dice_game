@@ -7,7 +7,7 @@
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Face","path":"objects/obj_Face/obj_Face.yy",},"propertyId":{"name":"face_cooldown_max","path":"objects/obj_Face/obj_Face.yy",},"value":"0",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Face","path":"objects/obj_Face/obj_Face.yy",},"propertyId":{"name":"face_cooldown_current","path":"objects/obj_Face/obj_Face.yy",},"value":"0",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Face","path":"objects/obj_Face/obj_Face.yy",},"propertyId":{"name":"face_move","path":"objects/obj_Face/obj_Face.yy",},"value":"obj_move_Hit6",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Face","path":"objects/obj_Face/obj_Face.yy",},"propertyId":{"name":"face_move","path":"objects/obj_Face/obj_Face.yy",},"value":"moveid_STRIKE",},
   ],
   "parent": {
     "name": "Faces",
