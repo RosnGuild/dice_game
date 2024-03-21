@@ -4,8 +4,13 @@ function parse_face(_face){
 	//if(!object_get_parent(_face).object_index == obj_Face){
 	//	return;
 	//}
+	show_debug_message("got here");
+	//var tags = obj_Encounter_Manager.selected_face;
+	show_debug_message("got here two");
+	show_debug_message(hit6);
+	//.face_move.tag_list
+	show_debug_message(obj_Encounter_Manager.selected_tags);
 	
-	var tags = obj_Encounter_Manager.selected_face.face_move.tag_list;
 	
 	var size = ds_list_size(tags);
 	for (var i = 0; i < size; i++) {

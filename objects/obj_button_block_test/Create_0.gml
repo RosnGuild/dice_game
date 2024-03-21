@@ -44,8 +44,8 @@ function activate_button()
 		/// @DnDVersion : 1
 		/// @DnDHash : 17C51E2C
 		/// @DnDParent : 65A449E8
-		/// @DnDArgument : "function" "scr_Face_Parser.parse_face"
+		/// @DnDArgument : "function" "parse_face"
 		/// @DnDArgument : "arg" "obj_Encounter_Manager.selected_face"
-		scr_Face_Parser.parse_face(obj_Encounter_Manager.selected_face);
+		parse_face(obj_Encounter_Manager.selected_face);
 	}
 }

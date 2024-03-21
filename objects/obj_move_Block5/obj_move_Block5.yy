@@ -4,7 +4,9 @@
   "name": "obj_move_Block5",
   "eventList": [],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Move","path":"objects/obj_Move/obj_Move.yy",},"propertyId":{"name":"tag_list","path":"objects/obj_Move/obj_Move.yy",},"value":"block5",},
+  ],
   "parent": {
     "name": "Moves",
     "path": "folders/Objects/Moves.yy",
