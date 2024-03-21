@@ -41,6 +41,7 @@
   },
   "resources": [
     {"id":{"name":"scr_Loot_Table","path":"scripts/scr_Loot_Table/scr_Loot_Table.yy",},},
+    {"id":{"name":"scr_Initialize_Moves","path":"scripts/scr_Initialize_Moves/scr_Initialize_Moves.yy",},},
     {"id":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},},
     {"id":{"name":"obj_Loot_Table","path":"objects/obj_Loot_Table/obj_Loot_Table.yy",},},
     {"id":{"name":"obj_face_Strike","path":"objects/obj_face_Strike/obj_face_Strike.yy",},},
