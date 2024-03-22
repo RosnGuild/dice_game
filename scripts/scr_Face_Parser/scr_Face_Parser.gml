@@ -1,6 +1,6 @@
 // State management for when a face is selected.
 
-tags_without_targeting = [movedata_BLOCK] // Tags that do NOT require enemy selection to resolve.
+global.tags_without_targeting = [movedata_BLOCK] // Tags that do NOT require enemy selection to resolve.
 
 /// @function				parse_face(_face);
 /// @param {index}	_face	The face to be parsed.
@@ -12,7 +12,7 @@ function parse_face(_face){
 	
 	var tags = array_length(global.move_data[move]);
 	for (var tag = 1; tag < tags; tag++) {
-		if (!array_contains(tags_without_targeting, tag)) {
+		if (!array_contains(global.tags_without_targeting, tag)) {
 			if (global.move_data[move][tag] > 0) {
 				obj_Encounter_Manager.state = STATES.PLAYER_ENEMY_SELECT;
 			}

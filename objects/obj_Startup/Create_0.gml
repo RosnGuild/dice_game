@@ -6,8 +6,6 @@
 die_graph = instance_create_layer(0, 0, layer, obj_Die_Graph);
 initialize_Die_Graph(die_graph);
 
-instance_create_layer(0,0,layer,obj_move_Hit6)
-
 
 
 
