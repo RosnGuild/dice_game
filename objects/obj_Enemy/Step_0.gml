@@ -15,13 +15,6 @@ if(current_hp < max_hp / 2)
 	/// @DnDSaveInfo : "spriteind" "spr_scuffed_red_to_grey_square"
 	sprite_index = spr_scuffed_red_to_grey_square;
 	image_index = 1;
-
-	/// @DnDAction : YoYo Games.Instances.Sprite_Rotate
-	/// @DnDVersion : 1
-	/// @DnDHash : 4BF894EF
-	/// @DnDParent : 38B6F01E
-	/// @DnDArgument : "angle" "45"
-	image_angle = 45;
 }
 
 /// @DnDAction : YoYo Games.Common.Else
@@ -37,10 +30,24 @@ else
 	/// @DnDSaveInfo : "spriteind" "spr_scuffed_red_to_grey_square"
 	sprite_index = spr_scuffed_red_to_grey_square;
 	image_index = 0;
+}
 
-	/// @DnDAction : YoYo Games.Instances.Sprite_Rotate
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 2B3E052F
+/// @DnDArgument : "var" "obj_Encounter_Manager.state"
+/// @DnDArgument : "value" "3"
+if(obj_Encounter_Manager.state == 3)
+{
+	/// @DnDAction : YoYo Games.Particles.Effect
 	/// @DnDVersion : 1
-	/// @DnDHash : 43261E03
-	/// @DnDParent : 6A037415
-	image_angle = 0;
+	/// @DnDHash : 3202EC0C
+	/// @DnDParent : 2B3E052F
+	/// @DnDArgument : "x_relative" "1"
+	/// @DnDArgument : "y_relative" "1"
+	/// @DnDArgument : "type" "6"
+	/// @DnDArgument : "where" "1"
+	/// @DnDArgument : "size" "1"
+	/// @DnDArgument : "color" "$FFCCF7FF"
+	effect_create_above(6, x + 0, y + 0, 1, $FFCCF7FF & $ffffff);
 }
