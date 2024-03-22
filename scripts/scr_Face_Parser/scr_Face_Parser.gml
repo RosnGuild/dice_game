@@ -1,20 +1,18 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+// State management for when a face is selected.
+
+tags_without_targeting = [movedata_BLOCK] // Tags that do NOT require enemy selection to resolve.
+
+/// @function				parse_face(_face);
+/// @param {index}	_face	The face to be parsed.
+/// @description			Checks whether the passed face requires enemy selection to resolve, sets Encounter_Manager state accordingly.
+
 function parse_face(_face){
-	//if(!object_get_parent(_face).object_index == obj_Face){
-	//	return;
-	//}
-	show_debug_message("got here");
-	//var tags = obj_Encounter_Manager.selected_face;
-	show_debug_message("got here two");
-	//.face_move.tag_list
-	show_debug_message(obj_Encounter_Manager.selected_face.face_move);
-	var move = obj_Encounter_Manager.selected_face.face_move
-	show_debug_message(move)
+	var move =_face.face_move
+	show_debug_message("Parsing: {0} ({1})", global.move_data[move][movedata_NAME], _face)
 	
 	var tags = array_length(global.move_data[move]);
 	for (var tag = 1; tag < tags; tag++) {
-		if (tag != movedata_BLOCK) {
+		if (!array_contains(tags_without_targeting, tag)) {
 			if (global.move_data[move][tag] > 0) {
 				obj_Encounter_Manager.state = STATES.PLAYER_ENEMY_SELECT;
 			}
