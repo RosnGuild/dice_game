@@ -20,4 +20,6 @@ function parse_face(_face){
 			}
 		}
 	}
+	
+	//set cooldown info
 }
