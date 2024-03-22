@@ -1,7 +1,9 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function take_damage(_entity_id, _damage_num){
-	_entity_id.current_hp -= _damage_num;
+function take_damage(_entity_id, _damage_value){
+	
+	_damage_value = max(_damage_value - _entity_id.status_block_value, 0);
+	_entity_id.current_hp -= _damage_value;
 	check_death(_entity_id);
 }
 
@@ -22,4 +24,9 @@ function kill_entity(_entity_id) {
 		// Do something.
 	//}
 	instance_destroy(_entity_id);
+}
+
+function add_block(_entity_id, _block_value) {
+	show_debug_message("made ot++it");
+	_entity_id.status_block_value += _block_value;
 }

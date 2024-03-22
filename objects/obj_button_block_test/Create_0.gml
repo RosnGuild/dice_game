@@ -47,5 +47,15 @@ function activate_button()
 		/// @DnDArgument : "function" "parse_face"
 		/// @DnDArgument : "arg" "obj_Encounter_Manager.selected_face"
 		parse_face(obj_Encounter_Manager.selected_face);
+	
+		/// @DnDAction : YoYo Games.Common.Function_Call
+		/// @DnDVersion : 1
+		/// @DnDHash : 7CD29FD6
+		/// @DnDInput : 2
+		/// @DnDParent : 65A449E8
+		/// @DnDArgument : "function" "add_block"
+		/// @DnDArgument : "arg" "obj_Enemy_Test"
+		/// @DnDArgument : "arg_1" " global.move_data[obj_Encounter_Manager.selected_face.face_move][movedata_BLOCK]"
+		add_block(obj_Enemy_Test,  global.move_data[obj_Encounter_Manager.selected_face.face_move][movedata_BLOCK]);
 	}
 }
