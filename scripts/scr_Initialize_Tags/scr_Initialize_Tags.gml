@@ -1,5 +1,4 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+// Initialises tag objects in the current room.
 hit6 = instance_create_layer(0, 0, 0, obj_Tag_Hit, 
 	{
 		tag_value : 6
