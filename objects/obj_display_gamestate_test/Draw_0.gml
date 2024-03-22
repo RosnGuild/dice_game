@@ -36,3 +36,35 @@ draw_set_valign(fa_middle);
 /// @DnDArgument : "caption" ""
 /// @DnDArgument : "var" "text"
 draw_text(x + sprite_width / 2, y + sprite_height / 2,  + string(text));
+
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 6410E6CC
+/// @DnDArgument : "var" "obj_Encounter_Manager.state"
+/// @DnDArgument : "value" "2"
+if(obj_Encounter_Manager.state == 2)
+{
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 11F42100
+	/// @DnDParent : 6410E6CC
+	/// @DnDArgument : "expr" ""Encounter state: PLAYER_MOVE_CHOICE""
+	/// @DnDArgument : "var" "text"
+	text = "Encounter state: PLAYER_MOVE_CHOICE";
+}
+
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 0A35408E
+/// @DnDArgument : "var" "obj_Encounter_Manager.state"
+/// @DnDArgument : "value" "3"
+if(obj_Encounter_Manager.state == 3)
+{
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 3D6109A8
+	/// @DnDParent : 0A35408E
+	/// @DnDArgument : "expr" ""Encounter state: PLAYER_ENEMY_SELECT""
+	/// @DnDArgument : "var" "text"
+	text = "Encounter state: PLAYER_ENEMY_SELECT";
+}
