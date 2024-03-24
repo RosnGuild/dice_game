@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_Initialize_Tags",
+  "name": "scr_Face_Node",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

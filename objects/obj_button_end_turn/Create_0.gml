@@ -6,9 +6,9 @@ event_inherited();
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 08A76FC4
-/// @DnDArgument : "expr" ""Test!""
+/// @DnDArgument : "expr" ""End Turn""
 /// @DnDArgument : "var" "text"
-text = "Test!";
+text = "End Turn";
 
 /// @DnDAction : YoYo Games.Common.Function
 /// @DnDVersion : 1
@@ -16,14 +16,10 @@ text = "Test!";
 /// @DnDArgument : "funcName" "activate_button"
 function activate_button() 
 {
-	/// @DnDAction : YoYo Games.Instances.Create_Instance
+	/// @DnDAction : YoYo Games.Common.Function_Call
 	/// @DnDVersion : 1
-	/// @DnDHash : 71253B18
+	/// @DnDHash : 07209152
 	/// @DnDParent : 3B617F64
-	/// @DnDArgument : "xpos_relative" "1"
-	/// @DnDArgument : "ypos" "sprite_height + 10"
-	/// @DnDArgument : "ypos_relative" "1"
-	/// @DnDArgument : "objectid" "obj_button_test"
-	/// @DnDSaveInfo : "objectid" "obj_button_test"
-	instance_create_layer(x + 0, y + sprite_height + 10, "Instances", obj_button_test);
+	/// @DnDArgument : "function" "end_turn_script"
+	end_turn_script();
 }

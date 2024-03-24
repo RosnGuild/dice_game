@@ -1,5 +1,4 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+// Functions for working with entities.
 function take_damage(_entity_id, _damage_value){
 	
 	_damage_value = max(_damage_value - _entity_id.status_block_value, 0);
@@ -27,6 +26,10 @@ function kill_entity(_entity_id) {
 }
 
 function add_block(_entity_id, _block_value) {
-	show_debug_message("made ot++it");
 	_entity_id.status_block_value += _block_value;
+}
+
+// Resets block on an entity at the end of the round.
+function clear_block(_entity_id) {
+	_entity_id.status_block_value = 0;
 }
