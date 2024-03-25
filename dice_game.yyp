@@ -78,6 +78,7 @@
     {"id":{"name":"fnt_enemy","path":"fonts/fnt_enemy/fnt_enemy.yy",},},
     {"id":{"name":"obj_Ticking_Tag","path":"objects/obj_Ticking_Tag/obj_Ticking_Tag.yy",},},
     {"id":{"name":"spr_block_tag_icon","path":"sprites/spr_block_tag_icon/spr_block_tag_icon.yy",},},
+    {"id":{"name":"spr_crumpled_paper_rectangle_test","path":"sprites/spr_crumpled_paper_rectangle_test/spr_crumpled_paper_rectangle_test.yy",},},
     {"id":{"name":"scr_Move_Parser","path":"scripts/scr_Move_Parser/scr_Move_Parser.yy",},},
     {"id":{"name":"spr_scuffed_rectangle_whitefill_blackoutline","path":"sprites/spr_scuffed_rectangle_whitefill_blackoutline/spr_scuffed_rectangle_whitefill_blackoutline.yy",},},
     {"id":{"name":"obj_Encounter","path":"objects/obj_Encounter/obj_Encounter.yy",},},

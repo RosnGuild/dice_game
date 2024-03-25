@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_scuffed_rectangle_whitefill_blackoutline",
-    "path": "sprites/spr_scuffed_rectangle_whitefill_blackoutline/spr_scuffed_rectangle_whitefill_blackoutline.yy",
+    "name": "spr_crumpled_paper_rectangle_test",
+    "path": "sprites/spr_crumpled_paper_rectangle_test/spr_crumpled_paper_rectangle_test.yy",
   },
   "spriteMaskId": null,
   "visible": true,
