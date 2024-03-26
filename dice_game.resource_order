@@ -27,6 +27,7 @@
     {"name":"obj_Loot_Table","order":10,"path":"objects/obj_Loot_Table/obj_Loot_Table.yy",},
     {"name":"obj_button_strike_test","order":2,"path":"objects/obj_button_strike_test/obj_button_strike_test.yy",},
     {"name":"obj_Face_Node","order":11,"path":"objects/obj_Face_Node/obj_Face_Node.yy",},
+    {"name":"obj_button_cancel_action_test","order":5,"path":"objects/obj_button_cancel_action_test/obj_button_cancel_action_test.yy",},
     {"name":"obj_button_end_turn","order":1,"path":"objects/obj_button_end_turn/obj_button_end_turn.yy",},
     {"name":"obj_Enemy_Test","order":3,"path":"objects/obj_Enemy_Test/obj_Enemy_Test.yy",},
     {"name":"scr_Die_Graph","order":6,"path":"scripts/scr_Die_Graph/scr_Die_Graph.yy",},
