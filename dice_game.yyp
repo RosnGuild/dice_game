@@ -40,7 +40,7 @@
   },
   "resources": [
     {"id":{"name":"scr_Loot_Table","path":"scripts/scr_Loot_Table/scr_Loot_Table.yy",},},
-    {"id":{"name":"scr_Initialize_Moves","path":"scripts/scr_Initialize_Moves/scr_Initialize_Moves.yy",},},
+    {"id":{"name":"scr_Initialize_Face_Moves","path":"scripts/scr_Initialize_Face_Moves/scr_Initialize_Face_Moves.yy",},},
     {"id":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},},
     {"id":{"name":"obj_Loot_Table","path":"objects/obj_Loot_Table/obj_Loot_Table.yy",},},
     {"id":{"name":"obj_face_Strike","path":"objects/obj_face_Strike/obj_face_Strike.yy",},},
@@ -78,6 +78,7 @@
     {"id":{"name":"fnt_enemy","path":"fonts/fnt_enemy/fnt_enemy.yy",},},
     {"id":{"name":"obj_Ticking_Tag","path":"objects/obj_Ticking_Tag/obj_Ticking_Tag.yy",},},
     {"id":{"name":"spr_block_tag_icon","path":"sprites/spr_block_tag_icon/spr_block_tag_icon.yy",},},
+    {"id":{"name":"scr_Initialize_Enemy_Moves","path":"scripts/scr_Initialize_Enemy_Moves/scr_Initialize_Enemy_Moves.yy",},},
     {"id":{"name":"spr_crumpled_paper_rectangle_test","path":"sprites/spr_crumpled_paper_rectangle_test/spr_crumpled_paper_rectangle_test.yy",},},
     {"id":{"name":"scr_Move_Parser","path":"scripts/scr_Move_Parser/scr_Move_Parser.yy",},},
     {"id":{"name":"spr_scuffed_rectangle_whitefill_blackoutline","path":"sprites/spr_scuffed_rectangle_whitefill_blackoutline/spr_scuffed_rectangle_whitefill_blackoutline.yy",},},

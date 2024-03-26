@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_Initialize_Moves",
+  "name": "scr_Initialize_Enemy_Moves",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

@@ -1,4 +1,4 @@
-// Creates a globally accessible 2D array that stores all move data. 
+// Creates a globally accessible 2D array that stores all player move data. 
 // Access a move and it's components with global.move_data[moveid_NAME][movedata_NAME/HIT/BLOCK].
 
 
