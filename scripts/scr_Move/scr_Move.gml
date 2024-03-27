@@ -7,7 +7,7 @@ function cooldown_handler(){
 
 // Applies incoming damage to an enemy during the enemy_select phase.
 function apply_hit(_entity_id, _value) {
-	_entity_id.incoming_damage += _value
+	_entity_id.incoming_hit_value += _value
 }
 
 // Handles incoming damage to an enemy during the hit phase.

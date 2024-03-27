@@ -6,7 +6,9 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":true,},
   ],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Enemy","path":"objects/obj_Enemy/obj_Enemy.yy",},"propertyId":{"name":"move_list","path":"objects/obj_Enemy/obj_Enemy.yy",},"value":"global.enemy_move_data[enemyid_IMP]",},
+  ],
   "parent": {
     "name": "Entities",
     "path": "folders/Objects/Entities.yy",
