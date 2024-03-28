@@ -84,6 +84,7 @@
     {"id":{"name":"spr_crumpled_paper_rectangle_test","path":"sprites/spr_crumpled_paper_rectangle_test/spr_crumpled_paper_rectangle_test.yy",},},
     {"id":{"name":"scr_Move_Parser","path":"scripts/scr_Move_Parser/scr_Move_Parser.yy",},},
     {"id":{"name":"spr_scuffed_rectangle_whitefill_blackoutline","path":"sprites/spr_scuffed_rectangle_whitefill_blackoutline/spr_scuffed_rectangle_whitefill_blackoutline.yy",},},
+    {"id":{"name":"obj_button_playerdie_up_test","path":"objects/obj_button_playerdie_up_test/obj_button_playerdie_up_test.yy",},},
     {"id":{"name":"obj_Encounter","path":"objects/obj_Encounter/obj_Encounter.yy",},},
     {"id":{"name":"spr_scuffed_red_to_grey_square","path":"sprites/spr_scuffed_red_to_grey_square/spr_scuffed_red_to_grey_square.yy",},},
     {"id":{"name":"scr_Face_Node","path":"scripts/scr_Face_Node/scr_Face_Node.yy",},},

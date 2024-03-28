@@ -8,5 +8,5 @@ function set_random_player_face() {
 }
 
 function get_adjacent_player_faces() {
-	return global.die_graph_array[get_current_player_face()].adjacent_nodes;
+	return global.die_graph_array[get_current_player_face() - 1].adjacent_nodes;
 }
