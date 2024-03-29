@@ -35,36 +35,46 @@ function activate_button()
 		/// @DnDArgument : "arg" "obj_Encounter_Manager.selected_face"
 		parse_face(obj_Encounter_Manager.selected_face);
 	
-		/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDVersion : 1
-		/// @DnDHash : 1D7D7440
+		/// @DnDHash : 6C0AF529
 		/// @DnDParent : 3A60C75B
-		/// @DnDArgument : "expr" "number"
-		/// @DnDArgument : "var" "global.current_player_face_number"
-		global.current_player_face_number = number;
-	
-		/// @DnDAction : YoYo Games.Common.Variable
-		/// @DnDVersion : 1
-		/// @DnDHash : 78533A31
-		/// @DnDParent : 3A60C75B
-		/// @DnDArgument : "expr" "get_adjacent_player_faces()[2]"
-		/// @DnDArgument : "var" "number"
-		number = get_adjacent_player_faces()[2];
-	
-		/// @DnDAction : YoYo Games.Common.Variable
-		/// @DnDVersion : 1
-		/// @DnDHash : 6EB6846E
-		/// @DnDParent : 3A60C75B
-		/// @DnDArgument : "expr" "number"
-		/// @DnDArgument : "var" "text"
-		text = number;
-	
-		/// @DnDAction : YoYo Games.Common.Variable
-		/// @DnDVersion : 1
-		/// @DnDHash : 37560259
-		/// @DnDParent : 3A60C75B
-		/// @DnDArgument : "expr" "global.die_graph_array[number - 1].node_face"
-		/// @DnDArgument : "var" "face"
-		face = global.die_graph_array[number - 1].node_face;
+		/// @DnDArgument : "var" "obj_Encounter_Manager.state"
+		/// @DnDArgument : "not" "1"
+		/// @DnDArgument : "value" "STATES.PLAYER_ENEMY_SELECT"
+		if(!(obj_Encounter_Manager.state == STATES.PLAYER_ENEMY_SELECT))
+		{
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 1D7D7440
+			/// @DnDParent : 6C0AF529
+			/// @DnDArgument : "expr" "number"
+			/// @DnDArgument : "var" "global.current_player_face_number"
+			global.current_player_face_number = number;
+		
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 78533A31
+			/// @DnDParent : 6C0AF529
+			/// @DnDArgument : "expr" "get_adjacent_player_faces()[2]"
+			/// @DnDArgument : "var" "number"
+			number = get_adjacent_player_faces()[2];
+		
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 6EB6846E
+			/// @DnDParent : 6C0AF529
+			/// @DnDArgument : "expr" "number"
+			/// @DnDArgument : "var" "text"
+			text = number;
+		
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 37560259
+			/// @DnDParent : 6C0AF529
+			/// @DnDArgument : "expr" "global.die_graph_array[number - 1].node_face"
+			/// @DnDArgument : "var" "face"
+			face = global.die_graph_array[number - 1].node_face;
+		}
 	}
 }
