@@ -1,14 +1,22 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-global.die_graph_array = array_create(20, new Face_Node(1));
+global.die_graph_array = array_create(20);
 global.current_player_face = 1;
+
 	
 for (i = 0; i < 20; i++) {
 	die_graph_array[i] = new Face_Node(i + 1);
+	
+}
+global.new_node = die_graph_array[0];
+for (i = 0; i < 20; i++) {
+	new_node = die_graph_array[i];
+	instance_create_layer(i, i, layer_get_id("Instances"), global.new_node);
+	show_debug_message("added " + string(new_node));
 }
 	
-die_graph_array[0].adjacent_nodes = [7, 13, 19];			
-die_graph_array[1].adjacent_nodes = [12, 18, 20];			
+die_graph_array[0].adjacent_nodes = [7, 13, 19];
+die_graph_array[1].adjacent_nodes = [12, 18, 20];
 die_graph_array[2].adjacent_nodes = [16, 17, 19];			
 die_graph_array[3].adjacent_nodes = [11, 14, 18];			
 die_graph_array[4].adjacent_nodes = [13, 15, 18];			
