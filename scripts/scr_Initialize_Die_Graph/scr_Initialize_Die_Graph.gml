@@ -29,7 +29,6 @@ die_graph_array[18].adjacent_nodes = [1, 3, 9];
 die_graph_array[19].adjacent_nodes = [2, 8, 14];
 
 die_graph_array[0].node_face = obj_face_Strike;
-show_debug_message("face 1 has " + string(die_graph_array[0]));
 die_graph_array[1].node_face = obj_face_Strike;
 die_graph_array[2].node_face = obj_face_Strike;
 die_graph_array[3].node_face = obj_face_Strike;

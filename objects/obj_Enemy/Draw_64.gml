@@ -66,13 +66,13 @@ if(incoming_hit_value > 0 or incoming_block_value > 0)
 	/// @DnDVersion : 1
 	/// @DnDHash : 13BD04A8
 	/// @DnDParent : 4C560659
-	/// @DnDArgument : "x" "sprite_width/2.5"
+	/// @DnDArgument : "x" "-sprite_width/2.5"
 	/// @DnDArgument : "x_relative" "1"
-	/// @DnDArgument : "y" "sprite_width/1.5"
+	/// @DnDArgument : "y" "sprite_width/2.5"
 	/// @DnDArgument : "y_relative" "1"
 	/// @DnDArgument : "caption" ""
 	/// @DnDArgument : "var" ""Incoming: ""
-	draw_text(x + sprite_width/2.5, y + sprite_width/1.5,  + string("Incoming: "));
+	draw_text(x + -sprite_width/2.5, y + sprite_width/2.5,  + string("Incoming: "));
 }
 
 /// @DnDAction : YoYo Games.Common.If_Variable
@@ -86,15 +86,15 @@ if(incoming_hit_value > 0)
 	/// @DnDVersion : 1
 	/// @DnDHash : 38D4CF7B
 	/// @DnDParent : 61E5222D
-	/// @DnDArgument : "x" "sprite_width/3.5"
+	/// @DnDArgument : "x" "sprite_width/-8"
 	/// @DnDArgument : "x_relative" "1"
-	/// @DnDArgument : "y" "sprite_height/1.5"
+	/// @DnDArgument : "y" "sprite_height/3.5"
 	/// @DnDArgument : "y_relative" "1"
-	/// @DnDArgument : "xscale" "0.15"
-	/// @DnDArgument : "yscale" "0.15"
+	/// @DnDArgument : "xscale" "0.1"
+	/// @DnDArgument : "yscale" "0.1"
 	/// @DnDArgument : "sprite" "spr_hit_tag_icon"
 	/// @DnDSaveInfo : "sprite" "spr_hit_tag_icon"
-	draw_sprite_ext(spr_hit_tag_icon, 0, x + sprite_width/3.5, y + sprite_height/1.5, 0.15, 0.15, 0, $FFFFFF & $ffffff, 1);
+	draw_sprite_ext(spr_hit_tag_icon, 0, x + sprite_width/-8, y + sprite_height/3.5, 0.1, 0.1, 0, $FFFFFF & $ffffff, 1);
 
 	/// @DnDAction : YoYo Games.Drawing.Set_Color
 	/// @DnDVersion : 1
@@ -109,13 +109,13 @@ if(incoming_hit_value > 0)
 	/// @DnDVersion : 1
 	/// @DnDHash : 6784028C
 	/// @DnDParent : 61E5222D
-	/// @DnDArgument : "x" "sprite_height/4.25"
+	/// @DnDArgument : "x" "sprite_height/12"
 	/// @DnDArgument : "x_relative" "1"
-	/// @DnDArgument : "y" "sprite_height/1.5"
+	/// @DnDArgument : "y" "sprite_height/2.5"
 	/// @DnDArgument : "y_relative" "1"
 	/// @DnDArgument : "caption" ""
 	/// @DnDArgument : "var" "incoming_hit_value"
-	draw_text(x + sprite_height/4.25, y + sprite_height/1.5,  + string(incoming_hit_value));
+	draw_text(x + sprite_height/12, y + sprite_height/2.5,  + string(incoming_hit_value));
 }
 
 /// @DnDAction : YoYo Games.Common.If_Variable
