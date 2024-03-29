@@ -50,6 +50,14 @@ function activate_button()
 			/// @DnDArgument : "function" "parse_face"
 			/// @DnDArgument : "arg" "obj_Encounter_Manager.selected_face"
 			parse_face(obj_Encounter_Manager.selected_face);
+		
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 55683D54
+			/// @DnDParent : 1CA95418
+			/// @DnDArgument : "expr" "number"
+			/// @DnDArgument : "var" "global.current_player_face_number"
+			global.current_player_face_number = number;
 		}
 	}
 }
