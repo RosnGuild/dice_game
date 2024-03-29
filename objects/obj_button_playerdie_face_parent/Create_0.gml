@@ -1,9 +1,9 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 7DF72DB5
-/// @DnDArgument : "expr" "get_current_player_face_number()"
+/// @DnDArgument : "expr" "number"
 /// @DnDArgument : "var" "text"
-text = get_current_player_face_number();
+text = number;
 
 /// @DnDAction : YoYo Games.Common.Function
 /// @DnDVersion : 1
@@ -29,7 +29,7 @@ function activate_button()
 		{
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
-			/// @DnDHash : 04693B3D
+			/// @DnDHash : 25385AE2
 			/// @DnDParent : 1CA95418
 			/// @DnDArgument : "expr" "global.die_graph_array[text - 1].node_face"
 			/// @DnDArgument : "var" "face"

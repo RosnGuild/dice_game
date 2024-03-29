@@ -1,9 +1,9 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 7DF72DB5
-/// @DnDArgument : "expr" "get_current_player_face_number()"
+/// @DnDArgument : "expr" "number"
 /// @DnDArgument : "var" "text"
-text = get_current_player_face_number();
+text = number;
 
 /// @DnDAction : YoYo Games.Common.Function
 /// @DnDVersion : 1

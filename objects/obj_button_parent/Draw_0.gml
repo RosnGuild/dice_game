@@ -34,9 +34,3 @@ draw_set_valign(fa_middle);
 /// @DnDArgument : "caption" ""
 /// @DnDArgument : "var" "text"
 draw_text(x + 0, y + 0,  + string(text));
-
-/// @DnDAction : YoYo Games.Drawing.Set_Alignment
-/// @DnDVersion : 1.1
-/// @DnDHash : 0B5C100B
-draw_set_halign(fa_left);
-draw_set_valign(fa_top);

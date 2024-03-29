@@ -6,7 +6,9 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":true,},
   ],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_button_playerdie_face_parent","path":"objects/obj_button_playerdie_face_parent/obj_button_playerdie_face_parent.yy",},"propertyId":{"name":"number","path":"objects/obj_button_playerdie_face_parent/obj_button_playerdie_face_parent.yy",},"value":"get_adjacent_player_faces()[1]",},
+  ],
   "parent": {
     "name": "UI",
     "path": "folders/Objects/UI.yy",
@@ -28,9 +30,7 @@
   "physicsShape": 1,
   "physicsShapePoints": [],
   "physicsStartAwake": true,
-  "properties": [
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"face","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":5,},
-  ],
+  "properties": [],
   "solid": false,
   "spriteId": {
     "name": "spr_scuffed_triangle_yellow",
