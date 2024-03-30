@@ -5,7 +5,7 @@ function end_turn_script() {
 		
 		hit_handler(current_enemy);
 		clear_block(current_enemy);
-		
+		// entity do thing
 	}
 }
 
