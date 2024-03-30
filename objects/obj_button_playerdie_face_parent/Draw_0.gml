@@ -10,5 +10,5 @@ event_inherited();
 /// @DnDArgument : "y" "sprite_height / 6"
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "caption" ""
-/// @DnDArgument : "var" "global.move_data[face.face_move][movedata_NAME]"
-draw_text(x + 0, y + sprite_height / 6,  + string(global.move_data[face.face_move][movedata_NAME]));
+/// @DnDArgument : "var" "face.face_move"
+draw_text(x + 0, y + sprite_height / 6,  + string(face.face_move));

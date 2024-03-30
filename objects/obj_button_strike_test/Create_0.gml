@@ -36,9 +36,9 @@ function activate_button()
 		/// @DnDVersion : 1
 		/// @DnDHash : 047FDF4C
 		/// @DnDParent : 48463E3E
-		/// @DnDArgument : "expr" "obj_face_Strike"
+		/// @DnDArgument : "expr" "face"
 		/// @DnDArgument : "var" "obj_Encounter_Manager.selected_face"
-		obj_Encounter_Manager.selected_face = obj_face_Strike;
+		obj_Encounter_Manager.selected_face = face;
 	
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
