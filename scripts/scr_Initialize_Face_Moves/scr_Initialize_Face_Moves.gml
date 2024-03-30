@@ -82,5 +82,11 @@ function move_get_target_tags(_name) {
 /// @param {string}	_name	The name of the move.
 /// @description			Returns a struct of the move's tags to be done to self.
 function move_get_self_tags(_name) {
+	show_debug_message(ds_map_find_value(global.move_data_alternative, _name));
+	show_debug_message(array_length(ds_map_find_value(global.move_data_alternative, _name)));
+	show_debug_message(ds_map_find_value(global.move_data_alternative, _name)[0]);
+	show_debug_message(ds_map_find_value(global.move_data_alternative, _name)[1]);
+	show_debug_message(ds_map_find_value(global.move_data_alternative, _name)[2]);
+	show_debug_message(ds_map_find_value(global.move_data_alternative, _name)[move_SELF_TAGS]);
 	return ds_map_find_value(global.move_data_alternative, _name)[move_SELF_TAGS];
 }
