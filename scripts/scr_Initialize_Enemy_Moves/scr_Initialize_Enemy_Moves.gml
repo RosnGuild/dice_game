@@ -33,3 +33,4 @@ global.enemy_move_data =
 		[0,		0,		false,	"Inflicts [Burned 1]"],		// Imp 4
     ]
 ]
+
