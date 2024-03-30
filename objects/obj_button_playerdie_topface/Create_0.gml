@@ -8,6 +8,7 @@ text = number;
 /// @DnDAction : YoYo Games.Common.Function
 /// @DnDVersion : 1
 /// @DnDHash : 1ECF9115
+/// @DnDComment : there is no functionality for this button$(13_10)because the nothing should happen when clicked,$(13_10)there are also no sprite changes in other events
 /// @DnDArgument : "funcName" "activate_button"
 function activate_button() 
 {
