@@ -1,15 +1,5 @@
-// Creates a globally accessible 2D array that stores all player move data. 
-// Access a move and it's components with global.move_data[moveid_NAME][movedata_NAME/HIT/BLOCK].
-
-
-// Move definitions
-#macro moveid_STRIKE 0
-#macro moveid_BLOCK 1
-
-// Use these to index into a move entry to get its components.`
-#macro movedata_NAME 0
-#macro movedata_HIT 1
-#macro movedata_BLOCK 2
+// Creates a globally accessible map that stores all player move data. 
+// Access a move and its components with ds_map_find_value(global.move_data, "move name")[movedata_DATA].
 
 // Tag definitions. 
 #macro BASE_BLOCK 5
@@ -21,20 +11,13 @@
 #macro RARE_BLOCK 3 * BASE_BLOCK
 #macro RARE_STRIKE 3 * BASE_HIT
 
-global.move_data = 
-[	//Name		Hit			Blk
-    ["Strike",	BASE_HIT,	0],
-    ["Block",	0,			BASE_BLOCK],
-    // ...and so on.
-]
-
 //---
 // Map and struct-based implementation of the move database. Accessed with ds_map_find_value(global.move_data_alternative, [move name string]
 
 // Use these to index into the list that each move name maps to.
-#macro move_RARITY 0
-#macro move_TARGET_TAGS 1
-#macro move_SELF_TAGS 2
+#macro movedata_RARITY 0
+#macro movedata_TARGET_TAGS 1
+#macro movedata_SELF_TAGS 2
 
 // Use these as keys in a move struct to get its tags.
 #macro tag_HIT "hit"
@@ -48,16 +31,16 @@ enum RARITY {
 	LEGENDARY
 };
 
-global.move_data_alternative = ds_map_create(); // Creates the globally accessible move map.
+global.move_data = ds_map_create(); // Creates the globally accessible move map.
 
-/// @function						move_create(_name, _target_tags, _self_tags);
+/// @function						move_create(_name, _rarity, _target_tags, _self_tags);
 /// @param {string}	_name			The name of the move.
 /// @param {string}	_rarity			The move's rarity.
 /// @param {struct}	_target_tags	Tags to be applied to a target.
 /// @param {struct}	_self_tags		Tags to be applied to the self.
 /// @description					Adds a new move to the global.move_data database.
 function move_create(_name, _rarity, _target_tags, _self_tags = {}) {
-	ds_map_add(global.move_data_alternative, _name, [_rarity, _target_tags, _self_tags]);
+	ds_map_add(global.move_data, _name, [_rarity, _target_tags, _self_tags]);
 }
 
 move_create("Strike", RARITY.COMMON, {tag_HIT : BASE_HIT});
@@ -68,27 +51,29 @@ move_create("Block", RARITY.COMMON, {}, {tag_BLOCK : BASE_BLOCK});
 /// @param {string}	_name	The name of the move.
 /// @description			Returns the rarity of a move. 0 being Common, 1 being Uncommon, etc.
 function move_get_rarity(_name) {
-	return ds_map_find_value(global.move_data_alternative, _name)[move_RARITY];
+	return ds_map_find_value(global.move_data, _name)[movedata_RARITY];
 }
 
-/// @function				move_get_target_tags(_name);
-/// @param {string}	_name	The name of the move.
-/// @description			Returns a struct of the move's tags to be done to a target.
-function move_get_target_tags(_name) {
-	return ds_map_find_value(global.move_data_alternative, _name)[move_TARGET_TAGS];
+/// @function							move_get_target_tags(_name);
+/// @param {string}	_name				Name of the move (or enemy).
+/// @param {real}	_enemy_dice_roll	Optional: Dice value rolled by enemy.
+/// @description						Returns a struct of the move's tags to be done to a target.
+function move_get_target_tags(_name, _enemy_dice_roll = undefined) {
+	if (_enemy_dice_roll != undefined) {
+	    return array_get(global.enemy_move_data[? _name][? _enemy_dice_roll], 0);
+	}
+	
+	return ds_map_find_value(global.move_data, _name)[movedata_TARGET_TAGS];
 }
 
-/// @function				move_get_self_tags(_name);
-/// @param {string}	_name	The name of the move.
-/// @description			Returns a struct of the move's tags to be done to self.
-function move_get_self_tags(_name) {
-	show_debug_message("Parsing Tag Array: {0}", ds_map_find_value(global.move_data_alternative, _name));
-	show_debug_message(array_length(ds_map_find_value(global.move_data_alternative, _name)));
-	show_debug_message(typeof(ds_map_find_value(global.move_data_alternative, _name)));
-	show_debug_message(array_get(ds_map_find_value(global.move_data_alternative, _name), 1));
-	show_debug_message(ds_map_find_value(global.move_data_alternative, _name)[0]);
-	show_debug_message(ds_map_find_value(global.move_data_alternative, _name)[1]);
-	show_debug_message(ds_map_find_value(global.move_data_alternative, _name)[2]);
-	show_debug_message(ds_map_find_value(global.move_data_alternative, _name)[move_SELF_TAGS]);
-	return ds_map_find_value(global.move_data_alternative, _name)[move_SELF_TAGS];
+/// @function							move_get_self_tags(_name);
+/// @param {string}	_name				The name of the move (or enemy).
+/// @param {real}	_enemy_dice_roll	Optional: Dice value rolled by enemy.
+/// @description						Returns a struct of the move's tags to be done to self.
+function move_get_self_tags(_name, _enemy_dice_roll = undefined) {
+	if (_enemy_dice_roll != undefined) {
+	    return array_get(global.enemy_move_data[? _name][? _enemy_dice_roll], 1);
+	}
+	
+	return ds_map_find_value(global.move_data, _name)[movedata_SELF_TAGS];
 }

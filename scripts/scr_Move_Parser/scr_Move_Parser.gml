@@ -1,11 +1,12 @@
-/// @function				parse_move(_move, _actor, _target);
-/// @param {any}	_move	The name of the move.
-/// @param {any}	_self	The entity performing the move.
-/// @param {any}	_target	The entity targeted by the move.
-/// @description			Processes a given move, causing involved entities to recieve the move's effects.
-function parse_move(_move, _self, _target = undefined){
-	var _self_tags = move_get_self_tags(_move);
-	var _target_tags = move_get_target_tags(_move);
+/// @function							parse_move(_move, _actor, _target, _enemy_dice_roll);
+/// @param {any}	_move				The name of the move.
+/// @param {any}	_self				The entity performing the move.
+/// @param {any}	_target				Optional: The entity targeted by the move.
+/// @param {any}	_enemy_dice_roll	Optional: Dice value rolled by enemy.
+/// @description						Processes a given move, causing involved entities to recieve the move's effects.
+function parse_move(_move, _self, _target = undefined, _enemy_dice_roll = undefined){
+	var _self_tags = move_get_self_tags(_move, _enemy_dice_roll);
+	var _target_tags = move_get_target_tags(_move, _enemy_dice_roll);
 	
 	scr_parse_move_helper(_self, _self_tags);
 	if (_target != undefined) {
