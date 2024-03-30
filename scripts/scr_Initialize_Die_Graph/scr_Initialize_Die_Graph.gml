@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 global.die_graph_array = array_create(20);
 global.current_player_face_number = 1;
+global.pending_player_face_number = 1;
 	
 for (i = 0; i < 20; i++) {
 	global.die_graph_array[i] = new Face_Node(i + 1);

@@ -11,6 +11,8 @@ function parse_move(_move, _self, _target = undefined){
 	if (_target != undefined) {
 		scr_parse_move_helper(_target, _target_tags);
 	}
+	
+	update_current_face_number();
 }
 
 /// @function				scr_parse_move_helper(_entity, _tags);

@@ -27,6 +27,14 @@ function activate_button()
 		/// @DnDArgument : "var" "obj_Encounter_Manager.selected_face"
 		obj_Encounter_Manager.selected_face = face;
 	
+		/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 7CB0D07C
+		/// @DnDParent : 3A60C75B
+		/// @DnDArgument : "expr" "number"
+		/// @DnDArgument : "var" "global.pending_player_face_number"
+		global.pending_player_face_number = number;
+	
 		/// @DnDAction : YoYo Games.Common.Function_Call
 		/// @DnDVersion : 1
 		/// @DnDHash : 68640CE6
@@ -34,45 +42,5 @@ function activate_button()
 		/// @DnDArgument : "function" "parse_face"
 		/// @DnDArgument : "arg" "obj_Encounter_Manager.selected_face"
 		parse_face(obj_Encounter_Manager.selected_face);
-	
-		/// @DnDAction : YoYo Games.Common.If_Variable
-		/// @DnDVersion : 1
-		/// @DnDHash : 5D8DD6F3
-		/// @DnDDisabled : 1
-		/// @DnDParent : 3A60C75B
-		/// @DnDArgument : "var" "obj_Encounter_Manager.state"
-		/// @DnDArgument : "not" "1"
-		/// @DnDArgument : "value" "STATES.PLAYER_ENEMY_SELECT"
-		/// @DnDAction : YoYo Games.Common.Variable
-		/// @DnDVersion : 1
-		/// @DnDHash : 7CB0D07C
-		/// @DnDParent : 5D8DD6F3
-		/// @DnDArgument : "expr" "number"
-		/// @DnDArgument : "var" "global.current_player_face_number"
-		global.current_player_face_number = number;
-		
-		/// @DnDAction : YoYo Games.Common.Variable
-		/// @DnDVersion : 1
-		/// @DnDHash : 46A140B8
-		/// @DnDParent : 5D8DD6F3
-		/// @DnDArgument : "expr" "get_adjacent_player_faces()[0]"
-		/// @DnDArgument : "var" "number"
-		number = get_adjacent_player_faces()[0];
-		
-		/// @DnDAction : YoYo Games.Common.Variable
-		/// @DnDVersion : 1
-		/// @DnDHash : 12B25ACC
-		/// @DnDParent : 5D8DD6F3
-		/// @DnDArgument : "expr" "number"
-		/// @DnDArgument : "var" "text"
-		text = number;
-		
-		/// @DnDAction : YoYo Games.Common.Variable
-		/// @DnDVersion : 1
-		/// @DnDHash : 62DC95E8
-		/// @DnDParent : 5D8DD6F3
-		/// @DnDArgument : "expr" "global.die_graph_array[number - 1].node_face"
-		/// @DnDArgument : "var" "face"
-		face = global.die_graph_array[number - 1].node_face;
 	}
 }

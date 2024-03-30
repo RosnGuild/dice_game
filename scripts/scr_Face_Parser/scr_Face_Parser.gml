@@ -12,7 +12,8 @@ function parse_face(_face){
 	if(struct_names_count(move_get_target_tags(_move)) > 0) {
 		obj_Encounter_Manager.state = STATES.PLAYER_ENEMY_SELECT;
 	} else {
-		parse_move(_move, obj_Player)
+		parse_move(_move, obj_Player);
+		//update_current_face_number();
 	}
 	//update face
 	//set cooldown info
