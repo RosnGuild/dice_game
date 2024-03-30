@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 if (obj_Encounter_Manager.state == STATES.PLAYER_ENEMY_SELECT) {
-	apply_hit(id, global.move_data[obj_Encounter_Manager.selected_face.face_move][movedata_HIT]);
+	parse_move(obj_Encounter_Manager.selected_face.face_move, instance_find(obj_Player, 0), id);
 	
 	obj_Encounter_Manager.state = STATES.PLAYER_MOVE_CHOICE;
 }
