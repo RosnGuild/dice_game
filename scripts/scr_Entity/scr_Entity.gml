@@ -1,9 +1,10 @@
 // Functions for working with entities.
 function take_damage(_entity_id, _damage_value){
-	
-	_damage_value = max(_damage_value - _entity_id.status_block_value, 0);
-	_entity_id.current_hp -= _damage_value;
-	check_death(_entity_id);
+	if (variable_instance_exists(_entity_id, "current_hp")) {
+		_damage_value = max(_damage_value - _entity_id.status_block_value, 0);
+		_entity_id.current_hp -= _damage_value;
+		check_death(_entity_id);
+	}
 }
 
 // Checks if an entity is dead.
