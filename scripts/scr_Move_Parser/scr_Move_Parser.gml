@@ -1,6 +1,6 @@
 /// @function							parse_move(_move, _actor, _target, _enemy_dice_roll);
-/// @param {any}	_move				The name of the move.
-/// @param {any}	_self				The entity performing the move.
+/// @param {any}	_move				The name of the move (or enemy).
+/// @param {any}	_self				id of the entity performing the move.
 /// @param {any}	_target				Optional: The entity targeted by the move.
 /// @param {any}	_enemy_dice_roll	Optional: Dice value rolled by enemy.
 /// @description						Processes a given move, causing involved entities to recieve the move's effects.
