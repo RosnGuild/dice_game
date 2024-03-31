@@ -10,6 +10,9 @@ function end_turn_script() {
 		show_debug_message("An enemy is going to {0} to itself", move_get_self_tags(current_enemy.name, _move_num));
 		show_debug_message("An enemy is going to {0} you ", move_get_target_tags(current_enemy.name, _move_num));
 		parse_move(current_enemy.name, current_enemy, obj_Player, _move_num);
-		clear_block(instance_find(obj_Player, 0));
+		
+		if (layer_has_instance("Instances", instance_find(obj_Player, 0))) {
+			clear_block(instance_find(obj_Player, 0));
+		}
 	}
 }
