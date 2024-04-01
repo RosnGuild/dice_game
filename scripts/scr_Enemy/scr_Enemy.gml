@@ -11,7 +11,7 @@ function enemy_choose_move(_enemy_name, _move_num){
 /// @function					enemy_generate_move_number(_enemy_name, _move_num);
 /// @param {string}	_enemy_name	The name of the enemy.
 /// @param {real}	_n			Optional: Modifier to the roll.
-/// @description				Returns a random move number from an enemy's move_list, optionally modified by an added number n. HELPER FUNCTION FOR choose_move().
+/// @description				Returns a random move number from an enemy's move_list, optionally modified by an added number n.
 function enemy_generate_move_number(_enemy_name, _n = 0){
 	num_moves = ds_map_size(global.enemy_move_data[? _enemy_name]);
 	

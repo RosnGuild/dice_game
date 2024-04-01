@@ -1,7 +1,9 @@
 // Functions for working with entities.
-function take_damage(_entity_id, _damage_value){
+function take_damage(_entity_id, _damage_value, _ignore_block = false){
 	if (variable_instance_exists(_entity_id, "current_hp")) {
-		_damage_value = max(_damage_value - _entity_id.status_block_value, 0);
+		if (_ignore_block == false) {
+			_damage_value = max(_damage_value - _entity_id.status_block_value, 0);
+		}
 		_entity_id.current_hp -= _damage_value;
 		check_death(_entity_id);
 	}
@@ -33,4 +35,12 @@ function add_block(_entity_id, _block_value) {
 // Resets block on an entity at the end of the round.
 function clear_block(_entity_id) {
 	_entity_id.status_block_value = 0;
+}
+
+function add_burn(_entity_id, _burn_value) {
+	_entity_id.status_burn_value += _burn_value;
+}
+
+function decrement_status(_entity_id, _status_name) {
+	_status_name = max(_status_name - 1, 0);
 }

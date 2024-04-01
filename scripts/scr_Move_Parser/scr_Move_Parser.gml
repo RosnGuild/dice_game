@@ -14,6 +14,12 @@ function parse_move(_move, _self, _target = undefined, _enemy_dice_roll = undefi
 	}
 	
 	update_current_face_number();
+	take_damage(_self, _self.status_burn_value, true);
+	show_debug_message("HAS TAKEN BURN!")
+	
+	if (instance_exists(_self)) {
+		decrement_status(_self, _self.status_burn_value);
+	}
 }
 
 /// @function				scr_parse_move_helper(_entity, _tags);
@@ -30,10 +36,16 @@ function scr_parse_move_helper(_entity, _tags){
 			case tag_BLOCK:
 				add_block(_entity, _tags[$ keys[i]]);
 				break;
+			case tag_BURN:
+				add_burn(_entity, _tags[$ keys[i]]);
+				break;
+			case tag_BOLSTER_SAME:
+				
+				break;
 		    default:
 		        // code here
 				show_debug_message("ERROR: Attempted to parse tag that doesn't exist!");
-				game_end();
+				//game_end();
 		        break;
 		}
 	}

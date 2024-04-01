@@ -38,6 +38,6 @@ enemy_move_create("Imp", 4, {tag_BURN : 1});
 
 show_debug_message("FUCK: {0}", global.enemy_move_data);
 show_debug_message("HEY SHITASS: {0}", global.enemy_move_data[? "Imp"]);
-show_debug_message("HEY SHITASS: {0}", global.enemy_move_data[? "Imp"][? 1]);
+show_debug_message("HEY SHITASS: {0}", global.enemy_move_data[? "Imp"][? 1]); //this one
 show_debug_message("HEY SHITASS: {0}", array_get(global.enemy_move_data[? "Imp"][? 1], 0));
 show_debug_message("HEY SHITASS: {0}", array_get(global.enemy_move_data[? "Imp"][? 1], 1));
