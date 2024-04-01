@@ -23,11 +23,18 @@ function parse_move(_move, _self, _target = undefined, _enemy_dice_roll = undefi
 function scr_parse_move_helper(_entity, _tags){
 	keys = struct_get_names(_tags);
 	for (var i = 0; i < struct_names_count(_tags); i++) {
-		if(keys[i] == tag_HIT) {
-			take_damage(_entity, _tags[$ keys[i]]);
-		}
-		if(keys[i] == tag_BLOCK) {
-			add_block(_entity, _tags[$ keys[i]]);
+		switch (keys[i]) {
+		    case tag_HIT:
+		        take_damage(_entity, _tags[$ keys[i]]);
+		        break;
+			case tag_BLOCK:
+				add_block(_entity, _tags[$ keys[i]]);
+				break;
+		    default:
+		        // code here
+				show_debug_message("ERROR: Attempted to parse tag that doesn't exist!");
+				game_end();
+		        break;
 		}
 	}
 }
