@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "Die Graph Scripts",
+    "path": "folders/Scripts/Die Graph Scripts.yy",
   },
 }
