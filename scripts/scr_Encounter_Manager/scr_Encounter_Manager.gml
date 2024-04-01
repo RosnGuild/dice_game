@@ -7,9 +7,9 @@ function end_turn_script() {
 		clear_block(current_enemy);
 		current_enemy.move_number = enemy_generate_move_number(current_enemy.name);
 		//var _move = enemy_choose_move(current_enemy.name, _move_num);
-		show_debug_message("An enemy is going to {0} to itself", move_get_self_tags(current_enemy.name, _move_num));
-		show_debug_message("An enemy is going to {0} you ", move_get_target_tags(current_enemy.name, _move_num));
-		parse_move(current_enemy.name, current_enemy, obj_Player, _move_num);
+		show_debug_message("An enemy is going to {0} itself", move_get_self_tags(current_enemy.name, current_enemy.move_number));
+		show_debug_message("An enemy is going to {0} you ", move_get_target_tags(current_enemy.name, current_enemy.move_number));
+		parse_move(current_enemy.name, current_enemy, obj_Player, current_enemy.move_number);
 	}
 	
 	if (layer_has_instance("Instances", instance_find(obj_Player, 0))) {
