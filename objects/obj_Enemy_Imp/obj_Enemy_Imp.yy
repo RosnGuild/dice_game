@@ -1,12 +1,9 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_Enemy",
+  "name": "obj_Enemy_Imp",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":true,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":true,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":6,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":true,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -15,8 +12,8 @@
     "path": "folders/Objects/Entities.yy",
   },
   "parentObjectId": {
-    "name": "obj_Entity",
-    "path": "objects/obj_Entity/obj_Entity.yy",
+    "name": "obj_Enemy",
+    "path": "objects/obj_Enemy/obj_Enemy.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -31,11 +28,12 @@
   "physicsShape": 1,
   "physicsShapePoints": [],
   "physicsStartAwake": true,
-  "properties": [
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"move_list","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":4,},
-  ],
-  "solid": false,
-  "spriteId": null,
+  "properties": [],
+  "solid": true,
+  "spriteId": {
+    "name": "spr_scuffed_red_to_grey_square",
+    "path": "sprites/spr_scuffed_red_to_grey_square/spr_scuffed_red_to_grey_square.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

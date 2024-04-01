@@ -1,19 +1,19 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_Enemy_Test",
+  "name": "obj_button_goto_battleroom",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":true,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Entities",
-    "path": "folders/Objects/Entities.yy",
+    "name": "UI",
+    "path": "folders/Objects/UI.yy",
   },
   "parentObjectId": {
-    "name": "obj_Enemy",
-    "path": "objects/obj_Enemy/obj_Enemy.yy",
+    "name": "obj_button_parent",
+    "path": "objects/obj_button_parent/obj_button_parent.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -29,10 +29,10 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [],
-  "solid": true,
+  "solid": false,
   "spriteId": {
-    "name": "spr_scuffed_red_to_grey_square",
-    "path": "sprites/spr_scuffed_red_to_grey_square/spr_scuffed_red_to_grey_square.yy",
+    "name": "spr_button_nine_slice_GUI_Buttons_Visual_Base",
+    "path": "sprites/spr_button_nine_slice_GUI_Buttons_Visual_Base/spr_button_nine_slice_GUI_Buttons_Visual_Base.yy",
   },
   "spriteMaskId": null,
   "visible": true,

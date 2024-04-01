@@ -4,6 +4,7 @@
 // Enemy definitions
 #macro enemyid_IMP "Imp"
 #macro enemyid_ZOMBIE "Zombie"
+#macro enemyid_DUMMY "Dummy"
 
 // Use these to index into the list that each move name maps to.
 #macro enemymovedata_TARGET_TAGS 0
@@ -41,3 +42,6 @@ show_debug_message("HEY SHITASS: {0}", global.enemy_move_data[? "Imp"]);
 show_debug_message("HEY SHITASS: {0}", global.enemy_move_data[? "Imp"][? 1]); //this one
 show_debug_message("HEY SHITASS: {0}", array_get(global.enemy_move_data[? "Imp"][? 1], 0));
 show_debug_message("HEY SHITASS: {0}", array_get(global.enemy_move_data[? "Imp"][? 1], 1));
+
+//Dummy
+enemy_move_create("Dummy", 1, {});

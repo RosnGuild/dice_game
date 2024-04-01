@@ -56,6 +56,6 @@ function activate_button()
 		/// @DnDArgument : "function" "add_block"
 		/// @DnDArgument : "arg" "obj_Enemy_Test"
 		/// @DnDArgument : "arg_1" " global.move_data[obj_Encounter_Manager.selected_face.face_move][movedata_BLOCK]"
-		add_block(obj_Enemy_Test,  global.move_data[obj_Encounter_Manager.selected_face.face_move][movedata_BLOCK]);
+		add_block(obj_Enemy_Imp,  global.move_data[obj_Encounter_Manager.selected_face.face_move][movedata_BLOCK]);
 	}
 }
