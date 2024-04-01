@@ -34,8 +34,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_scuffed_triangle_yellow",
-    "path": "sprites/spr_scuffed_triangle_yellow/spr_scuffed_triangle_yellow.yy",
+    "name": "spr_d20_rightface",
+    "path": "sprites/spr_d20_rightface/spr_d20_rightface.yy",
   },
   "spriteMaskId": null,
   "visible": true,

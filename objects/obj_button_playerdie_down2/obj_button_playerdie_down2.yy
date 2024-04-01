@@ -1,14 +1,14 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_button_playerdie_up0",
+  "name": "obj_button_playerdie_down2",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":true,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":true,},
   ],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_button_playerdie_face_parent","path":"objects/obj_button_playerdie_face_parent/obj_button_playerdie_face_parent.yy",},"propertyId":{"name":"number","path":"objects/obj_button_playerdie_face_parent/obj_button_playerdie_face_parent.yy",},"value":"get_adjacent_player_faces()[0]",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_button_playerdie_face_parent","path":"objects/obj_button_playerdie_face_parent/obj_button_playerdie_face_parent.yy",},"propertyId":{"name":"number","path":"objects/obj_button_playerdie_face_parent/obj_button_playerdie_face_parent.yy",},"value":"get_adjacent_player_faces()[2]",},
   ],
   "parent": {
     "name": "UI",
@@ -34,8 +34,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_scuffed_triangle_yellow",
-    "path": "sprites/spr_scuffed_triangle_yellow/spr_scuffed_triangle_yellow.yy",
+    "name": "spr_d20_downface",
+    "path": "sprites/spr_d20_downface/spr_d20_downface.yy",
   },
   "spriteMaskId": null,
   "visible": true,

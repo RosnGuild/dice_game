@@ -35,10 +35,7 @@
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"face","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"global.die_graph_array[number - 1].node_face","varType":5,},
   ],
   "solid": false,
-  "spriteId": {
-    "name": "spr_scuffed_triangle_yellow",
-    "path": "sprites/spr_scuffed_triangle_yellow/spr_scuffed_triangle_yellow.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

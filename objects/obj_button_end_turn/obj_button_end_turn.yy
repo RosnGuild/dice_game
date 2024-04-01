@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_scuffed_triangle_yellow",
-    "path": "sprites/spr_scuffed_triangle_yellow/spr_scuffed_triangle_yellow.yy",
+    "name": "spr_button_nine_slice_GUI_Buttons_Visual_Base",
+    "path": "sprites/spr_button_nine_slice_GUI_Buttons_Visual_Base/spr_button_nine_slice_GUI_Buttons_Visual_Base.yy",
   },
   "spriteMaskId": null,
   "visible": true,

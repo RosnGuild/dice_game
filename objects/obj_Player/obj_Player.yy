@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_scuffed_red_to_grey_square",
-    "path": "sprites/spr_scuffed_red_to_grey_square/spr_scuffed_red_to_grey_square.yy",
+    "name": "spr_d20",
+    "path": "sprites/spr_d20/spr_d20.yy",
   },
   "spriteMaskId": null,
   "visible": true,

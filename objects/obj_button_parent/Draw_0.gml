@@ -29,8 +29,20 @@ draw_set_valign(fa_middle);
 /// @DnDAction : YoYo Games.Drawing.Draw_Value
 /// @DnDVersion : 1
 /// @DnDHash : 523A3CF0
+/// @DnDDisabled : 1
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "caption" ""
 /// @DnDArgument : "var" "text"
-draw_text(x + 0, y + 0,  + string(text));
+
+
+/// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
+/// @DnDVersion : 1
+/// @DnDHash : 6F4DDE90
+/// @DnDArgument : "x_relative" "1"
+/// @DnDArgument : "y_relative" "1"
+/// @DnDArgument : "xscale_relative" "1"
+/// @DnDArgument : "yscale_relative" "1"
+/// @DnDArgument : "caption" ""
+/// @DnDArgument : "text" "text"
+draw_text_transformed(x + 0, y + 0, "" + string(text), image_xscale + 1, image_yscale + 1, 0);
