@@ -32,8 +32,8 @@ function enemy_move_create(_name, _dice_roll, _target_tags, _self_tags = {}) {
 }
 
 // Imp
-enemy_move_create("Imp", 1, {tag_HIT : 2});
-enemy_move_create("Imp", 2, {tag_HIT : 3, tag_REROLL: true});
+enemy_move_create("Imp", 1, {tag_HIT : 6});
+enemy_move_create("Imp", 2, {tag_HIT : 6, tag_REROLL: true});
 enemy_move_create("Imp", 3, {tag_BOLSTER_SAME : true});
 enemy_move_create("Imp", 4, {tag_BURN : 1});
 

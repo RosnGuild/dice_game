@@ -14,5 +14,6 @@ function end_turn_script() {
 	
 	if (layer_has_instance("Instances", instance_find(obj_Player, 0))) {
 		clear_block(instance_find(obj_Player, 0));
+		reset_energy(instance_find(obj_Player, 0));
 	}
 }

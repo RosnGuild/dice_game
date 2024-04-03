@@ -5,6 +5,11 @@
 /// @param {any}	_enemy_dice_roll	Optional: Dice value rolled by enemy.
 /// @description						Processes a given move, causing involved entities to recieve the move's effects.
 function parse_move(_move, _self, _target = undefined, _enemy_dice_roll = undefined){
+	if (_self == obj_Player) {
+		show_debug_message("Decrementing player energy!")
+		decrement_energy(_self);
+	}
+	
 	var _self_tags = move_get_self_tags(_move, _enemy_dice_roll);
 	var _target_tags = move_get_target_tags(_move, _enemy_dice_roll);
 	
@@ -23,7 +28,7 @@ function parse_move(_move, _self, _target = undefined, _enemy_dice_roll = undefi
 }
 
 /// @function				scr_parse_move_helper(_entity, _tags);
-/// @param {string}	_entity	Target of the tags.
+/// @param {ID.Instance}	_entity	Target of the tags.
 /// @param {struct}	_tags	Tags.
 /// @description			Processes a move's tags on a specific entity. HELPER FUNCTION, DO NOT CALL.
 function scr_parse_move_helper(_entity, _tags){

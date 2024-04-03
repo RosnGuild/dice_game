@@ -6,7 +6,11 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":true,},
   ],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},"propertyId":{"name":"current_hp","path":"objects/obj_Entity/obj_Entity.yy",},"value":"13",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},"propertyId":{"name":"max_hp","path":"objects/obj_Entity/obj_Entity.yy",},"value":"13",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},"propertyId":{"name":"name","path":"objects/obj_Entity/obj_Entity.yy",},"value":"Imp",},
+  ],
   "parent": {
     "name": "Entities",
     "path": "folders/Objects/Entities.yy",

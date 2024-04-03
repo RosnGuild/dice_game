@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "Face and Move Scripts",
+    "path": "folders/Scripts/Face and Move Scripts.yy",
   },
 }

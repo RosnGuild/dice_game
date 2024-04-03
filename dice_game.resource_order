@@ -73,7 +73,7 @@
     {"name":"obj_button_goto_battleroom","order":12,"path":"objects/obj_button_goto_battleroom/obj_button_goto_battleroom.yy",},
     {"name":"scr_Initialize_Enemy_Moves","order":2,"path":"scripts/scr_Initialize_Enemy_Moves/scr_Initialize_Enemy_Moves.yy",},
     {"name":"spr_crumpled_paper_rectangle_test","order":17,"path":"sprites/spr_crumpled_paper_rectangle_test/spr_crumpled_paper_rectangle_test.yy",},
-    {"name":"scr_Move_Parser","order":7,"path":"scripts/scr_Move_Parser/scr_Move_Parser.yy",},
+    {"name":"scr_Move_Parser","order":5,"path":"scripts/scr_Move_Parser/scr_Move_Parser.yy",},
     {"name":"spr_scuffed_rectangle_whitefill_blackoutline","order":3,"path":"sprites/spr_scuffed_rectangle_whitefill_blackoutline/spr_scuffed_rectangle_whitefill_blackoutline.yy",},
     {"name":"obj_button_playerdie_left0","order":8,"path":"objects/obj_button_playerdie_left0/obj_button_playerdie_left0.yy",},
     {"name":"obj_button_playerdie_face_parent","order":6,"path":"objects/obj_button_playerdie_face_parent/obj_button_playerdie_face_parent.yy",},
