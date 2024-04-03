@@ -41,6 +41,17 @@ function add_burn(_entity_id, _burn_value) {
 	_entity_id.status_burn_value += _burn_value;
 }
 
+/// @function								decrement_status(_entity_id, _status_name);
+/// @param {Id.Instance}	_entity_id		The name of the enemy.
+/// @param {string}			_status_name	Name of the status.
+/// @description							DOESN'T WORK CURRENTLY. CRASHES THE GAME.
 function decrement_status(_entity_id, _status_name) {
-	_status_name = max(_status_name - 1, 0);
+	_entity_id._status_name = max(_entity_id._status_name - 1, 0);
+}
+
+/// @function								decrement_burn(_entity_id);
+/// @param {Id.Instance}	_entity_id		The name of the enemy.
+/// @description							Decreases given entity's burn value by 1, to a minimum of 0.
+function decrement_burn(_entity_id) {
+	_entity_id.status_burn_value = max(_entity_id.status_burn_value - 1, 0);
 }

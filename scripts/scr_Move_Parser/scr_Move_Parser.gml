@@ -23,7 +23,8 @@ function parse_move(_move, _self, _target = undefined, _enemy_dice_roll = undefi
 	show_debug_message("HAS TAKEN BURN!")
 	
 	if (instance_exists(_self)) {
-		decrement_status(_self, _self.status_burn_value);
+		show_debug_message("THE GUY IS A PLAYEr: {0}", _self == obj_Player)
+		decrement_burn(_self);
 	}
 }
 
