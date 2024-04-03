@@ -6,7 +6,7 @@
 /// @description						Processes a given move, causing involved entities to recieve the move's effects.
 function parse_move(_move, _self, _target = undefined, _enemy_dice_roll = undefined){
 	if (_self == obj_Player) {
-		show_debug_message("Decrementing player energy!")
+		// show_debug_message("Decrementing player energy!")
 		decrement_energy(_self);
 	}
 	
@@ -20,10 +20,9 @@ function parse_move(_move, _self, _target = undefined, _enemy_dice_roll = undefi
 	
 	update_current_face_number();
 	take_damage(_self, _self.status_burn_value, true);
-	show_debug_message("HAS TAKEN BURN!")
+	show_debug_message("HAS {0} TAKEN BURN!", _self.status_burn_value);
 	
 	if (instance_exists(_self)) {
-		show_debug_message("THE GUY IS A PLAYEr: {0}", _self == obj_Player)
 		decrement_burn(_self);
 	}
 }
