@@ -44,13 +44,16 @@ function scr_parse_move_helper(_entity, _tags){
 			case tag_BURN:
 				add_burn(_entity, _tags[$ keys[i]]);
 				break;
-			case tag_BOLSTER_SAME:
+			case tag_BOLSTER_ALLIES:
+				
+				break;
+			case tag_REROLL:
 				
 				break;
 		    default:
 		        // code here
-				show_debug_message("ERROR: Attempted to parse tag that doesn't exist!");
-				//game_end();
+				show_debug_message("ERROR: Attempted to parse tag {0} that doesn't exist!", keys[i]);
+				// game_end();
 		        break;
 		}
 	}
