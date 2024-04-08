@@ -24,3 +24,8 @@ function apply_block(_entity_id) {
 
 // apply_poison()
 // handle_poison()
+
+// PARENT FUNCTION FOR ENEMY AND PLAYER GET DESCRIPTION
+function move_get_description() {
+	
+}
