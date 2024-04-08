@@ -18,4 +18,10 @@ function end_turn_script() {
 		clear_block(instance_find(obj_Player, 0));
 		reset_energy(instance_find(obj_Player, 0));
 	}
+	
+	for (var _i = 0; _i < 20; _i++) {
+		decrement_cooldown(global.die_graph_array[_i]);
+	}
+	
+	
 }

@@ -8,6 +8,7 @@ function parse_move(_move, _self, _target = undefined, _enemy_dice_roll = undefi
 	if (_self == obj_Player) {
 		// show_debug_message("Decrementing player energy!")
 		decrement_energy(_self);
+		trigger_cooldown(obj_Encounter_Manager.selected_face_node, obj_Encounter_Manager.selected_face);
 	}
 	
 	var _self_tags = move_get_self_tags(_move, _enemy_dice_roll);
