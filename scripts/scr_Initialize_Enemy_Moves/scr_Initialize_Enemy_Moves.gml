@@ -12,12 +12,12 @@
 
 // Use these as keys in a move struct to get its tags.
 #macro tag_REROLL "reroll"
-#macro tag_BOLSTER_SAME "bolster_same"
+#macro tag_BOLSTER_ALLIES "bolster_allies"
 #macro tag_BURN "burn"
 
 global.enemy_move_data = ds_map_create(); // Creates the globally accessible enemy move map.
 
-/// @function						move_create(_name, _dice_roll, _target_tags, _self_tags);
+/// @function						enemy_move_create(_name, _dice_roll, _target_tags, _self_tags);
 /// @param {string}	_name			The name of the enemy.
 /// @param {real}	_dice_roll		Dice roll associated with this move.
 /// @param {struct}	_target_tags	Tags to be applied to a target.
@@ -34,7 +34,7 @@ function enemy_move_create(_name, _dice_roll, _target_tags, _self_tags = {}) {
 // Imp
 enemy_move_create("Imp", 1, {tag_HIT : 6});
 enemy_move_create("Imp", 2, {tag_HIT : 6, tag_REROLL: true});
-enemy_move_create("Imp", 3, {tag_BOLSTER_SAME : true});
+enemy_move_create("Imp", 3, {tag_BOLSTER_ALLIES : true});
 enemy_move_create("Imp", 4, {tag_BURN : 1});
 
 show_debug_message("FUCK: {0}", global.enemy_move_data);
@@ -45,4 +45,3 @@ show_debug_message("HEY SHITASS: {0}", array_get(global.enemy_move_data[? "Imp"]
 
 //Dummy
 enemy_move_create("Dummy", 1, {});
-
