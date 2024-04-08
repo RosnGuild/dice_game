@@ -45,3 +45,5 @@ show_debug_message("HEY SHITASS: {0}", array_get(global.enemy_move_data[? "Imp"]
 
 //Dummy
 enemy_move_create("Dummy", 1, {});
+
+show_debug_message("FUCK: " + string(enemy_move_get_description("Imp", 2)));

@@ -35,11 +35,13 @@ function move_get_description() {
 /// @param {real}	_dice_roll		Dice roll associated with this move.
 /// @description					Generates and returns a String describing a move's effects.
 function enemy_move_get_description(_name, _dice_roll) {
-	var _self_tags_string = "";
-	var _target_tags_string = "";
-	
 	var _self_tags = move_get_self_tags(_name, _dice_roll);
 	var _target_tags = move_get_target_tags(_name, _dice_roll);
+	
+	var _self_tags_string = move_tags_get_description(_self_tags);
+	var _target_tags_string = move_tags_get_description(_target_tags);
+	
+	return string("Upcoming: " + _target_tags_string + _self_tags_string);
 }
 
 /// @function						move_tags_get_description(_tags);
@@ -47,7 +49,7 @@ function enemy_move_get_description(_name, _dice_roll) {
 /// @description					HELPER FUNCTION for move description getters. Generates and returns a String describing a move's effects.
 function move_tags_get_description(_tags) {
 	var _display_string = "";
-	var _tags_names= struct_get_names(_tags);
+	var _tags_names = struct_get_names(_tags);
 	var _tags_size = struct_names_count(_tags);
 
 	var keys = struct_get_names(_tags);
