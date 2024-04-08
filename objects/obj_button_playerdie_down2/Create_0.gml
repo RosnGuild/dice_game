@@ -19,28 +19,44 @@ function activate_button()
 	/// @DnDArgument : "value" "STATES.PLAYER_MOVE_CHOICE"
 	if(obj_Encounter_Manager.state == STATES.PLAYER_MOVE_CHOICE)
 	{
-		/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDVersion : 1
-		/// @DnDHash : 0BE2EB01
+		/// @DnDHash : 667B3410
 		/// @DnDParent : 3A60C75B
-		/// @DnDArgument : "expr" "face"
-		/// @DnDArgument : "var" "obj_Encounter_Manager.selected_face"
-		obj_Encounter_Manager.selected_face = face;
-	
-		/// @DnDAction : YoYo Games.Common.Variable
-		/// @DnDVersion : 1
-		/// @DnDHash : 1D7D7440
-		/// @DnDParent : 3A60C75B
-		/// @DnDArgument : "expr" "number"
-		/// @DnDArgument : "var" "global.pending_player_face_number"
-		global.pending_player_face_number = number;
-	
-		/// @DnDAction : YoYo Games.Common.Function_Call
-		/// @DnDVersion : 1
-		/// @DnDHash : 68640CE6
-		/// @DnDParent : 3A60C75B
-		/// @DnDArgument : "function" "parse_face"
-		/// @DnDArgument : "arg" "obj_Encounter_Manager.selected_face"
-		parse_face(obj_Encounter_Manager.selected_face);
+		/// @DnDArgument : "var" "global.die_graph_array[number - 1].cooldown"
+		if(global.die_graph_array[number - 1].cooldown == 0)
+		{
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 5D65338C
+			/// @DnDParent : 667B3410
+			/// @DnDArgument : "expr" "face"
+			/// @DnDArgument : "var" "obj_Encounter_Manager.selected_face"
+			obj_Encounter_Manager.selected_face = face;
+		
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 26C8F2FE
+			/// @DnDParent : 667B3410
+			/// @DnDArgument : "expr" "global.die_graph_array[number - 1]"
+			/// @DnDArgument : "var" "obj_Encounter_Manager.selected_face_node"
+			obj_Encounter_Manager.selected_face_node = global.die_graph_array[number - 1];
+		
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 11841D21
+			/// @DnDParent : 667B3410
+			/// @DnDArgument : "expr" "number"
+			/// @DnDArgument : "var" "global.pending_player_face_number"
+			global.pending_player_face_number = number;
+		
+			/// @DnDAction : YoYo Games.Common.Function_Call
+			/// @DnDVersion : 1
+			/// @DnDHash : 3581628D
+			/// @DnDParent : 667B3410
+			/// @DnDArgument : "function" "parse_face"
+			/// @DnDArgument : "arg" "obj_Encounter_Manager.selected_face"
+			parse_face(obj_Encounter_Manager.selected_face);
+		}
 	}
 }
