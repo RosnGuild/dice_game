@@ -45,3 +45,4 @@ show_debug_message("HEY SHITASS: {0}", array_get(global.enemy_move_data[? "Imp"]
 
 //Dummy
 enemy_move_create("Dummy", 1, {});
+

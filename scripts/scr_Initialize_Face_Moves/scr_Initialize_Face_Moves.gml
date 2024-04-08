@@ -29,7 +29,8 @@ enum RARITY {
 	UNCOMMON,
 	RARE,
 	VERY_RARE,
-	LEGENDARY
+	LEGENDARY,
+	TESTING
 };
 
 global.move_data = ds_map_create(); // Creates the globally accessible move map.
@@ -45,9 +46,9 @@ function move_create(_name, _rarity, _cooldown, _target_tags = {}, _self_tags = 
 	ds_map_add(global.move_data, _name, [_rarity, _cooldown, _target_tags, _self_tags]);
 }
 
+move_create("Default", RARITY.TESTING, 1, {}, {}); // TESTING MOVE
 move_create("Strike", RARITY.COMMON, 1, {tag_HIT : BASE_HIT});
-move_create("Block", RARITY.COMMON, 1, , {tag_BLOCK : BASE_BLOCK});
-
+move_create("Block", RARITY.COMMON, 1, {}, {tag_BLOCK : BASE_BLOCK});
 
 /// @function				move_get_rarity(_name);
 /// @param {string}	_name	The name of the move.
