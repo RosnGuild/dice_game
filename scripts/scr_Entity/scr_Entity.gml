@@ -1,4 +1,10 @@
 // Functions for working with entities.
+
+/// @function								take_damage(_entity_id, _damage_value, _ignore_block);
+/// @param {Id.Instance}	_entity_id		The id of the entity.
+/// @param {Real}			_damage_value	Amount of damage.
+/// @param {bool}			_ignore_block	Whether the damage should be reduced by the entity's Block status. (Defaults to false)
+/// @description							Increases an entity's block value by an amount.
 function take_damage(_entity_id, _damage_value, _ignore_block = false){
 	if (variable_instance_exists(_entity_id, "current_hp")) {
 		var _final_damage_value = 0;
@@ -30,21 +36,31 @@ function kill_entity(_entity_id) {
 	instance_destroy(_entity_id);
 }
 
+/// @function								add_block(_entity_id, _block_value);
+/// @param {Id.Instance}	_entity_id		The id of the entity.
+/// @param {Real}			_block_value		Amount of Block.
+/// @description							Increases an entity's Block value by an amount.
 function add_block(_entity_id, _block_value) {
 	_entity_id.status_block_value += _block_value;
 }
 
-// Resets block on an entity at the end of the round.
+/// @function								clear_block(_entity_id);
+/// @param {Id.Instance}	_entity_id		The id of the entity.
+/// @description							Sets an entity's Block status to 0.
 function clear_block(_entity_id) {
 	_entity_id.status_block_value = 0;
 }
 
+/// @function								add_burn(_entity_id, _burn_value);
+/// @param {Id.Instance}	_entity_id		The id of the entity.
+/// @param {Real}			_burn_value		Amount of burn.
+/// @description							Increases an entity's Burn value by an amount.
 function add_burn(_entity_id, _burn_value) {
 	_entity_id.status_burn_value += _burn_value;
 }
 
 /// @function								decrement_status(_entity_id, _status_name);
-/// @param {Id.Instance}	_entity_id		The name of the enemy.
+/// @param {Id.Instance}	_entity_id		The id of the entity.
 /// @param {string}			_status_name	Name of the status.
 /// @description							DOESN'T WORK CURRENTLY. CRASHES THE GAME.
 function decrement_status(_entity_id, _status_name) {
@@ -52,7 +68,7 @@ function decrement_status(_entity_id, _status_name) {
 }
 
 /// @function								decrement_burn(_entity_id);
-/// @param {Id.Instance}	_entity_id		The name of the enemy.
+/// @param {Id.Instance}	_entity_id		The id of the entity.
 /// @description							Decreases given entity's burn value by 1, to a minimum of 0.
 function decrement_burn(_entity_id) {
 	_entity_id.status_burn_value = max(_entity_id.status_burn_value - 1, 0);

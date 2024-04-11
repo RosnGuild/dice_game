@@ -22,3 +22,19 @@ function enemy_generate_move_number(_enemy_name, _n = 0){
 	}
 	return(return_value);
 }
+
+/// @function								add_bolster(_enemy_id);
+/// @param {Id.Instance}	_enemy_id		The id of the enemy.
+/// @description							Increases Bolster status by the given value (default 1).
+function add_bolster(_enemy_id = undefined, _bolster_value = 1) {
+	for (var i = 0; i < instance_number(obj_Enemy); i++;) {
+	    var _current_enemy = instance_find(obj_Enemy, i);
+		// TODO: This needs to get enemy name from enemy id
+		// 
+		if (_enemy_id == undefined) {
+			_current_enemy.status_bolster_value = true;
+		} else if (_current_enemy.name == _enemy_id) {
+			_current_enemy.status_bolster_value = true;
+		}
+	}
+}

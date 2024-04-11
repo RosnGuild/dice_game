@@ -25,9 +25,20 @@ function apply_block(_entity_id) {
 // apply_poison()
 // handle_poison()
 
-// PARENT FUNCTION FOR ENEMY AND PLAYER GET DESCRIPTION
-function move_get_description() {
+/// @function						player_move_get_description(_name);
+/// @param {string}	_name			The name of the move.
+/// @description					Generates and returns a String describing a move's effects.
+function player_move_get_description(_name) {
+	var _self_tags = move_get_self_tags(_name);
+	var _target_tags = move_get_target_tags(_name);
 	
+	var _self_tags_string = move_tags_get_description(_self_tags);
+	var _target_tags_string = move_tags_get_description(_target_tags);
+	
+	if (string_length(_target_tags_string) > 0 && string_length(_self_tags_string) > 0) {
+	    return string(_target_tags_string + " | " + _self_tags_string)
+	} 
+	return string(_target_tags_string + _self_tags_string);
 }
 
 /// @function						enemy_move_get_description(_name, _dice_roll);
@@ -41,6 +52,9 @@ function enemy_move_get_description(_name, _dice_roll) {
 	var _self_tags_string = move_tags_get_description(_self_tags);
 	var _target_tags_string = move_tags_get_description(_target_tags);
 	
+	if (string_length(_target_tags_string) > 0 && string_length(_self_tags_string) > 0) {
+	    return string("Upcoming: " + _target_tags_string + " | " + _self_tags_string)
+	} 
 	return string("Upcoming: " + _target_tags_string + _self_tags_string);
 }
 

@@ -28,10 +28,10 @@ function parse_move(_move, _self, _target = undefined, _enemy_dice_roll = undefi
 	}
 }
 
-/// @function				scr_parse_move_helper(_entity, _tags);
-/// @param {ID.Instance}	_entity	Target of the tags.
-/// @param {struct}	_tags	Tags.
-/// @description			Processes a move's tags on a specific entity. HELPER FUNCTION, DO NOT CALL.
+/// @function						scr_parse_move_helper(_entity, _tags);
+/// @param {ID.Instance} _entity	Target of the tags.
+/// @param {struct}	_tags			Tags.
+/// @description					Processes a move's tags on a specific entity. HELPER FUNCTION, DO NOT CALL.
 function scr_parse_move_helper(_entity, _tags){
 	keys = struct_get_names(_tags);
 	for (var i = 0; i < struct_names_count(_tags); i++) {
@@ -46,7 +46,7 @@ function scr_parse_move_helper(_entity, _tags){
 				add_burn(_entity, _tags[$ keys[i]]);
 				break;
 			case tag_BOLSTER_ALLIES:
-				
+				add_bolster(_entity)
 				break;
 			case tag_REROLL:
 				
