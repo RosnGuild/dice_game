@@ -25,6 +25,7 @@ function parse_move(_move, _self, _target = undefined, _enemy_dice_roll = undefi
 	
 	if (instance_exists(_self)) {
 		decrement_burn(_self);
+		decrement_bolster(_self);
 	}
 }
 

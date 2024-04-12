@@ -11,7 +11,7 @@ function end_turn_script() {
 		
 		parse_move(current_enemy.name, current_enemy, obj_Player, current_enemy.move_number);
 		
-		current_enemy.move_number = enemy_generate_move_number(current_enemy.name);
+		current_enemy.move_number = enemy_generate_move_number(current_enemy.name, min(current_enemy.status_bolster_value, 1));
 	}
 	
 	if (layer_has_instance("Instances", instance_find(obj_Player, 0))) {

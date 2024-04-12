@@ -73,3 +73,10 @@ function decrement_status(_entity_id, _status_name) {
 function decrement_burn(_entity_id) {
 	_entity_id.status_burn_value = max(_entity_id.status_burn_value - 1, 0);
 }
+
+/// @function								decrement_bolster(_entity_id);
+/// @param {Id.Instance}	_entity_id		The id of the entity.
+/// @description							Decreases given entity's bolster value by 1, to a minimum of 0.
+function decrement_bolster(_entity_id) {
+	_entity_id.status_bolster_value = max(_entity_id.status_bolster_value - 1, 0);
+}
