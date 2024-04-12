@@ -47,6 +47,9 @@ function scr_parse_move_helper(_entity, _tags){
 				add_burn(_entity, _tags[$ keys[i]]);
 				break;
 			case tag_BOLSTER_ALLIES:
+				add_bolster()
+				break;
+			case tag_BOLSTER_SAME:
 				add_bolster(_entity)
 				break;
 			case tag_REROLL:

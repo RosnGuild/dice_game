@@ -32,8 +32,8 @@ function enemy_move_get_description(_name, _dice_roll) {
 	var _self_tags = move_get_self_tags(_name, _dice_roll);
 	var _target_tags = move_get_target_tags(_name, _dice_roll);
 	
-	var _self_tags_string = move_tags_get_description(_self_tags);
-	var _target_tags_string = move_tags_get_description(_target_tags);
+	var _self_tags_string = move_tags_get_description(_self_tags, _name);
+	var _target_tags_string = move_tags_get_description(_target_tags, _name);
 	
 	if (string_length(_target_tags_string) > 0 && string_length(_self_tags_string) > 0) {
 	    return string("Upcoming: " + _target_tags_string + " | " + _self_tags_string)
@@ -43,8 +43,9 @@ function enemy_move_get_description(_name, _dice_roll) {
 
 /// @function						move_tags_get_description(_tags);
 /// @param {struct}	_tags			A struct of a move's tags, either those directed at self or at a target.
+/// @param {String}	_name			The enemy's name.
 /// @description					HELPER FUNCTION for move description getters. Generates and returns a String describing a move's effects.
-function move_tags_get_description(_tags) {
+function move_tags_get_description(_tags, _name) {
 	var _display_string = "";
 	var _tags_names = struct_get_names(_tags);
 	var _tags_size = struct_names_count(_tags);
@@ -63,6 +64,9 @@ function move_tags_get_description(_tags) {
 				break;
 			case tag_BOLSTER_ALLIES:
 				_display_string = string_concat(_display_string, "Bolster Allies");
+				break;
+			case tag_BOLSTER_SAME:
+				_display_string = string_concat(_display_string, "Bolster All " + _name + "s");
 				break;
 			case tag_REROLL:
 				_display_string = string_concat(_display_string, "Reroll");
