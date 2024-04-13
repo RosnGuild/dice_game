@@ -45,7 +45,7 @@ function enemy_move_get_description(_name, _dice_roll) {
 /// @param {struct}	_tags			A struct of a move's tags, either those directed at self or at a target.
 /// @param {String}	_name			The enemy's name.
 /// @description					HELPER FUNCTION for move description getters. Generates and returns a String describing a move's effects.
-function move_tags_get_description(_tags, _name) {
+function move_tags_get_description(_tags, _name = undefined) {
 	var _display_string = "";
 	var _tags_names = struct_get_names(_tags);
 	var _tags_size = struct_names_count(_tags);

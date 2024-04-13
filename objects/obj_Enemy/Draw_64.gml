@@ -66,9 +66,9 @@ draw_text_transformed(x + 0, y + -sprite_height/1.7, string("HP: ") + string(str
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y" "sprite_height/1.7"
 /// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "caption" ""Upcoming: ""
-/// @DnDArgument : "text" "global.enemy_move_data[? name][? move_number]"
-draw_text_transformed(x + 0, y + sprite_height/1.7, string("Upcoming: ") + string(global.enemy_move_data[? name][? move_number]), 1, 1, 0);
+/// @DnDArgument : "caption" ""
+/// @DnDArgument : "text" "enemy_move_get_description(name, move_number)"
+draw_text_transformed(x + 0, y + sprite_height/1.7, "" + string(enemy_move_get_description(name, move_number)), 1, 1, 0);
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
