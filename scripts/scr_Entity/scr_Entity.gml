@@ -7,7 +7,7 @@
 /// @description							Increases an entity's block value by an amount.
 function take_damage(_entity_id, _damage_value, _ignore_block = false){
 	if (variable_instance_exists(_entity_id, "current_hp")) {
-		var _final_damage_value = 0;
+		var _final_damage_value = _damage_value;
 		if (_ignore_block == false) {
 			_final_damage_value = max(_damage_value - _entity_id.status_block_value, 0);
 		}
