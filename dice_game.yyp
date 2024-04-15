@@ -52,6 +52,7 @@
     {"id":{"name":"obj_face_Strike","path":"objects/obj_face_Strike/obj_face_Strike.yy",},},
     {"id":{"name":"obj_button_strike_test","path":"objects/obj_button_strike_test/obj_button_strike_test.yy",},},
     {"id":{"name":"obj_Face_Node","path":"objects/obj_Face_Node/obj_Face_Node.yy",},},
+    {"id":{"name":"spr_d4_imp","path":"sprites/spr_d4_imp/spr_d4_imp.yy",},},
     {"id":{"name":"spr_d20_downface","path":"sprites/spr_d20_downface/spr_d20_downface.yy",},},
     {"id":{"name":"obj_button_cancel_action_test","path":"objects/obj_button_cancel_action_test/obj_button_cancel_action_test.yy",},},
     {"id":{"name":"obj_button_end_turn","path":"objects/obj_button_end_turn/obj_button_end_turn.yy",},},

@@ -33,6 +33,7 @@
     {"name":"spr_transparent","order":19,"path":"sprites/spr_transparent/spr_transparent.yy",},
     {"name":"obj_button_strike_test","order":2,"path":"objects/obj_button_strike_test/obj_button_strike_test.yy",},
     {"name":"obj_Face_Node","order":11,"path":"objects/obj_Face_Node/obj_Face_Node.yy",},
+    {"name":"spr_d4_imp","order":24,"path":"sprites/spr_d4_imp/spr_d4_imp.yy",},
     {"name":"spr_d20_downface","order":20,"path":"sprites/spr_d20_downface/spr_d20_downface.yy",},
     {"name":"obj_button_cancel_action_test","order":5,"path":"objects/obj_button_cancel_action_test/obj_button_cancel_action_test.yy",},
     {"name":"obj_button_end_turn","order":1,"path":"objects/obj_button_end_turn/obj_button_end_turn.yy",},

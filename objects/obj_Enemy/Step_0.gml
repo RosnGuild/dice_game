@@ -11,9 +11,8 @@ if(current_hp < max_hp / 2)
 	/// @DnDHash : 5E75690E
 	/// @DnDParent : 38B6F01E
 	/// @DnDArgument : "imageind" "1"
-	/// @DnDArgument : "spriteind" "spr_scuffed_red_to_grey_square"
-	/// @DnDSaveInfo : "spriteind" "spr_scuffed_red_to_grey_square"
-	sprite_index = spr_scuffed_red_to_grey_square;
+	/// @DnDArgument : "spriteind" ""
+	
 	image_index = 1;
 }
 
@@ -26,9 +25,8 @@ else
 	/// @DnDVersion : 1
 	/// @DnDHash : 1D20DF27
 	/// @DnDParent : 6A037415
-	/// @DnDArgument : "spriteind" "spr_scuffed_red_to_grey_square"
-	/// @DnDSaveInfo : "spriteind" "spr_scuffed_red_to_grey_square"
-	sprite_index = spr_scuffed_red_to_grey_square;
+	/// @DnDArgument : "spriteind" ""
+	
 	image_index = 0;
 }
 
