@@ -62,11 +62,8 @@ function move_tags_get_description(_tags, _name = undefined) {
 			case tag_BURN:
 				_display_string = string_concat(_display_string, "Burn");
 				break;
-			case tag_BOLSTER_ALLIES:
-				_display_string = string_concat(_display_string, "Bolster Allies");
-				break;
-			case tag_BOLSTER_SAME:
-				_display_string = string_concat(_display_string, "Bolster All " + _name + "s");
+			case tag_BOLSTER:
+				_display_string = string_concat(_display_string, "Bolster Enemies");
 				break;
 			case tag_REROLL:
 				_display_string = string_concat(_display_string, "Reroll");

@@ -25,7 +25,6 @@ function parse_move(_move, _self, _target = undefined, _enemy_dice_roll = undefi
 	
 	if (instance_exists(_self)) {
 		decrement_burn(_self);
-		decrement_bolster(_self);
 	}
 }
 
@@ -46,11 +45,8 @@ function scr_parse_move_helper(_entity, _tags){
 			case tag_BURN:
 				add_burn(_entity, _tags[$ keys[i]]);
 				break;
-			case tag_BOLSTER_ALLIES:
+			case tag_BOLSTER:
 				add_bolster()
-				break;
-			case tag_BOLSTER_SAME:
-				add_bolster(_entity)
 				break;
 			case tag_REROLL:
 				

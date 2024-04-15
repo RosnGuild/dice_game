@@ -12,8 +12,7 @@
 
 // Use these as keys in a move struct to get its tags.
 #macro tag_REROLL "reroll"
-#macro tag_BOLSTER_ALLIES "bolster_allies"
-#macro tag_BOLSTER_SAME "bolster_same"
+#macro tag_BOLSTER "bolster"
 #macro tag_BURN "burn"
 
 global.enemy_move_data = ds_map_create(); // Creates the globally accessible enemy move map.
@@ -35,7 +34,7 @@ function enemy_move_create(_name, _dice_roll, _target_tags, _self_tags = {}) {
 // Imp
 enemy_move_create("Imp", 1, {tag_HIT : 6});
 enemy_move_create("Imp", 2, {tag_HIT : 6, tag_REROLL: true});
-enemy_move_create("Imp", 3, {}, {tag_BOLSTER_ALLIES : true});
+enemy_move_create("Imp", 3, {}, {tag_BOLSTER : true});
 enemy_move_create("Imp", 4, {tag_BURN : 1});
 
 
