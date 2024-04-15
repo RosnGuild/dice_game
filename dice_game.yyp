@@ -93,6 +93,7 @@
     {"id":{"name":"Sprite1","path":"sprites/Sprite1/Sprite1.yy",},},
     {"id":{"name":"spr_hit_tag_icon_3","path":"sprites/spr_hit_tag_icon_3/spr_hit_tag_icon_3.yy",},},
     {"id":{"name":"scr_Face","path":"scripts/scr_Face/scr_Face.yy",},},
+    {"id":{"name":"spr_burn_tag_icon","path":"sprites/spr_burn_tag_icon/spr_burn_tag_icon.yy",},},
     {"id":{"name":"spr_d20_leftface","path":"sprites/spr_d20_leftface/spr_d20_leftface.yy",},},
     {"id":{"name":"fnt_healthbar","path":"fonts/fnt_healthbar/fnt_healthbar.yy",},},
     {"id":{"name":"obj_Ticking_Tag","path":"objects/obj_Ticking_Tag/obj_Ticking_Tag.yy",},},

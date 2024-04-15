@@ -111,9 +111,9 @@ if(status_burn_value > 0)
 	/// @DnDArgument : "y_relative" "1"
 	/// @DnDArgument : "xscale" "0.7"
 	/// @DnDArgument : "yscale" "0.7"
-	/// @DnDArgument : "sprite" "spr_scuffed_red_to_grey_square"
-	/// @DnDSaveInfo : "sprite" "spr_scuffed_red_to_grey_square"
-	draw_sprite_ext(spr_scuffed_red_to_grey_square, 0, x + -sprite_width/1.5, y + -sprite_height/1.2, 0.7, 0.7, 0, $FFFFFF & $ffffff, 1);
+	/// @DnDArgument : "sprite" "spr_burn_tag_icon"
+	/// @DnDSaveInfo : "sprite" "spr_burn_tag_icon"
+	draw_sprite_ext(spr_burn_tag_icon, 0, x + -sprite_width/1.5, y + -sprite_height/1.2, 0.7, 0.7, 0, $FFFFFF & $ffffff, 1);
 
 	/// @DnDAction : YoYo Games.Drawing.Set_Color
 	/// @DnDVersion : 1
