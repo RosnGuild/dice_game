@@ -54,13 +54,13 @@ draw_healthbar(x + -sprite_width/1.75, y + -sprite_height/1.45, x + sprite_width
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y" "-sprite_height/1.675"
 /// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "xscale" "0.3"
+/// @DnDArgument : "xscale" "sprite_height/1000"
 /// @DnDArgument : "xscale_relative" "1"
-/// @DnDArgument : "yscale" "0.3"
+/// @DnDArgument : "yscale" "sprite_height/1000"
 /// @DnDArgument : "yscale_relative" "1"
 /// @DnDArgument : "caption" ""HP: ""
 /// @DnDArgument : "text" "string(current_hp) + " / " + string(max_hp)"
-draw_text_transformed(x + 0, y + -sprite_height/1.675, string("HP: ") + string(string(current_hp) + " / " + string(max_hp)), image_xscale + 0.3, image_yscale + 0.3, 0);
+draw_text_transformed(x + 0, y + -sprite_height/1.675, string("HP: ") + string(string(current_hp) + " / " + string(max_hp)), image_xscale + sprite_height/1000, image_yscale + sprite_height/1000, 0);
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
