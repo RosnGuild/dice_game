@@ -23,11 +23,11 @@ draw_set_valign(fa_bottom);
 /// @DnDAction : YoYo Games.Drawing.Draw_Healthbar
 /// @DnDVersion : 1
 /// @DnDHash : 13C5BC05
-/// @DnDArgument : "x1" "-sprite_width/1.5"
+/// @DnDArgument : "x1" "-sprite_width/1.75"
 /// @DnDArgument : "x1_relative" "1"
 /// @DnDArgument : "y1" "-sprite_height/1.45"
 /// @DnDArgument : "y1_relative" "1"
-/// @DnDArgument : "x2" "sprite_width/1.5"
+/// @DnDArgument : "x2" "sprite_width/1.75"
 /// @DnDArgument : "x2_relative" "1"
 /// @DnDArgument : "y2" "-sprite_height/1.65"
 /// @DnDArgument : "y2_relative" "1"
@@ -35,7 +35,7 @@ draw_set_valign(fa_bottom);
 /// @DnDArgument : "backcol" "$FF333333"
 /// @DnDArgument : "mincol" "$FF0000FF"
 /// @DnDArgument : "maxcol" "$FF0000FF"
-draw_healthbar(x + -sprite_width/1.5, y + -sprite_height/1.45, x + sprite_width/1.5, y + -sprite_height/1.65, 100 * (current_hp / max_hp), $FF333333 & $FFFFFF, $FF0000FF & $FFFFFF, $FF0000FF & $FFFFFF, 0, (($FF333333>>24) != 0), (($FFFFFFFF>>24) != 0));
+draw_healthbar(x + -sprite_width/1.75, y + -sprite_height/1.45, x + sprite_width/1.75, y + -sprite_height/1.65, 100 * (current_hp / max_hp), $FF333333 & $FFFFFF, $FF0000FF & $FFFFFF, $FF0000FF & $FFFFFF, 0, (($FF333333>>24) != 0), (($FFFFFFFF>>24) != 0));
 
 /// @DnDAction : YoYo Games.Drawing.Draw_Value
 /// @DnDVersion : 1
@@ -52,13 +52,15 @@ draw_healthbar(x + -sprite_width/1.5, y + -sprite_height/1.45, x + sprite_width/
 /// @DnDVersion : 1
 /// @DnDHash : 094B21CB
 /// @DnDArgument : "x_relative" "1"
-/// @DnDArgument : "y" "-sprite_height/1.7"
+/// @DnDArgument : "y" "-sprite_height/1.675"
 /// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "xscale" "0.9"
-/// @DnDArgument : "yscale" "0.9"
+/// @DnDArgument : "xscale" "0.3"
+/// @DnDArgument : "xscale_relative" "1"
+/// @DnDArgument : "yscale" "0.3"
+/// @DnDArgument : "yscale_relative" "1"
 /// @DnDArgument : "caption" ""HP: ""
 /// @DnDArgument : "text" "string(current_hp) + " / " + string(max_hp)"
-draw_text_transformed(x + 0, y + -sprite_height/1.7, string("HP: ") + string(string(current_hp) + " / " + string(max_hp)), 0.9, 0.9, 0);
+draw_text_transformed(x + 0, y + -sprite_height/1.675, string("HP: ") + string(string(current_hp) + " / " + string(max_hp)), image_xscale + 0.3, image_yscale + 0.3, 0);
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
