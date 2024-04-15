@@ -84,5 +84,20 @@ function move_tags_get_description(_tags, _name = undefined) {
 	return _display_string;
 }
 
+/// @function						get_hovered_adjacent_move_names(_face_node);
+/// @description					HELPER FUNCTION for move description getters. Generates and returns a String describing the names of the two upcoming face nodes.
+function get_hovered_adjacent_move_names(_face_node) {
+	var _display_string = "";
+	var _adjacent_nodes = _face_node.adjacent_nodes;
+	
+	for (var i = 0; i < array_length(_adjacent_nodes); i++) {
+		_display_string = string_concat(_display_string, player_move_get_description(_adjacent_nodes[i]));
+		if (i+1 != array_length(_adjacent_nodes)) {
+			_display_string = string_concat(_display_string, ", ");
+		}
+	}
+	return _display_string;
+}
+
 //show_debug_message("FUCK: " + string(move_tags_get_description(move_get_target_tags("Strike"))));
 //show_debug_message("FUCK: " + string(move_get_target_tags("Strike")));

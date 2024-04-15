@@ -1,7 +1,12 @@
-/// @DnDAction : YoYo Games.Drawing.Draw_Self
+/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
 /// @DnDVersion : 1
-/// @DnDHash : 2475F6B5
-draw_self();
+/// @DnDHash : 34E9ED14
+/// @DnDArgument : "x_relative" "1"
+/// @DnDArgument : "y_relative" "1"
+/// @DnDArgument : "xscale" "display_x_scale"
+/// @DnDArgument : "yscale" "display_y_scale"
+/// @DnDArgument : "sprite" "display_sprite"
+draw_sprite_ext(display_sprite, 0, x + 0, y + 0, display_x_scale, display_y_scale, 0, $FFFFFF & $ffffff, 1);
 
 /// @DnDAction : YoYo Games.Drawing.Set_Font
 /// @DnDVersion : 1
@@ -29,20 +34,11 @@ draw_set_valign(fa_middle);
 /// @DnDVersion : 1
 /// @DnDHash : 3BFCF561
 /// @DnDArgument : "x_relative" "1"
-/// @DnDArgument : "y" "-sprite_height"
+/// @DnDArgument : "y" "-sprite_height/2"
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "caption" ""
 /// @DnDArgument : "text" "display_header_text"
-draw_text_transformed(x + 0, y + -sprite_height, "" + string(display_header_text), 1, 1, 0);
-
-/// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
-/// @DnDVersion : 1
-/// @DnDHash : 33FA514C
-/// @DnDArgument : "x_relative" "1"
-/// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "caption" ""
-/// @DnDArgument : "text" "display_header_text"
-draw_text_transformed(x + 0, y + 0, "" + string(display_header_text), 1, 1, 0);
+draw_text_transformed(x + 0, y + -sprite_height/2, "" + string(display_header_text), 1, 1, 0);
 
 /// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
 /// @DnDVersion : 1
@@ -57,8 +53,8 @@ draw_text_transformed(x + 0, y + 0, "" + string(display_body_text), 1, 1, 0);
 /// @DnDVersion : 1
 /// @DnDHash : 4109C1FA
 /// @DnDArgument : "x_relative" "1"
-/// @DnDArgument : "y" "sprite_height"
+/// @DnDArgument : "y" "sprite_height/2"
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "caption" ""
-/// @DnDArgument : "text" "display_foot_text"
-draw_text_transformed(x + 0, y + sprite_height, "" + string(display_foot_text), 1, 1, 0);
+/// @DnDArgument : "text" "display_footer_text"
+draw_text_transformed(x + 0, y + sprite_height/2, "" + string(display_footer_text), 1, 1, 0);
