@@ -4,12 +4,15 @@
 // Tag definitions. 
 #macro BASE_BLOCK 5
 #macro BASE_HIT 6
+#macro BASE_VULNERABLE 1
 
 #macro UNCOMMON_BLOCK 2 * BASE_BLOCK
 #macro UNCOMMON_STRIKE 2 * BASE_HIT
+#macro UNCOMMON_VULNERABLE 2 * BASE_VULNERABLE
 
 #macro RARE_BLOCK 3 * BASE_BLOCK
 #macro RARE_STRIKE 3 * BASE_HIT
+#macro RARE_VULNERABLE 3 * BASE_VULNERABLE
 
 //---
 // Map and struct-based implementation of the move database. Accessed with ds_map_find_value(global.move_data_alternative, [move name string]
@@ -23,6 +26,8 @@
 // Use these as keys in a move struct to get its tags.
 #macro tag_HIT "hit"
 #macro tag_BLOCK "block"
+#macro tag_BURN "burn"
+#macro tag_VULNERABLE "vulnerable"
 
 enum RARITY {
 	COMMON,
@@ -49,6 +54,7 @@ function move_create(_name, _rarity, _cooldown, _target_tags = {}, _self_tags = 
 move_create("Default", RARITY.TESTING, 1, {}, {}); // TESTING MOVE
 move_create("Strike", RARITY.COMMON, 1, {tag_HIT : BASE_HIT});
 move_create("Block", RARITY.COMMON, 1, {}, {tag_BLOCK : BASE_BLOCK});
+move_create("Trip", RARITY.COMMON, 1, {}, {tag_VULNERABLE : BASE_VULNERABLE});
 
 /// @function				move_get_rarity(_name);
 /// @param {string}	_name	The name of the move.

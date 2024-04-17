@@ -9,6 +9,6 @@ event_inherited();
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y" "-265"
 /// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "caption" ""Energy: ""
+/// @DnDArgument : "caption" ""Actions Left: ""
 /// @DnDArgument : "var" "current_energy"
-draw_text(x + 0, y + -265, string("Energy: ") + string(current_energy));
+draw_text(x + 0, y + -265, string("Actions Left: ") + string(current_energy));

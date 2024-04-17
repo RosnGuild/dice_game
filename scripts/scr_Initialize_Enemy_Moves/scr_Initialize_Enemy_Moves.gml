@@ -13,7 +13,6 @@
 // Use these as keys in a move struct to get its tags.
 #macro tag_REROLL "reroll"
 #macro tag_BOLSTER "bolster"
-#macro tag_BURN "burn"
 
 global.enemy_move_data = ds_map_create(); // Creates the globally accessible enemy move map.
 
