@@ -32,3 +32,16 @@ function add_bolster(_bolster_value = 1) {
 		show_debug_message("enemy: {0} has been bolstered to {1}", instance_find(obj_Enemy, i), instance_find(obj_Enemy, i).status_bolster_value);
 	}
 }
+
+/// @function						get_enemy_upcoming_description(_name, _dice_roll);
+/// @param {string}	_name			The name of the enemy.
+/// @param {real}	_dice_roll		Dice roll associated with this move.
+/// @description					Returns a full description of the upcoming enemy action.
+function get_enemy_upcoming_description(_name, _dice_roll) {
+	var _final_string = string("Rolled a " + string(_dice_roll));
+	if (status_bolster_value > 0) {
+	    _final_string = string(_final_string + " (+1, Bolstered)");
+	}
+	
+	return string(_final_string + "\n Next Turn: " + enemy_move_get_description(_name, _dice_roll));
+}

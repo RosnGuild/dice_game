@@ -36,9 +36,9 @@ function enemy_move_get_description(_name, _dice_roll) {
 	var _target_tags_string = move_tags_get_description(_target_tags, _name);
 	
 	if (string_length(_target_tags_string) > 0 && string_length(_self_tags_string) > 0) {
-	    return string("Upcoming: " + _target_tags_string + " | " + _self_tags_string)
+	    return string(_target_tags_string + " | " + _self_tags_string)
 	} 
-	return string("Upcoming: " + _target_tags_string + _self_tags_string);
+	return string(_target_tags_string + _self_tags_string);
 }
 
 /// @function						move_tags_get_description(_tags);
@@ -74,11 +74,11 @@ function move_tags_get_description(_tags, _name = undefined) {
 		}
 		var _value = struct_get(_tags, keys[i])
 		if (_value != true) {
-			_display_string = string_concat(_display_string, string(" {0}", _value));
+			_display_string = string(_display_string + " " + string(_value));
 		}
 		
 		if (i+1 != _tags_size) {
-			_display_string = string_concat(_display_string, ", ");
+			_display_string = string(_display_string + ", ");
 		}
 	}
 	return _display_string;
