@@ -59,6 +59,14 @@ function add_burn(_entity_id, _burn_value) {
 	_entity_id.status_burn_value += _burn_value;
 }
 
+/// @function									add_vulnerable(_entity_id, _vulnerable_value);
+/// @param {Id.Instance}	_entity_id			The id of the entity.
+/// @param {Real}			_vulnerable_value	Amount of vulnerable.
+/// @description								Increases an entity's Vulnerable status by an amount.
+function add_vulnerable(_entity_id, _vulnerable_value) {
+	_entity_id.status_vulnerable_value += _vulnerable_value;
+}
+
 /// @function								decrement_status(_entity_id, _status_name);
 /// @param {Id.Instance}	_entity_id		The id of the entity.
 /// @param {string}			_status_name	Name of the status.
@@ -79,4 +87,11 @@ function decrement_burn(_entity_id) {
 /// @description							Decreases given entity's bolster value by 1, to a minimum of 0.
 function decrement_bolster(_entity_id) {
 	_entity_id.status_bolster_value = max(_entity_id.status_bolster_value - 1, 0);
+}
+
+/// @function								decrement_vulnerable(_entity_id);
+/// @param {Id.Instance}	_entity_id		The id of the entity.
+/// @description							Decreases given entity's Vulnerable value by 1, to a minimum of 0.
+function decrement_vulnerable(_entity_id) {
+	_entity_id.status_vulnerable_value = max(_entity_id.status_vulnerable_value - 1, 0);
 }
