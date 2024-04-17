@@ -1,9 +1,9 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 19C4BA29
-/// @DnDArgument : "expr" ""Go to devroom""
+/// @DnDArgument : "expr" ""Enter Battle!""
 /// @DnDArgument : "var" "text"
-text = "Go to devroom";
+text = "Enter Battle!";
 
 /// @DnDAction : YoYo Games.Common.Function
 /// @DnDVersion : 1
