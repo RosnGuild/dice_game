@@ -11,8 +11,8 @@ if(current_hp < max_hp / 2)
 	/// @DnDHash : 5E75690E
 	/// @DnDParent : 38B6F01E
 	/// @DnDArgument : "imageind" "1"
-	/// @DnDArgument : "spriteind" ""
-	
+	/// @DnDArgument : "spriteind" "sprite_index"
+	sprite_index = sprite_index;
 	image_index = 1;
 }
 
@@ -25,8 +25,8 @@ else
 	/// @DnDVersion : 1
 	/// @DnDHash : 1D20DF27
 	/// @DnDParent : 6A037415
-	/// @DnDArgument : "spriteind" ""
-	
+	/// @DnDArgument : "spriteind" "sprite_index"
+	sprite_index = sprite_index;
 	image_index = 0;
 }
 
@@ -48,4 +48,17 @@ if(obj_Encounter_Manager.state == 3)
 	/// @DnDArgument : "size" "1"
 	/// @DnDArgument : "color" "$FFCCF7FF"
 	effect_create_above(6, x + 0, y + 0, 1, $FFCCF7FF & $ffffff);
+
+	/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
+	/// @DnDVersion : 1
+	/// @DnDHash : 63DCC7A4
+	/// @DnDDisabled : 1
+	/// @DnDParent : 2B3E052F
+	/// @DnDArgument : "x_relative" "1"
+	/// @DnDArgument : "y_relative" "1"
+	/// @DnDArgument : "xscale" "0.01"
+	/// @DnDArgument : "yscale" "0.01"
+	/// @DnDArgument : "yscale_relative" "1"
+	/// @DnDArgument : "sprite" "spr_yellow_pointy_glow_halo_overlay"
+	/// @DnDSaveInfo : "sprite" "spr_yellow_pointy_glow_halo_overlay"
 }
