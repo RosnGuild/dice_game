@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_battle_wip_screenshot",
-  "bbox_bottom": 1023,
+  "bbox_bottom": 1079,
   "bbox_left": 0,
-  "bbox_right": 1827,
+  "bbox_right": 1920,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -17,7 +17,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 1024,
+  "height": 1080,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6622c8e1-83b7-4b97-9bb7-7394088b3eb1","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 1828,
+  "width": 1921,
 }

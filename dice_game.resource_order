@@ -73,6 +73,7 @@
     {"name":"scr_Face","order":6,"path":"scripts/scr_Face/scr_Face.yy",},
     {"name":"spr_burn_tag_icon","order":25,"path":"sprites/spr_burn_tag_icon/spr_burn_tag_icon.yy",},
     {"name":"spr_d20_leftface","order":21,"path":"sprites/spr_d20_leftface/spr_d20_leftface.yy",},
+    {"name":"obj_display_clickenemy","order":15,"path":"objects/obj_display_clickenemy/obj_display_clickenemy.yy",},
     {"name":"Tutorial_Room","order":3,"path":"rooms/Tutorial_Room/Tutorial_Room.yy",},
     {"name":"fnt_healthbar","order":1,"path":"fonts/fnt_healthbar/fnt_healthbar.yy",},
     {"name":"spr_battle_wip_screenshot","order":26,"path":"sprites/spr_battle_wip_screenshot/spr_battle_wip_screenshot.yy",},

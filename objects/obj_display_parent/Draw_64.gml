@@ -17,9 +17,9 @@ draw_set_font(display_font);
 /// @DnDAction : YoYo Games.Drawing.Set_Color
 /// @DnDVersion : 1
 /// @DnDHash : 1EF525BC
-/// @DnDArgument : "color" "$FF000000"
-draw_set_colour($FF000000 & $ffffff);
-var l1EF525BC_0=($FF000000 >> 24);
+/// @DnDArgument : "color" "display_text_color"
+draw_set_colour(display_text_color & $ffffff);
+var l1EF525BC_0=(display_text_color >> 24);
 draw_set_alpha(l1EF525BC_0 / $ff);
 
 /// @DnDAction : YoYo Games.Drawing.Set_Alignment

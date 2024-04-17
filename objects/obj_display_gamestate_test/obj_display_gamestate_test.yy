@@ -7,7 +7,9 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":true,},
   ],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_display_parent","path":"objects/obj_display_parent/obj_display_parent.yy",},"propertyId":{"name":"display_body_text","path":"objects/obj_display_parent/obj_display_parent.yy",},"value":"obj_",},
+  ],
   "parent": {
     "name": "UI",
     "path": "folders/Objects/UI.yy",

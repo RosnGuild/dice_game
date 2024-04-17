@@ -96,6 +96,7 @@
     {"id":{"name":"scr_Face","path":"scripts/scr_Face/scr_Face.yy",},},
     {"id":{"name":"spr_burn_tag_icon","path":"sprites/spr_burn_tag_icon/spr_burn_tag_icon.yy",},},
     {"id":{"name":"spr_d20_leftface","path":"sprites/spr_d20_leftface/spr_d20_leftface.yy",},},
+    {"id":{"name":"obj_display_clickenemy","path":"objects/obj_display_clickenemy/obj_display_clickenemy.yy",},},
     {"id":{"name":"Tutorial_Room","path":"rooms/Tutorial_Room/Tutorial_Room.yy",},},
     {"id":{"name":"fnt_healthbar","path":"fonts/fnt_healthbar/fnt_healthbar.yy",},},
     {"id":{"name":"spr_battle_wip_screenshot","path":"sprites/spr_battle_wip_screenshot/spr_battle_wip_screenshot.yy",},},
