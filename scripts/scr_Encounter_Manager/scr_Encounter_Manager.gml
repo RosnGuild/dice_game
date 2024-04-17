@@ -33,5 +33,5 @@ function end_turn_script() {
 		decrement_cooldown(global.die_graph_array[_i]);
 	}
 	
-	
+	obj_Encounter_Manager.state = STATES.PLAYER_MOVE_CHOICE;
 }

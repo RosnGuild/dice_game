@@ -23,6 +23,7 @@
 // Use these as keys in a move struct to get its tags.
 #macro tag_HIT "hit"
 #macro tag_BLOCK "block"
+#macro tag_BURN "burn"
 
 enum RARITY {
 	COMMON,

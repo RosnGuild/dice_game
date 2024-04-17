@@ -9,23 +9,11 @@ switch (state) {
 		// else, if action points remaining, decrease action points by 1 and continue at this state
 		// else, go to BLOCKS_RESOLVE.
         break;
-		
 	case STATES.PLAYER_ENEMY_SELECT:
-		// 
+		// in this state, enemies can be selected
         // code here
         break;
-		
-	case STATES.PLAYER_ACTIONS_RESOLVE:
-        // code here
-        break;
-	
     default:
         state = STATES.PLAYER_MOVE_CHOICE;
         break;
 }
-
-
-
-
-
-
