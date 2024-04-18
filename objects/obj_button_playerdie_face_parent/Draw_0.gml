@@ -37,7 +37,8 @@ draw_set_valign(fa_middle);
 /// @DnDArgument : "yscale_relative" "1"
 /// @DnDArgument : "caption" ""
 /// @DnDArgument : "text" "text"
-draw_text_transformed(x + 0, y + 0, "" + string(text), image_xscale + 1.75, image_yscale + 1.75, 0);
+/// @DnDArgument : "angle" "text_rotation"
+draw_text_transformed(x + 0, y + 0, "" + string(text), image_xscale + 1.75, image_yscale + 1.75, text_rotation);
 
 /// @DnDAction : YoYo Games.Drawing.Set_Color
 /// @DnDVersion : 1
@@ -50,13 +51,16 @@ draw_set_alpha(l224B3E45_0 / $ff);
 /// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
 /// @DnDVersion : 1
 /// @DnDHash : 25C14FCA
+/// @DnDArgument : "x" "-2 * dsin(text_rotation)"
 /// @DnDArgument : "x_relative" "1"
+/// @DnDArgument : "y" "-15 * dcos(text_rotation)"
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "xscale" "1.5"
 /// @DnDArgument : "yscale" "1.5"
 /// @DnDArgument : "caption" ""
 /// @DnDArgument : "text" "face.face_move"
-draw_text_transformed(x + 0, y + 0, "" + string(face.face_move), 1.5, 1.5, 0);
+/// @DnDArgument : "angle" "text_rotation"
+draw_text_transformed(x + -2 * dsin(text_rotation), y + -15 * dcos(text_rotation), "" + string(face.face_move), 1.5, 1.5, text_rotation);
 
 /// @DnDAction : YoYo Games.Drawing.Set_Color
 /// @DnDVersion : 1
@@ -69,11 +73,13 @@ draw_set_alpha(l067E3317_0 / $ff);
 /// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
 /// @DnDVersion : 1
 /// @DnDHash : 5CCD1229
+/// @DnDArgument : "x" "10 * dsin(text_rotation)"
 /// @DnDArgument : "x_relative" "1"
-/// @DnDArgument : "y" "sprite_height/5"
+/// @DnDArgument : "y" "sprite_height/5 + 60 * dcos(text_rotation)"
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "xscale" "0.9"
 /// @DnDArgument : "yscale" "0.9"
 /// @DnDArgument : "caption" ""CD: ""
 /// @DnDArgument : "text" "global.die_graph_array[number - 1].cooldown"
-draw_text_transformed(x + 0, y + sprite_height/5, string("CD: ") + string(global.die_graph_array[number - 1].cooldown), 0.9, 0.9, 0);
+/// @DnDArgument : "angle" "text_rotation"
+draw_text_transformed(x + 10 * dsin(text_rotation), y + sprite_height/5 + 60 * dcos(text_rotation), string("CD: ") + string(global.die_graph_array[number - 1].cooldown), 0.9, 0.9, text_rotation);

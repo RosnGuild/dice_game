@@ -3,6 +3,13 @@
 /// @DnDHash : 61E82644
 event_inherited();
 
+/// @DnDAction : YoYo Games.Drawing.Set_Font
+/// @DnDVersion : 1
+/// @DnDHash : 09B1837B
+/// @DnDArgument : "font" "fnt_healthbar"
+/// @DnDSaveInfo : "font" "fnt_healthbar"
+draw_set_font(fnt_healthbar);
+
 /// @DnDAction : YoYo Games.Drawing.Draw_Value
 /// @DnDVersion : 1
 /// @DnDHash : 46DA63EE

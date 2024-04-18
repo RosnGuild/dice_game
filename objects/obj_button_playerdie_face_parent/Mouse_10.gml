@@ -6,11 +6,11 @@ event_inherited();
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1
 /// @DnDHash : 166B7BFE
-/// @DnDArgument : "xpos" "1000"
+/// @DnDArgument : "xpos" "900"
 /// @DnDArgument : "ypos" "775"
 /// @DnDArgument : "objectid" "obj_display_face_infocard"
 /// @DnDSaveInfo : "objectid" "obj_display_face_infocard"
-instance_create_layer(1000, 775, "Instances", obj_display_face_infocard);
+instance_create_layer(900, 775, "Instances", obj_display_face_infocard);
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1

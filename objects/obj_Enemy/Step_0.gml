@@ -53,11 +53,11 @@ if(obj_Encounter_Manager.state == 3)
 	/// @DnDAction : YoYo Games.Instances.Set_Sprite
 	/// @DnDVersion : 1
 	/// @DnDHash : 5646D08D
-	/// @DnDDisabled : 1
 	/// @DnDParent : 2B3E052F
 	/// @DnDArgument : "imageind" "2"
 	/// @DnDArgument : "spriteind" "sprite_index"
-
+	sprite_index = sprite_index;
+	image_index = 2;
 
 	/// @DnDAction : YoYo Games.Instances.Create_Instance
 	/// @DnDVersion : 1
