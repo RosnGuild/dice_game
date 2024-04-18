@@ -40,6 +40,7 @@ if(obj_Encounter_Manager.state == 3)
 	/// @DnDAction : YoYo Games.Particles.Effect
 	/// @DnDVersion : 1
 	/// @DnDHash : 3202EC0C
+	/// @DnDDisabled : 1
 	/// @DnDParent : 2B3E052F
 	/// @DnDArgument : "x_relative" "1"
 	/// @DnDArgument : "y_relative" "1"
@@ -47,18 +48,38 @@ if(obj_Encounter_Manager.state == 3)
 	/// @DnDArgument : "where" "1"
 	/// @DnDArgument : "size" "1"
 	/// @DnDArgument : "color" "$FFCCF7FF"
-	effect_create_above(6, x + 0, y + 0, 1, $FFCCF7FF & $ffffff);
 
-	/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
+
+	/// @DnDAction : YoYo Games.Instances.Set_Sprite
 	/// @DnDVersion : 1
-	/// @DnDHash : 63DCC7A4
+	/// @DnDHash : 5646D08D
 	/// @DnDDisabled : 1
 	/// @DnDParent : 2B3E052F
-	/// @DnDArgument : "x_relative" "1"
-	/// @DnDArgument : "y_relative" "1"
-	/// @DnDArgument : "xscale" "0.01"
-	/// @DnDArgument : "yscale" "0.01"
-	/// @DnDArgument : "yscale_relative" "1"
-	/// @DnDArgument : "sprite" "spr_yellow_pointy_glow_halo_overlay"
-	/// @DnDSaveInfo : "sprite" "spr_yellow_pointy_glow_halo_overlay"
+	/// @DnDArgument : "imageind" "2"
+	/// @DnDArgument : "spriteind" "sprite_index"
+
+
+	/// @DnDAction : YoYo Games.Instances.Create_Instance
+	/// @DnDVersion : 1
+	/// @DnDHash : 4C44C103
+	/// @DnDParent : 2B3E052F
+	/// @DnDArgument : "xpos_relative" "1"
+	/// @DnDArgument : "ypos_relative" "1"
+	/// @DnDArgument : "objectid" "obj_enemy_select_overlay"
+	/// @DnDArgument : "layer" ""Button_Instances""
+	/// @DnDSaveInfo : "objectid" "obj_enemy_select_overlay"
+	instance_create_layer(x + 0, y + 0, "Button_Instances", obj_enemy_select_overlay);
+}
+
+/// @DnDAction : YoYo Games.Common.Else
+/// @DnDVersion : 1
+/// @DnDHash : 7B20D004
+else
+{
+	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
+	/// @DnDVersion : 1
+	/// @DnDHash : 630BC33A
+	/// @DnDApplyTo : {obj_enemy_select_overlay}
+	/// @DnDParent : 7B20D004
+	with(obj_enemy_select_overlay) instance_destroy();
 }
