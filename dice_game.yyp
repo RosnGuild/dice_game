@@ -44,7 +44,9 @@
   "resources": [
     {"id":{"name":"obj_display_face_infocard","path":"objects/obj_display_face_infocard/obj_display_face_infocard.yy",},},
     {"id":{"name":"spr_d20_rightface","path":"sprites/spr_d20_rightface/spr_d20_rightface.yy",},},
+    {"id":{"name":"Battle_Win_Room","path":"rooms/Battle_Win_Room/Battle_Win_Room.yy",},},
     {"id":{"name":"scr_Loot_Table","path":"scripts/scr_Loot_Table/scr_Loot_Table.yy",},},
+    {"id":{"name":"obj_button_restart_game","path":"objects/obj_button_restart_game/obj_button_restart_game.yy",},},
     {"id":{"name":"scr_Initialize_Face_Moves","path":"scripts/scr_Initialize_Face_Moves/scr_Initialize_Face_Moves.yy",},},
     {"id":{"name":"spr_red_circle_and_arrow_overlay","path":"sprites/spr_red_circle_and_arrow_overlay/spr_red_circle_and_arrow_overlay.yy",},},
     {"id":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},},
@@ -90,6 +92,7 @@
     {"id":{"name":"obj_button_block_test","path":"objects/obj_button_block_test/obj_button_block_test.yy",},},
     {"id":{"name":"scr_Entity","path":"scripts/scr_Entity/scr_Entity.yy",},},
     {"id":{"name":"obj_Startup","path":"objects/obj_Startup/obj_Startup.yy",},},
+    {"id":{"name":"Battle_Lose_Room","path":"rooms/Battle_Lose_Room/Battle_Lose_Room.yy",},},
     {"id":{"name":"obj_button_restart_current_room","path":"objects/obj_button_restart_current_room/obj_button_restart_current_room.yy",},},
     {"id":{"name":"scr_Face_Parser","path":"scripts/scr_Face_Parser/scr_Face_Parser.yy",},},
     {"id":{"name":"obj_display_parent","path":"objects/obj_display_parent/obj_display_parent.yy",},},
@@ -129,6 +132,8 @@
     {"roomId":{"name":"Tutorial_Room","path":"rooms/Tutorial_Room/Tutorial_Room.yy",},},
     {"roomId":{"name":"Battle_Room","path":"rooms/Battle_Room/Battle_Room.yy",},},
     {"roomId":{"name":"Dev_Room","path":"rooms/Dev_Room/Dev_Room.yy",},},
+    {"roomId":{"name":"Battle_Win_Room","path":"rooms/Battle_Win_Room/Battle_Win_Room.yy",},},
+    {"roomId":{"name":"Battle_Lose_Room","path":"rooms/Battle_Lose_Room/Battle_Lose_Room.yy",},},
   ],
   "templateType": "game",
   "TextureGroups": [

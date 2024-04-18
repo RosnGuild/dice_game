@@ -37,19 +37,6 @@ else
 /// @DnDArgument : "value" "3"
 if(obj_Encounter_Manager.state == 3)
 {
-	/// @DnDAction : YoYo Games.Particles.Effect
-	/// @DnDVersion : 1
-	/// @DnDHash : 3202EC0C
-	/// @DnDDisabled : 1
-	/// @DnDParent : 2B3E052F
-	/// @DnDArgument : "x_relative" "1"
-	/// @DnDArgument : "y_relative" "1"
-	/// @DnDArgument : "type" "6"
-	/// @DnDArgument : "where" "1"
-	/// @DnDArgument : "size" "1"
-	/// @DnDArgument : "color" "$FFCCF7FF"
-
-
 	/// @DnDAction : YoYo Games.Instances.Set_Sprite
 	/// @DnDVersion : 1
 	/// @DnDHash : 5646D08D

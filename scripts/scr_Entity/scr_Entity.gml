@@ -34,6 +34,16 @@ function kill_entity(_entity_id) {
 		// Do something.
 	//}
 	instance_destroy(_entity_id);
+	
+	//go to lose screen if the player is the one being killed
+	if (_entity_id == obj_Player) {
+		room_goto(asset_get_index("Battle_Lose_Room"));	
+	}
+	
+	//go to battle win screen if there are now no more enemies in the battle
+	if (!layer_has_instance("Instances", instance_find(obj_Enemy, 0))) {
+		room_goto(asset_get_index("Battle_Win_Room"));
+	}
 }
 
 /// @function								add_block(_entity_id, _block_value);
