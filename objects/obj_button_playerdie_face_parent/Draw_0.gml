@@ -77,9 +77,9 @@ draw_set_alpha(l067E3317_0 / $ff);
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y" "sprite_height/5 + 60 * dcos(text_rotation)"
 /// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "xscale" "0.9"
-/// @DnDArgument : "yscale" "0.9"
-/// @DnDArgument : "caption" ""CD: ""
+/// @DnDArgument : "xscale" "0.7"
+/// @DnDArgument : "yscale" "0.7"
+/// @DnDArgument : "caption" ""Cooldown: ""
 /// @DnDArgument : "text" "global.die_graph_array[number - 1].cooldown"
 /// @DnDArgument : "angle" "text_rotation"
-draw_text_transformed(x + 10 * dsin(text_rotation), y + sprite_height/5 + 60 * dcos(text_rotation), string("CD: ") + string(global.die_graph_array[number - 1].cooldown), 0.9, 0.9, text_rotation);
+draw_text_transformed(x + 10 * dsin(text_rotation), y + sprite_height/5 + 60 * dcos(text_rotation), string("Cooldown: ") + string(global.die_graph_array[number - 1].cooldown), 0.7, 0.7, text_rotation);

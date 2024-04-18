@@ -25,3 +25,18 @@ if(!(layer_has_instance("Instances", instance_find(obj_Player, 0))))
 	/// @DnDParent : 1AF1CEC7
 	instance_destroy();
 }
+
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 347724E3
+/// @DnDArgument : "var" "obj_Player.current_energy"
+if(obj_Player.current_energy == 0)
+{
+	/// @DnDAction : YoYo Games.Instances.Color_Sprite
+	/// @DnDVersion : 1
+	/// @DnDHash : 6F9A5B6C
+	/// @DnDParent : 347724E3
+	/// @DnDArgument : "colour" "$FF999999"
+	image_blend = $FF999999 & $ffffff;
+	image_alpha = ($FF999999 >> 24) / $ff;
+}
