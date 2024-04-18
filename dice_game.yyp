@@ -53,6 +53,7 @@
     {"id":{"name":"obj_button_goto_devroom","path":"objects/obj_button_goto_devroom/obj_button_goto_devroom.yy",},},
     {"id":{"name":"obj_Loot_Table","path":"objects/obj_Loot_Table/obj_Loot_Table.yy",},},
     {"id":{"name":"spr_transparent","path":"sprites/spr_transparent/spr_transparent.yy",},},
+    {"id":{"name":"obj_button_exit_game","path":"objects/obj_button_exit_game/obj_button_exit_game.yy",},},
     {"id":{"name":"obj_face_Strike","path":"objects/obj_face_Strike/obj_face_Strike.yy",},},
     {"id":{"name":"spr_red_circle_and_arrows_overlay","path":"sprites/spr_red_circle_and_arrows_overlay/spr_red_circle_and_arrows_overlay.yy",},},
     {"id":{"name":"obj_button_strike_test","path":"objects/obj_button_strike_test/obj_button_strike_test.yy",},},

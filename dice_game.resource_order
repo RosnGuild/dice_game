@@ -35,6 +35,7 @@
     {"name":"obj_button_goto_devroom","order":11,"path":"objects/obj_button_goto_devroom/obj_button_goto_devroom.yy",},
     {"name":"obj_Loot_Table","order":10,"path":"objects/obj_Loot_Table/obj_Loot_Table.yy",},
     {"name":"spr_transparent","order":19,"path":"sprites/spr_transparent/spr_transparent.yy",},
+    {"name":"obj_button_exit_game","order":19,"path":"objects/obj_button_exit_game/obj_button_exit_game.yy",},
     {"name":"spr_red_circle_and_arrows_overlay","order":33,"path":"sprites/spr_red_circle_and_arrows_overlay/spr_red_circle_and_arrows_overlay.yy",},
     {"name":"obj_button_strike_test","order":2,"path":"objects/obj_button_strike_test/obj_button_strike_test.yy",},
     {"name":"obj_Face_Node","order":11,"path":"objects/obj_Face_Node/obj_Face_Node.yy",},
