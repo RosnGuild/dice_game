@@ -22,27 +22,27 @@ obj_display_face_infocard.display_x_scale = 1;
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 4FAFE78B
-/// @DnDArgument : "expr" "1.65"
+/// @DnDArgument : "expr" "2"
 /// @DnDArgument : "var" "obj_display_face_infocard.display_y_scale"
-obj_display_face_infocard.display_y_scale = 1.65;
+obj_display_face_infocard.display_y_scale = 2;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 23E6137A
-/// @DnDArgument : "expr" "number"
+/// @DnDArgument : "expr" "string(number) + ":\n" + string(player_move_get_description(face.face_move))"
 /// @DnDArgument : "var" "obj_display_face_infocard.display_header_text"
-obj_display_face_infocard.display_header_text = number;
+obj_display_face_infocard.display_header_text = string(number) + ":\n" + string(player_move_get_description(face.face_move));
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 7E204E33
-/// @DnDArgument : "expr" "player_move_get_description(face.face_move)"
+/// @DnDArgument : "expr" """"
 /// @DnDArgument : "var" "obj_display_face_infocard.display_body_text"
-obj_display_face_infocard.display_body_text = player_move_get_description(face.face_move);
+obj_display_face_infocard.display_body_text = "";
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 2CBF69C4
-/// @DnDArgument : "expr" "global.die_graph_array[number-1].adjacent_nodes"
+/// @DnDArgument : "expr" "get_hovered_adjacent_move_names(number)"
 /// @DnDArgument : "var" "obj_display_face_infocard.display_footer_text"
-obj_display_face_infocard.display_footer_text = global.die_graph_array[number-1].adjacent_nodes;
+obj_display_face_infocard.display_footer_text = get_hovered_adjacent_move_names(number);
