@@ -1,9 +1,9 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 19C4BA29
-/// @DnDArgument : "expr" ""Go to Character Customizer""
+/// @DnDArgument : "expr" ""Character Customizer""
 /// @DnDArgument : "var" "text"
-text = "Go to Character Customizer";
+text = "Character Customizer";
 
 /// @DnDAction : YoYo Games.Common.Function
 /// @DnDVersion : 1
