@@ -16,6 +16,8 @@ function end_turn_script() {
 		show_debug_message("An enemy is going to {0} you ", move_get_target_tags(current_enemy.name, current_enemy.move_number));
 		
 		parse_move(current_enemy.name, current_enemy, obj_Player, current_enemy.move_number);
+		
+		current_enemy.attacking = true;	//sets up enemies to perform attack animation
 	}
 	
 	// Generates new enemies numbers for their next moves.

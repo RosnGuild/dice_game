@@ -70,3 +70,17 @@ else
 	/// @DnDParent : 7B20D004
 	with(obj_enemy_select_overlay) instance_destroy();
 }
+
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
+/// @DnDHash : 5439C122
+/// @DnDArgument : "expr" "attacking == true"
+if(attacking == true)
+{
+	/// @DnDAction : YoYo Games.Common.Function_Call
+	/// @DnDVersion : 1
+	/// @DnDHash : 034F50E7
+	/// @DnDParent : 5439C122
+	/// @DnDArgument : "function" "bounce_off_player"
+	bounce_off_player();
+}
