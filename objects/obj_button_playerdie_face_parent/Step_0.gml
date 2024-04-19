@@ -40,3 +40,16 @@ if(obj_Player.current_energy == 0)
 	image_blend = $FF999999 & $ffffff;
 	image_alpha = ($FF999999 >> 24) / $ff;
 }
+
+/// @DnDAction : YoYo Games.Common.Else
+/// @DnDVersion : 1
+/// @DnDHash : 6136FACF
+else
+{
+	/// @DnDAction : YoYo Games.Instances.Color_Sprite
+	/// @DnDVersion : 1
+	/// @DnDHash : 087E9649
+	/// @DnDParent : 6136FACF
+	image_blend = $FFFFFFFF & $ffffff;
+	image_alpha = ($FFFFFFFF >> 24) / $ff;
+}
