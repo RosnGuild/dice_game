@@ -105,5 +105,10 @@ function get_hovered_adjacent_move_names(_face_number) {
 	return _display_string;
 }
 
+//I'll get to this function later -Nick
+//function is_attack() {
+//	ds_map_find_value(ds_map_find_value(global.enemy_move_data, name), move_number), tag_HIT
+//}
+
 //show_debug_message("FUCK: " + string(move_tags_get_description(move_get_target_tags("Strike"))));
 //show_debug_message("FUCK: " + string(move_get_target_tags("Strike")));
