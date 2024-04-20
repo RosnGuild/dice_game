@@ -11,8 +11,8 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_button_playerdie_face_parent","path":"objects/obj_button_playerdie_face_parent/obj_button_playerdie_face_parent.yy",},"propertyId":{"name":"text_rotation","path":"objects/obj_button_playerdie_face_parent/obj_button_playerdie_face_parent.yy",},"value":"60",},
   ],
   "parent": {
-    "name": "UI",
-    "path": "folders/Objects/UI.yy",
+    "name": "Player_Die_Face_Buttons",
+    "path": "folders/Objects/UI/Player_Die_Face_Buttons.yy",
   },
   "parentObjectId": {
     "name": "obj_button_playerdie_face_parent",

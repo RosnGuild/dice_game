@@ -11,8 +11,8 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_display_parent","path":"objects/obj_display_parent/obj_display_parent.yy",},"propertyId":{"name":"display_body_text","path":"objects/obj_display_parent/obj_display_parent.yy",},"value":"obj_",},
   ],
   "parent": {
-    "name": "UI",
-    "path": "folders/Objects/UI.yy",
+    "name": "Displays",
+    "path": "folders/Objects/UI/Displays.yy",
   },
   "parentObjectId": {
     "name": "obj_display_parent",

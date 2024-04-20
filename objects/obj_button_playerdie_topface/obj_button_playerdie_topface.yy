@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "UI",
-    "path": "folders/Objects/UI.yy",
+    "name": "Player_Die_Face_Buttons",
+    "path": "folders/Objects/UI/Player_Die_Face_Buttons.yy",
   },
   "parentObjectId": {
     "name": "obj_button_playerdie_face_parent",
