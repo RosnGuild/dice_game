@@ -54,26 +54,26 @@ function move_tags_get_description(_tags, _name = undefined) {
 	for (var i = 0; i < _tags_size; i++) {
 		switch (keys[i]) {
 		    case tag_HIT:
-		        _display_string = string_concat(_display_string, "Hit");
-		        break;
 			case tag_BLOCK:
-				_display_string = string_concat(_display_string, "Block");
-				break;
 			case tag_BURN:
-				_display_string = string_concat(_display_string, "Burn");
-				break;
+			case tag_VULNERABLE:
+			case tag_BLEED:
+		        _display_string = string_concat(_display_string, string_upper_case_first(keys[i]));
+		        break;
 			case tag_BOLSTER:
-				_display_string = string_concat(_display_string, "Bolster Enemies");
+				_display_string = string_concat(_display_string, "Bolster EnemiesFALSE");
 				break;
 			case tag_REROLL:
-				_display_string = string_concat(_display_string, "Reroll");
+				_display_string = string_concat(_display_string, "RerollFALSE");
 				break;
 		    default:
 				show_debug_message("ERROR: Attempted to parse tag ( {0} ) that doesn't exist!", keys[i]);
 		        break;
 		}
 		var _value = struct_get(_tags, keys[i])
-		if (_value != true) {
+		if (string_ends_with(_display_string, "FALSE")) {
+			_display_string = string_replace(_display_string, "FALSE", "");
+		} else {
 			_display_string = string(_display_string + " " + string(_value));
 		}
 		
@@ -121,4 +121,14 @@ function move_get_self_tags(_name, _enemy_dice_roll = undefined) {
 /// @description						Returns TRUE if move is an attack, FALSE otherwise.
 function move_is_attack(_name, _enemy_dice_roll = undefined) {
 	return struct_names_count(move_get_target_tags(_name, _enemy_dice_roll)) != 0;
+}
+
+/// @func						string_upper_case_first(str)
+/// @param {string}    _str		String of text
+/// @desc						Returns a string with the first character capitalized.
+/// This function was based on one sourced from GMLscripts.com, link is https://www.gmlscripts.com/script/string_ucfirst
+function string_upper_case_first(_str) {
+    var _output = string_upper(string_char_at(_str, 1));
+    _output += string_copy(_str, 2, string_length(_str) - 1);
+    return _output;
 }

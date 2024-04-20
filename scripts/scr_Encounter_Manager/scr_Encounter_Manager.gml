@@ -5,6 +5,7 @@ function end_turn_script() {
 	    current_enemy = instance_find(obj_Enemy, i);
 		clear_block(current_enemy);
 		decrement_bolster(current_enemy);
+		decrement_vulnerable(current_enemy);
 		show_debug_message("An enemy's bolster has been decreased to {0}", current_enemy.status_bolster_value);
 	}
 	
@@ -22,12 +23,18 @@ function end_turn_script() {
 		}
 	}
 	
+	for (var i = 0; i < instance_number(obj_Enemy); i++;) {
+		decrement_bleed(instance_find(obj_Enemy, i));
+	}
+	
 	set_enemy_new_move_number();
 	
 	// Resets player energy and block.
 	if (layer_has_instance("Instances", instance_find(obj_Player, 0))) {
 		clear_block(instance_find(obj_Player, 0));
+		decrement_vulnerable(instance_find(obj_Player, 0));
 		reset_energy(instance_find(obj_Player, 0));
+		decrement_bleed(instance_find(obj_Player, 0))
 	}
 	
 	// Decrements cooldown for all dice faces.

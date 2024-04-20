@@ -33,6 +33,13 @@ function add_bolster(_bolster_value = 1) {
 	}
 }
 
+/// @function								decrement_bolster(_enemy_id);
+/// @param {Id.Instance}	_enemy_id		The id of the enemy.
+/// @description							Decreases given entity's bolster value by 1, to a minimum of 0.
+function decrement_bolster(_enemy_id) {
+	_enemy_id.status_bolster_value = max(_enemy_id.status_bolster_value - 1, 0);
+}
+
 /// @function						get_enemy_upcoming_description(_name, _dice_roll);
 /// @param {string}	_name			The name of the enemy.
 /// @param {real}	_dice_roll		Dice roll associated with this move.
