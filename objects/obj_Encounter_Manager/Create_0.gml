@@ -18,6 +18,6 @@ enum STATES {
 
 state = STATES.SETUP;
 
-selected_face = obj_Face;
-selected_tags = obj_Face;
+selected_face = "";
+selected_tags = "";
 selected_face_node = 0;

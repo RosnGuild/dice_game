@@ -4,17 +4,12 @@
   "name": "obj_face_Strike",
   "eventList": [],
   "managed": true,
-  "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Face","path":"objects/obj_Face/obj_Face.yy",},"propertyId":{"name":"face_move","path":"objects/obj_Face/obj_Face.yy",},"value":"Strike",},
-  ],
+  "overriddenProperties": [],
   "parent": {
     "name": "Faces",
-    "path": "folders/Objects/Faces.yy",
+    "path": "",
   },
-  "parentObjectId": {
-    "name": "obj_Face",
-    "path": "objects/obj_Face/obj_Face.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
