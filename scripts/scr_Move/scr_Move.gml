@@ -105,10 +105,41 @@ function get_hovered_adjacent_move_names(_face_number) {
 	return _display_string;
 }
 
-//I'll get to this function later -Nick
-//function is_attack() {
-//	ds_map_find_value(ds_map_find_value(global.enemy_move_data, name), move_number), tag_HIT
-//}
+/// @function				move_get_rarity(_name);
+/// @param {string}	_name	The name of the move.
+/// @description			Returns the rarity of a move. 0 being Common, 1 being Uncommon, etc.
+function move_get_rarity(_name) {
+	return ds_map_find_value(global.move_data, _name)[movedata_RARITY];
+}
 
-//show_debug_message("FUCK: " + string(move_tags_get_description(move_get_target_tags("Strike"))));
-//show_debug_message("FUCK: " + string(move_get_target_tags("Strike")));
+/// @function							move_get_target_tags(_name);
+/// @param {string}	_name				Name of the move (or enemy).
+/// @param {real}	_enemy_dice_roll	Optional: Dice value rolled by enemy.
+/// @description						Returns a struct of the move's tags to be done to a target.
+function move_get_target_tags(_name, _enemy_dice_roll = undefined) {
+	if (_enemy_dice_roll != undefined) {
+	    return array_get(global.enemy_move_data[? _name][? _enemy_dice_roll], 0);
+	}
+	
+	return ds_map_find_value(global.move_data, _name)[movedata_TARGET_TAGS];
+}
+
+/// @function							move_get_self_tags(_name);
+/// @param {string}	_name				The name of the move (or enemy).
+/// @param {real}	_enemy_dice_roll	Optional: Dice value rolled by enemy.
+/// @description						Returns a struct of the move's tags to be done to self.
+function move_get_self_tags(_name, _enemy_dice_roll = undefined) {
+	if (_enemy_dice_roll != undefined) {
+	    return array_get(global.enemy_move_data[? _name][? _enemy_dice_roll], 1);
+	}
+	
+	return ds_map_find_value(global.move_data, _name)[movedata_SELF_TAGS];
+}
+
+/// @function							move_is_attack(_name, _move_number);
+/// @param {string}	_name				The name of the move (or enemy).
+/// @param {real}	_enemy_dice_roll	Optional: Dice value rolled by enemy.
+/// @description						Returns TRUE if move is an attack, FALSE otherwise.
+function move_is_attack(_name, _enemy_dice_roll = undefined) {
+	return struct_names_count(move_get_target_tags(_name, _enemy_dice_roll)) != 0;
+}

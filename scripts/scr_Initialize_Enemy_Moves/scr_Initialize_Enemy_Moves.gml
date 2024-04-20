@@ -48,3 +48,8 @@ enemy_move_create("Imp", 4, {tag_BURN : 1});
 enemy_move_create("Dummy", 1, {});
 
 // show_debug_message("FUCK: " + string(enemy_move_get_description("Imp", 2)));
+
+//show_debug_message("DOES THE LINE WORK for 1?: {0}", move_is_attack("Imp", 1));
+//show_debug_message("DOES THE LINE WORK for 2?: {0}", move_is_attack("Imp", 2));
+//show_debug_message("DOES THE LINE WORK for 3?: {0}", move_is_attack("Imp", 3));
+//show_debug_message("DOES THE LINE WORK for 4?: {0}", move_is_attack("Imp", 4));
