@@ -4,7 +4,7 @@ function get_current_player_face_number(){
 }
 
 function set_random_player_face() {
-	global.current_player_face_number = random_range(1, 20); // TODO: Is this range inclusive?
+	global.current_player_face_number = random_range(1, 21); // TODO: Is this range inclusive?
 }
 
 function get_adjacent_player_faces() {
