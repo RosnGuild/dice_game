@@ -74,12 +74,49 @@ function add_burn(_entity_id, _burn_value) {
 	_entity_id.status_burn_value += _burn_value;
 }
 
+/// @function								decrement_burn(_entity_id);
+/// @param {Id.Instance}	_entity_id		The id of the entity.
+/// @description							Decreases given entity's burn value by 1, to a minimum of 0.
+function decrement_burn(_entity_id) {
+	_entity_id.status_burn_value = max(_entity_id.status_burn_value - 1, 0);
+}
+
 /// @function									add_vulnerable(_entity_id, _vulnerable_value);
 /// @param {Id.Instance}	_entity_id			The id of the entity.
 /// @param {Real}			_vulnerable_value	Amount of vulnerable.
 /// @description								Increases an entity's Vulnerable status by an amount.
-function add_vulnerable(_entity_id, _vulnerable_value) {
+function add_vulnerable(_entity_id, _vulnerable_value = 1) {
 	_entity_id.status_vulnerable_value += _vulnerable_value;
+}
+
+/// @function								decrement_vulnerable(_entity_id);
+/// @param {Id.Instance}	_entity_id		The id of the entity.
+/// @description							Decreases given entity's Vulnerable value by 1, to a minimum of 0.
+function decrement_vulnerable(_entity_id) {
+	_entity_id.status_vulnerable_value = max(_entity_id.status_vulnerable_value - 1, 0);
+}
+
+/// @function								add_bleed(_entity_id, _bleed_value);
+/// @param {Id.Instance}	_entity_id		The id of the entity.
+/// @param {Real}			_bleed_value	Amount of bleed.
+/// @description							Increases an entity's Bleed status by an amount.
+function add_bleed(_entity_id, _bleed_value) {
+	_entity_id.status_bleed_value += _bleed_value;
+}
+
+/// @function								decrement_bleed(_entity_id);
+/// @param {Id.Instance}	_entity_id		The id of the entity.
+/// @param {Bool}			_take_damage	Whether the entity should take the current bleed damage as damage.
+/// @description							Decreases given entity's Bleed value by 1, to a minimum of 0.
+function decrement_bleed(_entity_id, _take_damage = true) {
+	if (_take_damage) {
+		if (_entity_id.current_hp <= _entity_id.status_bleed_value) {
+			take_damage(_entity_id, _entity_id.status_bleed_value, true);
+			return;
+		}
+		take_damage(_entity_id, _entity_id.status_bleed_value, true);
+	}
+	_entity_id.status_bleed_value = max(_entity_id.status_bleed_value - 1, 0);
 }
 
 /// @function								decrement_status(_entity_id, _status_name);
@@ -88,25 +125,4 @@ function add_vulnerable(_entity_id, _vulnerable_value) {
 /// @description							DOESN'T WORK CURRENTLY. CRASHES THE GAME.
 function decrement_status(_entity_id, _status_name) {
 	_entity_id._status_name = max(_entity_id._status_name - 1, 0);
-}
-
-/// @function								decrement_burn(_entity_id);
-/// @param {Id.Instance}	_entity_id		The id of the entity.
-/// @description							Decreases given entity's burn value by 1, to a minimum of 0.
-function decrement_burn(_entity_id) {
-	_entity_id.status_burn_value = max(_entity_id.status_burn_value - 1, 0);
-}
-
-/// @function								decrement_bolster(_entity_id);
-/// @param {Id.Instance}	_entity_id		The id of the entity.
-/// @description							Decreases given entity's bolster value by 1, to a minimum of 0.
-function decrement_bolster(_entity_id) {
-	_entity_id.status_bolster_value = max(_entity_id.status_bolster_value - 1, 0);
-}
-
-/// @function								decrement_vulnerable(_entity_id);
-/// @param {Id.Instance}	_entity_id		The id of the entity.
-/// @description							Decreases given entity's Vulnerable value by 1, to a minimum of 0.
-function decrement_vulnerable(_entity_id) {
-	_entity_id.status_vulnerable_value = max(_entity_id.status_vulnerable_value - 1, 0);
 }

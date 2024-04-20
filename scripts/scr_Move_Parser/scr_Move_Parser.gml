@@ -54,6 +54,9 @@ function scr_parse_move_helper(_entity, _tags){
 			case tag_VULNERABLE:
 				add_vulnerable(_entity, _tags[$ keys[i]]);
 				break;
+			case tag_BLEED:
+				add_bleed(_entity, _tags[$ keys[i]]);
+				break;
 		    default:
 		        // code here
 				show_debug_message("ERROR: Attempted to parse tag {0} that doesn't exist!", keys[i]);

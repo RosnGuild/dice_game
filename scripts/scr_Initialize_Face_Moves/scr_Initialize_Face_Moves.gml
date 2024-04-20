@@ -5,14 +5,17 @@
 #macro BASE_BLOCK 5
 #macro BASE_HIT 6
 #macro BASE_VULNERABLE 1
+#macro BASE_BLEED 5
 
 #macro UNCOMMON_BLOCK 2 * BASE_BLOCK
 #macro UNCOMMON_STRIKE 2 * BASE_HIT
 #macro UNCOMMON_VULNERABLE 2 * BASE_VULNERABLE
+#macro UNCOMMON_BLEED 2 * BASE_BLEED
 
 #macro RARE_BLOCK 3 * BASE_BLOCK
 #macro RARE_STRIKE 3 * BASE_HIT
 #macro RARE_VULNERABLE 3 * BASE_VULNERABLE
+#macro RARE_BLEED 3 * BASE_BLEED
 
 //---
 // Map and struct-based implementation of the move database. Accessed with ds_map_find_value(global.move_data_alternative, [move name string]
@@ -22,6 +25,7 @@
 #macro face_move_STRIKE "Strike"
 #macro face_move_BLOCK "Block"
 #macro face_move_TRIP "Trip"
+#macro face_move_SLICE "Slice"
 
 // Use these to index into the list that each move name maps to.
 #macro movedata_RARITY 0
@@ -34,6 +38,7 @@
 #macro tag_BLOCK "block"
 #macro tag_BURN "burn"
 #macro tag_VULNERABLE "vulnerable"
+#macro tag_BLEED "bleed"
 
 enum RARITY {
 	COMMON,
@@ -60,4 +65,5 @@ function move_create(_name, _rarity, _cooldown, _target_tags = {}, _self_tags = 
 move_create(face_move_DEFAULT, RARITY.TESTING, 1, {}, {}); // TESTING MOVE
 move_create(face_move_STRIKE, RARITY.COMMON, 1, {tag_HIT : BASE_HIT});
 move_create(face_move_BLOCK, RARITY.COMMON, 1, {}, {tag_BLOCK : BASE_BLOCK});
-move_create(face_move_TRIP, RARITY.COMMON, 1, {}, {tag_VULNERABLE : BASE_VULNERABLE});
+move_create(face_move_TRIP, RARITY.COMMON, 1, {tag_VULNERABLE : BASE_VULNERABLE});
+move_create(face_move_SLICE, RARITY.COMMON, 1, {tag_BLEED : BASE_BLEED});
