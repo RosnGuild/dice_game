@@ -11,5 +11,11 @@ text = "Swap Faces";
 /// @DnDArgument : "funcName" "activate_button"
 function activate_button() 
 {
-
+	/// @DnDAction : YoYo Games.Common.Function_Call
+	/// @DnDVersion : 1
+	/// @DnDHash : 0EBAB55E
+	/// @DnDParent : 56BE0477
+	/// @DnDArgument : "function" "under_swap"
+	/// @DnDArgument : "arg" "number"
+	under_swap(number);
 }

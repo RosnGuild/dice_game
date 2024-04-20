@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "UI",
-    "path": "folders/Objects/UI.yy",
+    "name": "Goto_Room_Buttons",
+    "path": "folders/Objects/UI/Goto_Room_Buttons.yy",
   },
   "parentObjectId": {
     "name": "obj_button_parent",
