@@ -14,8 +14,8 @@
     "path": "folders/Objects/UI/Character_Customizer.yy",
   },
   "parentObjectId": {
-    "name": "obj_button_parent",
-    "path": "objects/obj_button_parent/obj_button_parent.yy",
+    "name": "obj_button_player_customizer_die_face_parent",
+    "path": "objects/obj_button_player_customizer_die_face_parent/obj_button_player_customizer_die_face_parent.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
