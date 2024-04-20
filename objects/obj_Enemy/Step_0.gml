@@ -75,14 +75,52 @@ else
 /// @DnDVersion : 1
 /// @DnDHash : 5439C122
 /// @DnDInput : 2
-/// @DnDArgument : "expr" "attacking == true"
+/// @DnDDisabled : 1
+/// @DnDArgument : "expr" "attacking"
 /// @DnDArgument : "expr_1" "move_is_attack(name, move_number)"
-if(attacking == true && move_is_attack(name, move_number))
+/// @DnDAction : YoYo Games.Common.Function_Call
+/// @DnDVersion : 1
+/// @DnDHash : 034F50E7
+/// @DnDDisabled : 1
+/// @DnDParent : 5439C122
+/// @DnDArgument : "function" "bounce_off_player"
+
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
+/// @DnDHash : 377F044D
+/// @DnDInput : 4
+/// @DnDArgument : "expr" "x == start_x"
+/// @DnDArgument : "expr_1" "y == start_y"
+/// @DnDArgument : "expr_2" "attacking"
+/// @DnDArgument : "expr_3" "collided_player"
+if(x == start_x && y == start_y && attacking && collided_player)
 {
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 38F87842
+	/// @DnDParent : 377F044D
+	/// @DnDArgument : "expr" "false"
+	/// @DnDArgument : "var" "attacking"
+	attacking = false;
+
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 75ACE915
+	/// @DnDParent : 377F044D
+	/// @DnDArgument : "expr" "false"
+	/// @DnDArgument : "var" "collided_player"
+	collided_player = false;
+
+	/// @DnDAction : YoYo Games.Movement.Set_Speed
+	/// @DnDVersion : 1
+	/// @DnDHash : 78F6104D
+	/// @DnDParent : 377F044D
+	speed = 0;
+
 	/// @DnDAction : YoYo Games.Common.Function_Call
 	/// @DnDVersion : 1
-	/// @DnDHash : 034F50E7
-	/// @DnDParent : 5439C122
-	/// @DnDArgument : "function" "bounce_off_player"
-	bounce_off_player();
+	/// @DnDHash : 49042720
+	/// @DnDDisabled : 1
+	/// @DnDParent : 377F044D
+	/// @DnDArgument : "function" "set_enemy_new_move_number"
 }
