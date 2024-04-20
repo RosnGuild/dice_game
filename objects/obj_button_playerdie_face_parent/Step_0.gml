@@ -8,9 +8,9 @@ text = number;
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 0F307A77
-/// @DnDArgument : "expr" "global.die_graph_array[number - 1].node_face"
+/// @DnDArgument : "expr" "global.die_graph_array[number - 1].move"
 /// @DnDArgument : "var" "face"
-face = global.die_graph_array[number - 1].node_face;
+face = global.die_graph_array[number - 1].move;
 
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1

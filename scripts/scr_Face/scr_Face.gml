@@ -7,7 +7,7 @@ function decrement_cooldown(_face_node){
 }
 
 function trigger_cooldown(_face_node) {
-	_face_node.cooldown = ds_map_find_value(global.move_data, _face_node.node_face)[movedata_COOLDOWN]
+	_face_node.cooldown = ds_map_find_value(global.move_data, _face_node.move)[movedata_COOLDOWN]
 }
 
 function reset_cooldown(_face_node) {

@@ -18,13 +18,13 @@ function update_current_face_number() {
 
 // Changes the face assigned to a die graph node to the specified face.
 function change_assigned_face_move(_face_number, _new_face_move) {
-	global.die_graph_array[_face_number].node_face = _new_face_move;
+	global.die_graph_array[_face_number].move = _new_face_move;
 }
 
 // Swaps the faces assigned to two die graph nodes.
 function swap_face_moves(_first_face_number, _second_face_number) {
-	var _first_face_move = global.die_graph_array[_first_face_number].node_face;
-	var _second_face_move = global.die_graph_array[_first_face_number].node_face;
+	var _first_face_move = global.die_graph_array[_first_face_number].move;
+	var _second_face_move = global.die_graph_array[_first_face_number].move;
 	
 	change_assigned_face_move(_first_face_number, _second_face_move);
 	change_assigned_face_move(_second_face_number, _first_face_move);
