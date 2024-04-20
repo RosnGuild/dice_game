@@ -17,6 +17,12 @@
 //---
 // Map and struct-based implementation of the move database. Accessed with ds_map_find_value(global.move_data_alternative, [move name string]
 
+// Use use these to access player moves.
+#macro face_move_DEFAULT "Default"
+#macro face_move_STRIKE "Strike"
+#macro face_move_BLOCK "Block"
+#macro face_move_TRIP "Trip"
+
 // Use these to index into the list that each move name maps to.
 #macro movedata_RARITY 0
 #macro movedata_COOLDOWN 1
@@ -51,7 +57,7 @@ function move_create(_name, _rarity, _cooldown, _target_tags = {}, _self_tags = 
 	ds_map_add(global.move_data, _name, [_rarity, _cooldown, _target_tags, _self_tags]);
 }
 
-move_create("Default", RARITY.TESTING, 1, {}, {}); // TESTING MOVE
-move_create("Strike", RARITY.COMMON, 1, {tag_HIT : BASE_HIT});
-move_create("Block", RARITY.COMMON, 1, {}, {tag_BLOCK : BASE_BLOCK});
-move_create("Trip", RARITY.COMMON, 1, {}, {tag_VULNERABLE : BASE_VULNERABLE});
+move_create(face_move_DEFAULT, RARITY.TESTING, 1, {}, {}); // TESTING MOVE
+move_create(face_move_STRIKE, RARITY.COMMON, 1, {tag_HIT : BASE_HIT});
+move_create(face_move_BLOCK, RARITY.COMMON, 1, {}, {tag_BLOCK : BASE_BLOCK});
+move_create(face_move_TRIP, RARITY.COMMON, 1, {}, {tag_VULNERABLE : BASE_VULNERABLE});
