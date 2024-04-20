@@ -84,27 +84,6 @@ function move_tags_get_description(_tags, _name = undefined) {
 	return _display_string;
 }
 
-/// @function						get_hovered_adjacent_move_names(_face_node);
-/// @description					HELPER FUNCTION for move description getters. Generates and returns a String describing the names of the two upcoming face nodes.
-function get_hovered_adjacent_move_names(_face_number) {
-	var _display_string = "";
-	var _adjacent_nodes = global.die_graph_array[_face_number - 1].adjacent_nodes;
-	
-	_display_string = string_concat(_display_string, "Next:\n");
-	for (var i = 0; i < 3; i++) {
-		_display_string = string_concat(_display_string, global.die_graph_array[_adjacent_nodes[i] - 1].face_number);
-		_display_string = string_concat(_display_string, ": ");
-		_display_string = string_concat(_display_string, global.die_graph_array[_adjacent_nodes[i] - 1].node_face.face_move);
-		if (i+1 != 3) {
-			_display_string = string_concat(_display_string, ",\n");
-		}
-	}
-
-
-	
-	return _display_string;
-}
-
 /// @function				move_get_rarity(_name);
 /// @param {string}	_name	The name of the move.
 /// @description			Returns the rarity of a move. 0 being Common, 1 being Uncommon, etc.

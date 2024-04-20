@@ -52,9 +52,9 @@ obj_display_face_infocard.display_y_scale = 1.75;
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 23E6137A
-/// @DnDArgument : "expr" "string(number) + ":\n" + string(player_move_get_description(face.face_move))"
+/// @DnDArgument : "expr" "string(number) + ":\n" + string(player_move_get_description(face))"
 /// @DnDArgument : "var" "obj_display_face_infocard.display_header_text"
-obj_display_face_infocard.display_header_text = string(number) + ":\n" + string(player_move_get_description(face.face_move));
+obj_display_face_infocard.display_header_text = string(number) + ":\n" + string(player_move_get_description(face));
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
