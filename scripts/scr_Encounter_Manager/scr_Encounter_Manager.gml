@@ -27,7 +27,7 @@ function end_turn_script() {
 		decrement_bleed(instance_find(obj_Enemy, i));
 	}
 	
-	set_enemy_new_move_number();
+	update_enemy_move_numbers();
 	
 	// Resets player energy and block.
 	if (layer_has_instance("Instances", instance_find(obj_Player, 0))) {
@@ -43,12 +43,15 @@ function end_turn_script() {
 	}
 	
 	obj_Encounter_Manager.state = STATES.PLAYER_MOVE_CHOICE;
+	
+	show_debug_message("CURRENT TOP FACE : {0} and {1}", global.current_player_face_number, global.current_player_face_move)
 }
 
-function set_enemy_new_move_number() {
-	// Generates new enemies numbers for their next moves.
+/// @function		update_enemy_move_numbers();
+/// @description	Using their saved upcoming move numbers list, updates the move numbers of all enemies for the new round.
+function update_enemy_move_numbers() {
 	for (var i = 0; i < instance_number(obj_Enemy); i++;) {
 	    current_enemy = instance_find(obj_Enemy, i);
-		current_enemy.move_number = enemy_generate_move_number(current_enemy.name, min(current_enemy.status_bolster_value, 1));
+		enemy_update_move_number(current_enemy);
 	}
 }

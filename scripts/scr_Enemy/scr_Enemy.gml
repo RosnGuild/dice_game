@@ -40,6 +40,21 @@ function decrement_bolster(_enemy_id) {
 	_enemy_id.status_bolster_value = max(_enemy_id.status_bolster_value - 1, 0);
 }
 
+/// @function							add_scry(_enemy_id, _scry_value);
+/// @param {Id.Instance}	_enemy_id	The id of the enemy.
+/// @param {Real}			_scry_value	Value to increase Scry status of the enemy by.
+/// @description						Increases Bolster status by the given value (default 1).
+function add_scry(_enemy_id, _scry_value = 1) {
+	_enemy_id.status_scry_value += _scry_value;
+}
+
+/// @function								decrement_scry(_enemy_id);
+/// @param {Id.Instance}	_enemy_id		The id of the enemy.
+/// @description							Decreases given entity's Scry value by 1, to a minimum of 0.
+function decrement_scry(_enemy_id) {
+	_enemy_id.status_scry_value = max(_enemy_id.status_scry_value - 1, 0);
+}
+
 /// @function						get_enemy_upcoming_description(_name, _dice_roll);
 /// @param {string}	_name			The name of the enemy.
 /// @param {real}	_dice_roll		Dice roll associated with this move.
@@ -51,4 +66,22 @@ function get_enemy_upcoming_description(_name, _dice_roll) {
 	}
 	
 	return string(_final_string + "\n Next Turn: " + enemy_move_get_description(_name, _dice_roll));
+}
+
+/// @function		enemy_setup_initial_move_numbers();
+/// @description	Creates and populates a list of move numbers for an enemy, to be drawn upon for each upcoming turn.
+function enemy_setup_initial_move_numbers() {
+	upcoming_move_numbers = [];
+	for (var i = 0; i < 6; ++i) {
+	    array_push(upcoming_move_numbers, enemy_generate_move_number(name));
+	}
+	move_number = array_shift(upcoming_move_numbers);
+}
+
+/// @function							enemy_update_move_numbers(_enemy_id);
+/// @param {Id.Instance}	_enemy_id	The id of the enemy.
+/// @description						Sets move_number to the next value in upcoming_move_numbers, and repopulates upcoming_move_numbers.
+function enemy_update_move_number(_enemy_id) {
+	_enemy_id.move_number = array_shift(_enemy_id.upcoming_move_numbers);
+	array_push(_enemy_id.upcoming_move_numbers, enemy_generate_move_number(_enemy_id.name));
 }

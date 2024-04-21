@@ -27,6 +27,9 @@
 #macro face_move_TRIP "Trip"
 #macro face_move_SLICE "Slice"
 
+#macro face_move_COMBO "Combo"
+#macro face_move_BLOODY_BLOW "Bloody Blow"
+
 // Use these to index into the list that each move name maps to.
 #macro movedata_RARITY 0
 #macro movedata_COOLDOWN 1
@@ -39,6 +42,7 @@
 #macro tag_BURN "burn"
 #macro tag_VULNERABLE "vulnerable"
 #macro tag_BLEED "bleed"
+#macro tag_SCRY "scry"
 
 enum RARITY {
 	COMMON,
@@ -67,3 +71,6 @@ move_create(face_move_STRIKE, RARITY.COMMON, 1, {tag_HIT : BASE_HIT});
 move_create(face_move_BLOCK, RARITY.COMMON, 1, {}, {tag_BLOCK : BASE_BLOCK});
 move_create(face_move_TRIP, RARITY.COMMON, 1, {tag_VULNERABLE : BASE_VULNERABLE});
 move_create(face_move_SLICE, RARITY.COMMON, 1, {tag_BLEED : BASE_BLEED});
+
+move_create(face_move_COMBO, RARITY.UNCOMMON, 2, {tag_HIT : BASE_HIT},	{tag_BLOCK : BASE_BLOCK});
+move_create(face_move_BLOODY_BLOW, RARITY.UNCOMMON, 2, {tag_HIT : BASE_HIT, tag_BLEED : BASE_BLEED});

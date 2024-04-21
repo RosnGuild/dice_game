@@ -49,13 +49,16 @@ function scr_parse_move_helper(_entity, _tags){
 				add_bolster()
 				break;
 			case tag_REROLL:
-				
+				set_random_player_face();
 				break;
 			case tag_VULNERABLE:
 				add_vulnerable(_entity, _tags[$ keys[i]]);
 				break;
 			case tag_BLEED:
 				add_bleed(_entity, _tags[$ keys[i]]);
+				break;
+			case tag_SCRY:
+				add_scry(_entity, _tags[$ keys[i]]);
 				break;
 		    default:
 		        // code here

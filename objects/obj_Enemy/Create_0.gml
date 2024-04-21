@@ -3,6 +3,19 @@
 /// @DnDHash : 60353186
 event_inherited();
 
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 7AEB43EC
+/// @DnDArgument : "expr" "[]"
+/// @DnDArgument : "var" "upcoming_move_numbers"
+upcoming_move_numbers = [];
+
+/// @DnDAction : YoYo Games.Common.Function_Call
+/// @DnDVersion : 1
+/// @DnDHash : 41E5219D
+/// @DnDArgument : "function" "enemy_setup_initial_move_numbers"
+enemy_setup_initial_move_numbers();
+
 /// @DnDAction : YoYo Games.Common.Function
 /// @DnDVersion : 1
 /// @DnDHash : 0143B323

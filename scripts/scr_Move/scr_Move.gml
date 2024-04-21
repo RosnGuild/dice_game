@@ -58,6 +58,7 @@ function move_tags_get_description(_tags, _name = undefined) {
 			case tag_BURN:
 			case tag_VULNERABLE:
 			case tag_BLEED:
+			case tag_SCRY:
 		        _display_string = string_concat(_display_string, string_upper_case_first(keys[i]));
 		        break;
 			case tag_BOLSTER:
