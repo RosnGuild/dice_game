@@ -6,6 +6,6 @@ event_inherited();
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 2FF4D9FC
-/// @DnDArgument : "expr" "get_current_player_face_number()"
-/// @DnDArgument : "var" "number"
-number = get_current_player_face_number();
+/// @DnDArgument : "expr" "global.current_stashed_face_move"
+/// @DnDArgument : "var" "face"
+face = global.current_stashed_face_move;

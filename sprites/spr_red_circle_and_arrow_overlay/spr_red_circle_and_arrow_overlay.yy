@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Enemy_Selection_Overlays",
+    "path": "folders/Sprites/Enemy_Selection_Overlays.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
