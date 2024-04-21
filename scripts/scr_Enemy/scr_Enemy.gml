@@ -30,6 +30,18 @@ function enemy_generate_move_number(_enemy_id, _n = 0){
 	return(return_value);
 }
 
+/// @function							enemy_generate_round_numbers(_enemy_name, _move_num);
+/// @param {Id.Instance}	_enemy_id	The id of the enemy.
+/// @param {real}			_n			Optional: Modifier to the roll.
+/// @description						Returns a list of all move numbers for the enemy to do in a round. Optionally modified by an added number n.
+function enemy_generate_round_numbers(_enemy_id, _n = 0){
+	var _actions_for_round = [];
+	for (var i = 0; i < _enemy_id.actions_per_round; ++i) {
+		array_push(_actions_for_round, enemy_generate_move_number(_enemy_id, _n));
+	}
+	return(_actions_for_round);
+}
+
 /// @function							add_bolster(_enemy_id);
 /// @param {Real}	_bolster_value		Value to increase Bolster status of all enemies by.
 /// @description						Increases Bolster status by the given value (default 1).
@@ -163,21 +175,24 @@ function enemy_describe_upcoming_one_round (_dice_value1, _dice_value2 = undefin
 }
 
 /// @function		enemy_setup_initial_move_numbers();
-/// @description	Creates and populates a list of move numbers for an enemy, to be drawn upon for each upcoming turn.
+/// @description	Creates and populates a list of lists of move numbers for an enemy, to be drawn upon for each upcoming turn. Each sub-list is the size of the enemy's actions_per_round.
 function enemy_setup_initial_move_numbers() {
 	upcoming_move_numbers = [];
 	for (var i = 0; i < 6; ++i) {
-	    array_push(upcoming_move_numbers, enemy_generate_move_number(id));
+	    array_push(upcoming_move_numbers, enemy_generate_round_numbers(id));
 	}
-	move_number = array_shift(upcoming_move_numbers);
+	current_move_numbers = array_shift(upcoming_move_numbers);
 }
 
-/// @function							enemy_update_move_numbers(_enemy_id);
+/// @function							enemy_update_move_number(_enemy_id);
 /// @param {Id.Instance}	_enemy_id	The id of the enemy.
 /// @description						Sets move_number to the next value in upcoming_move_numbers, and repopulates upcoming_move_numbers.
-function enemy_update_move_number(_enemy_id) {
-	_enemy_id.move_number = enemy_handle_bolster(_enemy_id, array_shift(_enemy_id.upcoming_move_numbers));
-	show_debug_message("SET NEW ENEMY MOVE NUMBERS TO: " + string(_enemy_id.move_number) + string(_enemy_id.upcoming_move_numbers));
+function enemy_update_upcoming_move(_enemy_id) {
+	_enemy_id.current_move_numbers = array_shift(_enemy_id.upcoming_move_numbers)
+	for (var i = 0; i < array_length(_enemy_id.current_move_numbers); ++i) {
+	    _enemy_id.current_move_numbers[i] = enemy_handle_bolster(_enemy_id, _enemy_id.current_move_numbers[i]);
+	}
+	show_debug_message("SET NEW ENEMY MOVE NUMBERS TO: " + string(_enemy_id.current_move_numbers) + string(_enemy_id.upcoming_move_numbers));
 	
-	array_push(_enemy_id.upcoming_move_numbers, enemy_generate_move_number(_enemy_id));
+	array_push(_enemy_id.upcoming_move_numbers, enemy_generate_round_numbers(_enemy_id));
 }
