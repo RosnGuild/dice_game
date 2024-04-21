@@ -44,24 +44,45 @@ obj_display_face_infocard.display_x_scale = 1;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
-/// @DnDHash : 4FAFE78B
+/// @DnDHash : 3AA2FC9C
 /// @DnDArgument : "expr" "1.75"
 /// @DnDArgument : "var" "obj_display_face_infocard.display_y_scale"
 obj_display_face_infocard.display_y_scale = 1.75;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
+/// @DnDHash : 4FAFE78B
+/// @DnDArgument : "expr" "1"
+/// @DnDArgument : "var" "obj_display_face_infocard.display_header_scale"
+obj_display_face_infocard.display_header_scale = 1;
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 659863AB
+/// @DnDArgument : "expr" "1"
+/// @DnDArgument : "var" "obj_display_face_infocard.display_body_scale"
+obj_display_face_infocard.display_body_scale = 1;
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 54EB256B
+/// @DnDArgument : "expr" "0.75"
+/// @DnDArgument : "var" "obj_display_face_infocard.display_footer_scale"
+obj_display_face_infocard.display_footer_scale = 0.75;
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
 /// @DnDHash : 23E6137A
-/// @DnDArgument : "expr" "string(number) + ":\n" + string(player_move_get_description(face))"
+/// @DnDArgument : "expr" "string(face) + " " + "[" + string(number) + "]""
 /// @DnDArgument : "var" "obj_display_face_infocard.display_header_text"
-obj_display_face_infocard.display_header_text = string(number) + ":\n" + string(player_move_get_description(face));
+obj_display_face_infocard.display_header_text = string(face) + " " + "[" + string(number) + "]";
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 7E204E33
-/// @DnDArgument : "expr" """"
+/// @DnDArgument : "expr" "string(player_move_get_description(face))"
 /// @DnDArgument : "var" "obj_display_face_infocard.display_body_text"
-obj_display_face_infocard.display_body_text = "";
+obj_display_face_infocard.display_body_text = string(player_move_get_description(face));
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
