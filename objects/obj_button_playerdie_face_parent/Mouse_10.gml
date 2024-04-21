@@ -45,16 +45,16 @@ obj_display_face_infocard.display_x_scale = 1;
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 3AA2FC9C
-/// @DnDArgument : "expr" "1.75"
+/// @DnDArgument : "expr" "1.7"
 /// @DnDArgument : "var" "obj_display_face_infocard.display_y_scale"
-obj_display_face_infocard.display_y_scale = 1.75;
+obj_display_face_infocard.display_y_scale = 1.7;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 4FAFE78B
-/// @DnDArgument : "expr" "1"
+/// @DnDArgument : "expr" "1.25"
 /// @DnDArgument : "var" "obj_display_face_infocard.display_header_scale"
-obj_display_face_infocard.display_header_scale = 1;
+obj_display_face_infocard.display_header_scale = 1.25;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
@@ -62,6 +62,13 @@ obj_display_face_infocard.display_header_scale = 1;
 /// @DnDArgument : "expr" "1"
 /// @DnDArgument : "var" "obj_display_face_infocard.display_body_scale"
 obj_display_face_infocard.display_body_scale = 1;
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 58957302
+/// @DnDArgument : "expr" "0.8"
+/// @DnDArgument : "var" "obj_display_face_infocard.display_body2_scale"
+obj_display_face_infocard.display_body2_scale = 0.8;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
@@ -80,9 +87,16 @@ obj_display_face_infocard.display_header_text = string(face) + " " + "[" + strin
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 7E204E33
-/// @DnDArgument : "expr" "string(player_move_get_description(face))"
+/// @DnDArgument : "expr" "string(player_move_get_description(face)) + "\n\n ""
 /// @DnDArgument : "var" "obj_display_face_infocard.display_body_text"
-obj_display_face_infocard.display_body_text = string(player_move_get_description(face));
+obj_display_face_infocard.display_body_text = string(player_move_get_description(face)) + "\n\n ";
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 6B119578
+/// @DnDArgument : "expr" ""\n" + "Max Cooldown: " + string(ds_map_find_value(global.move_data, global.die_graph_array[number - 1].move)[movedata_COOLDOWN])"
+/// @DnDArgument : "var" "obj_display_face_infocard.display_body2_text"
+obj_display_face_infocard.display_body2_text = "\n" + "Max Cooldown: " + string(ds_map_find_value(global.move_data, global.die_graph_array[number - 1].move)[movedata_COOLDOWN]);
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1

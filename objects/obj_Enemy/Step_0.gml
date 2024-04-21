@@ -89,11 +89,11 @@ else
 /// @DnDVersion : 1
 /// @DnDHash : 377F044D
 /// @DnDInput : 4
-/// @DnDArgument : "expr" "x == start_x"
-/// @DnDArgument : "expr_1" "y == start_y"
+/// @DnDArgument : "expr" "x <= (start_x + 1) and x >= (start_x - 1)"
+/// @DnDArgument : "expr_1" "y <= (start_y + 1) and  y >= (start_y - 1)"
 /// @DnDArgument : "expr_2" "attacking"
 /// @DnDArgument : "expr_3" "collided_player"
-if(x == start_x && y == start_y && attacking && collided_player)
+if(x <= (start_x + 1) and x >= (start_x - 1) && y <= (start_y + 1) and  y >= (start_y - 1) && attacking && collided_player)
 {
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
@@ -116,11 +116,4 @@ if(x == start_x && y == start_y && attacking && collided_player)
 	/// @DnDHash : 78F6104D
 	/// @DnDParent : 377F044D
 	speed = 0;
-
-	/// @DnDAction : YoYo Games.Common.Function_Call
-	/// @DnDVersion : 1
-	/// @DnDHash : 49042720
-	/// @DnDDisabled : 1
-	/// @DnDParent : 377F044D
-	/// @DnDArgument : "function" "set_enemy_new_move_number"
 }

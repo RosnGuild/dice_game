@@ -53,3 +53,32 @@ else
 	image_blend = $FFFFFFFF & $ffffff;
 	image_alpha = ($FFFFFFFF >> 24) / $ff;
 }
+
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 656A9711
+/// @DnDArgument : "var" "global.die_graph_array[number - 1].cooldown"
+/// @DnDArgument : "op" "2"
+if(global.die_graph_array[number - 1].cooldown > 0)
+{
+	/// @DnDAction : YoYo Games.Instances.Color_Sprite
+	/// @DnDVersion : 1
+	/// @DnDHash : 3E72F119
+	/// @DnDParent : 656A9711
+	/// @DnDArgument : "colour" "$FF999999"
+	image_blend = $FF999999 & $ffffff;
+	image_alpha = ($FF999999 >> 24) / $ff;
+}
+
+/// @DnDAction : YoYo Games.Common.Else
+/// @DnDVersion : 1
+/// @DnDHash : 7D631751
+else
+{
+	/// @DnDAction : YoYo Games.Instances.Color_Sprite
+	/// @DnDVersion : 1
+	/// @DnDHash : 6D9776CA
+	/// @DnDParent : 7D631751
+	image_blend = $FFFFFFFF & $ffffff;
+	image_alpha = ($FFFFFFFF >> 24) / $ff;
+}
