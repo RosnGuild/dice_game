@@ -110,7 +110,7 @@ function move_get_target_tags(_name, _enemy_dice_roll = undefined) {
 /// @description						Returns a struct of the move's tags to be done to self.
 function move_get_self_tags(_name, _enemy_dice_roll = undefined) {
 	if (_enemy_dice_roll != undefined) {
-		show_debug_message("THE OUTPUT WAS A " + string(_enemy_dice_roll));
+		//show_debug_message("THE OUTPUT WAS A " + string(_enemy_dice_roll));
 	    return array_get(global.enemy_move_data[? _name][? _enemy_dice_roll], 1);
 		//var _enemy_move_map = ds_map_find_value(global.enemy_move_data, _name);
 		//return ds_map_find_value(_enemy_move_map, _enemy_dice_roll)[1];
