@@ -32,5 +32,5 @@ draw_set_valign(fa_bottom);
 /// @DnDArgument : "y" "sprite_height/1.7"
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "caption" ""
-/// @DnDArgument : "text" "get_enemy_upcoming_description(name, move_number)"
-draw_text_transformed(x + 0, y + sprite_height/1.7, "" + string(get_enemy_upcoming_description(name, move_number)), 1, 1, 0);
+/// @DnDArgument : "text" "get_enemy_upcoming_description()"
+draw_text_transformed(x + 0, y + sprite_height/1.7, "" + string(get_enemy_upcoming_description()), 1, 1, 0);
