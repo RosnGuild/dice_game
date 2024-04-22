@@ -154,9 +154,9 @@ if(status_vulnerable_value > 0)
 	/// @DnDArgument : "xscale" "0.25"
 	/// @DnDArgument : "yscale" "0.25"
 	/// @DnDArgument : "rot_relative" "1"
-	/// @DnDArgument : "sprite" "spr_vulnerable_tag_icon"
-	/// @DnDSaveInfo : "sprite" "spr_vulnerable_tag_icon"
-	draw_sprite_ext(spr_vulnerable_tag_icon, 0, x + -sprite_width/2.75, y + -sprite_height/1.2, 0.25, 0.25, image_angle + 0, $FFFFFF & $ffffff, 1);
+	/// @DnDArgument : "sprite" "spr_vulnerable_tag_icon_2"
+	/// @DnDSaveInfo : "sprite" "spr_vulnerable_tag_icon_2"
+	draw_sprite_ext(spr_vulnerable_tag_icon_2, 0, x + -sprite_width/2.75, y + -sprite_height/1.2, 0.25, 0.25, image_angle + 0, $FFFFFF & $ffffff, 1);
 
 	/// @DnDAction : YoYo Games.Drawing.Set_Color
 	/// @DnDVersion : 1
