@@ -126,6 +126,7 @@
     {"id":{"name":"spr_red_arrow_overlay","path":"sprites/spr_red_arrow_overlay/spr_red_arrow_overlay.yy",},},
     {"id":{"name":"spr_burn_tag_icon","path":"sprites/spr_burn_tag_icon/spr_burn_tag_icon.yy",},},
     {"id":{"name":"spr_d20_triangle_tile_orange","path":"sprites/spr_d20_triangle_tile_orange/spr_d20_triangle_tile_orange.yy",},},
+    {"id":{"name":"obj_text_display","path":"objects/obj_text_display/obj_text_display.yy",},},
     {"id":{"name":"spr_d20_leftface","path":"sprites/spr_d20_leftface/spr_d20_leftface.yy",},},
     {"id":{"name":"obj_display_clickenemy","path":"objects/obj_display_clickenemy/obj_display_clickenemy.yy",},},
     {"id":{"name":"Tutorial_Room","path":"rooms/Tutorial_Room/Tutorial_Room.yy",},},

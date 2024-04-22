@@ -1,4 +1,6 @@
 {
   "FolderOrderSettings": [],
-  "ResourceOrderSettings": [],
+  "ResourceOrderSettings": [
+    {"name":"obj_text_display","order":1,"path":"objects/obj_text_display/obj_text_display.yy",},
+  ],
 }
