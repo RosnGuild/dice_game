@@ -19,6 +19,14 @@ function activate_button()
 	/// @DnDArgument : "not" "1"
 	if(!(layer_has_instance("Instances", instance_find(obj_display_instructions, 0))))
 	{
+		/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 17F09BFE
+		/// @DnDParent : 1932EBDF
+		/// @DnDArgument : "expr" ""X""
+		/// @DnDArgument : "var" "text"
+		text = "X";
+	
 		/// @DnDAction : YoYo Games.Instances.Create_Instance
 		/// @DnDVersion : 1
 		/// @DnDHash : 79A39164
@@ -100,6 +108,14 @@ function activate_button()
 	/// @DnDParent : 27DBA310
 	else
 	{
+		/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 5BEDA1A1
+		/// @DnDParent : 269C0D8B
+		/// @DnDArgument : "expr" ""Instructions""
+		/// @DnDArgument : "var" "text"
+		text = "Instructions";
+	
 		/// @DnDAction : YoYo Games.Instances.Destroy_Instance
 		/// @DnDVersion : 1
 		/// @DnDHash : 72575582
