@@ -1,10 +1,18 @@
 {
-  "FolderOrderSettings": [],
+  "FolderOrderSettings": [
+    {"name":"Overworld_Buttons","order":1,"path":"folders/Objects/UI/Overworld_Buttons.yy",},
+  ],
   "ResourceOrderSettings": [
+    {"name":"obj_button_goto_battleroom_2","order":1,"path":"objects/obj_button_goto_battleroom_2/obj_button_goto_battleroom_2.yy",},
+    {"name":"obj_button_goto_lootroom_3","order":6,"path":"objects/obj_button_goto_lootroom_3/obj_button_goto_lootroom_3.yy",},
     {"name":"Loot_Room_2","order":2,"path":"rooms/Loot_Room_2/Loot_Room_2.yy",},
     {"name":"Loot_Room_3","order":3,"path":"rooms/Loot_Room_3/Loot_Room_3.yy",},
+    {"name":"obj_button_goto_lootroom_2","order":5,"path":"objects/obj_button_goto_lootroom_2/obj_button_goto_lootroom_2.yy",},
     {"name":"Overworld_Room","order":4,"path":"rooms/Overworld_Room/Overworld_Room.yy",},
     {"name":"Loot_Room_1","order":1,"path":"rooms/Loot_Room_1/Loot_Room_1.yy",},
     {"name":"obj_text_display","order":1,"path":"objects/obj_text_display/obj_text_display.yy",},
+    {"name":"obj_button_goto_battleroom_3","order":2,"path":"objects/obj_button_goto_battleroom_3/obj_button_goto_battleroom_3.yy",},
+    {"name":"obj_button_goto_battleroom_4","order":3,"path":"objects/obj_button_goto_battleroom_4/obj_button_goto_battleroom_4.yy",},
+    {"name":"obj_button_goto_lootroom_1","order":4,"path":"objects/obj_button_goto_lootroom_1/obj_button_goto_lootroom_1.yy",},
   ],
 }
