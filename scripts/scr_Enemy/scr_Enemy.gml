@@ -85,93 +85,37 @@ function decrement_scry(_enemy_id) {
 /// @function						get_enemy_upcoming_description();
 /// @description					Returns a full description of the upcoming enemy action(s).
 function get_enemy_upcoming_description() {
-	var _final_string = string("Rolled a " + string(move_number));
-	//var i = 1;
-	//var j = 1;
-	for (var k = 1; k < 2 + status_scry_value; ++k) {
-		// If scrying, add a prefix indicating this.
-		if (k == 2) {
-			_final_string = string(_final_string + "\n\n--Scrying--\n");
-		} else if (k > 2) {
-			_final_string = string(_final_string + "\n\n");
-		}
-		
-	    // Appends additional dice rolls if the enemy rolls 2+ dice each round.
-		if (actions_per_round > 1) {
-			for (var i = 1; i < actions_per_round; ++i) {
-			    _final_string = string(_final_string + " & " + string(enemy_handle_bolster(id, upcoming_move_numbers[i-1 + k*actions_per_round])));
-			}
-		}
+	var _description = enemy_describe_upcoming_one_round(current_move_numbers);
 	
-		// Appends Bolster information.
-		if (status_bolster_value > 0) {
-		   _final_string = string(_final_string + " (+1, Bolstered)");
-		}
-	
-		_final_string = string(_final_string + "\n Next Turn: " + enemy_move_get_description(name, move_number));
-	
-		// Appends additional move descriptions if the enemy rolls 2+ dice each round.
-		if (actions_per_round > 1) {
-			for (var i = 1; i < actions_per_round; ++i) {
-			  _final_string = string(_final_string + "\n" + enemy_move_get_description(name, string(enemy_handle_bolster(id, upcoming_move_numbers[i-1 + k*actions_per_round]))));
-			}
-		}
+	if (status_scry_value > 0) {
+	    _description = _description + "\n\n--Scrying--\n";
 	}
-	return _final_string;
+	for (var i = 0; i < status_scry_value; ++i) {
+	    _description = _description + enemy_describe_upcoming_one_round(upcoming_move_numbers[i], true)
+	}
+	return _description;
 }
 
-/// @function						enemy_describe_upcoming_one_round(_dice_value1, _dice_value2, _dice_value3, _ignore_scry);
-/// @param {Real}	_dice_value1	First dice rolled.
-/// @param {Real}	_dice_value2	Optional: second dice rolled.
-/// @param {Real}	_dice_value3	Optional: third dice rolled.
+/// @function						enemy_describe_upcoming_one_round(_dice_values);
+/// @param {Array}	_dice_values	Array of rolled dice values, corresponding to enemy moves to be performed this round.
+/// @param {Bool}	_is_scry		Optional. Whether this is a description gotten via Scrying. If so, Bolster is ignored. False by default.
 /// @description					Returns a description of an enemy's actions for a single round.
-function enemy_describe_upcoming_one_round (_dice_value1, _dice_value2 = undefined, _dice_value3 = undefined, _ignore_scry = true) {
-	var _description = string("Rolled a " + string(_dice_value1));
-	
-	if (_dice_value2 != undefined) {
-		_description = _description + " & " + _dice_value2;
-	}
-	if (_dice_value3 != undefined) {
-		_description = _description + " & " + _dice_value3;
+function enemy_describe_upcoming_one_round (_dice_values, _is_scry = false) {
+	var _description = string("Rolled a " + string(_dice_values[0]));
+	for (var i = 1; i < array_length(_dice_values); ++i) {
+	    _description = _description + " & " + string(_dice_values[i]);
 	}
 	
-	if (status_bolster_value > 0) {
-		_final_string = string(_final_string + " (+1, Bolstered)");
+	if (status_bolster_value > 0 && !_is_scry) {
+		_description = string(_description + " (+1, Bolstered)");
 	}
 	
+	_description = string(_description + "\n Next Turn: ");
 	
-	//var i = 1;
-	//var j = 1;
-	for (var k = 1; k < 2 + status_scry_value; ++k) {
-		// If scrying, add a prefix indicating this.
-		if (k == 2) {
-			_final_string = string(_final_string + "\n\n--Scrying--\n");
-		} else if (k > 2) {
-			_final_string = string(_final_string + "\n\n");
-		}
-		
-	    // Appends additional dice rolls if the enemy rolls 2+ dice each round.
-		if (actions_per_round > 1) {
-			for (var i = 1; i < actions_per_round; ++i) {
-			    _final_string = string(_final_string + " & " + string(enemy_handle_bolster(id, upcoming_move_numbers[i-1 + k*actions_per_round])));
-			}
-		}
-	
-		// Appends Bolster information.
-		if (status_bolster_value > 0) {
-		   _final_string = string(_final_string + " (+1, Bolstered)");
-		}
-	
-		_final_string = string(_final_string + "\n Next Turn: " + enemy_move_get_description(name, move_number));
-	
-		// Appends additional move descriptions if the enemy rolls 2+ dice each round.
-		if (actions_per_round > 1) {
-			for (var i = 1; i < actions_per_round; ++i) {
-			  _final_string = string(_final_string + "\n" + enemy_move_get_description(name, string(enemy_handle_bolster(id, upcoming_move_numbers[i-1 + k*actions_per_round]))));
-			}
-		}
+	for (var i = 0; i < array_length(_dice_values); ++i) {
+		_description = string(_description + enemy_move_get_description(id.name, _dice_values[i]) + "\n");
 	}
-	return _final_string;
+	return _description;
 }
 
 /// @function		enemy_setup_initial_move_numbers();
@@ -184,9 +128,9 @@ function enemy_setup_initial_move_numbers() {
 	current_move_numbers = array_shift(upcoming_move_numbers);
 }
 
-/// @function							enemy_update_move_number(_enemy_id);
+/// @function							enemy_update_upcoming_move(_enemy_id);
 /// @param {Id.Instance}	_enemy_id	The id of the enemy.
-/// @description						Sets move_number to the next value in upcoming_move_numbers, and repopulates upcoming_move_numbers.
+/// @description						Sets current_move_numbers to the next value in upcoming_move_numbers, and repopulates upcoming_move_numbers.
 function enemy_update_upcoming_move(_enemy_id) {
 	_enemy_id.current_move_numbers = array_shift(_enemy_id.upcoming_move_numbers)
 	for (var i = 0; i < array_length(_enemy_id.current_move_numbers); ++i) {

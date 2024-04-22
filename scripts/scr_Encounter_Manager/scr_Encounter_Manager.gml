@@ -9,19 +9,18 @@ function end_turn_script() {
 		show_debug_message("An enemy's bolster has been decreased to {0}", current_enemy.status_bolster_value);
 	}
 	
-	// Makes all enemies perform their selected move, based on their dice_number.
+	// Makes all enemies perform their selected moves, based on their current_move_numbers.
 	for (var i = 0; i < instance_number(obj_Enemy); i++;) {
 	    current_enemy = instance_find(obj_Enemy, i);
-		for (var j = 0; j < current_enemy.actions_per_round; ++j) {
-		    handle_enemy_move(current_enemy);
-		}
+		handle_enemy_moves(current_enemy);
 	}
 	
+	// Decrements Bleed and inflicts Bleed damage to all enemies.
 	for (var i = 0; i < instance_number(obj_Enemy); i++;) {
 		decrement_bleed(instance_find(obj_Enemy, i));
 	}
 	
-	//update_enemy_move_numbers(); //ATTEMPINTG TO MOVE THIS INTO THE MOVE PARSING
+	update_enemy_move_numbers(); //ATTEMPINTG TO MOVE THIS INTO THE MOVE PARSING
 	
 	// Resets player energy and block.
 	if (layer_has_instance("Instances", instance_find(obj_Player, 0))) {
@@ -42,27 +41,29 @@ function end_turn_script() {
 }
 
 /// @function		update_enemy_move_numbers();
-/// @description	UNUSED. Using their saved upcoming move numbers list, updates the move numbers of all enemies for the new round.
+/// @description	Using their saved upcoming move numbers list, updates the move numbers of all enemies for the new round. Also applies Bolster to those moves.
 function update_enemy_move_numbers() {
 	for (var i = 0; i < instance_number(obj_Enemy); i++;) {
-	    current_enemy = instance_find(obj_Enemy, i);
-		enemy_update_move_number(current_enemy);
+	    var _current_enemy = instance_find(obj_Enemy, i);
+		enemy_update_upcoming_move(_current_enemy);
 	}
 }
 
-/// @function				handle_enemy_move(_enemy);
-/// @param {any}	_enemy	id of the enemy performing the move.
-/// @description			Resolves a single enemy move, including all animations and updating the upcoming dice roll.
-function handle_enemy_move(_enemy) {
-	parse_move(_enemy.name, _enemy, obj_Player, _enemy.move_number);
-	show_debug_message("An enemy is going to {0} itself", move_get_self_tags(current_enemy.name, current_enemy.move_number));
-	show_debug_message("An enemy is going to {0} you ", move_get_target_tags(current_enemy.name, current_enemy.move_number));
-	
-	if (move_is_attack(_enemy.name, _enemy.move_number)) {
-		_enemy.bounce_off_player();
+/// @function				handle_enemy_moves(_enemy);
+/// @param {any}	_enemy	id of the enemy performing the moves.
+/// @description			Resolves an enemy move's for the round, including all animations.
+function handle_enemy_moves(_enemy) {
+	for (var i = 0; i < _enemy.actions_per_round; ++i) {
+		var _dice_number = _enemy.current_move_numbers[i];
+	    parse_move(_enemy.name, _enemy, obj_Player, _dice_number);
+		show_debug_message("An enemy is going to {0} itself", move_get_self_tags(_enemy.name, _dice_number));
+		show_debug_message("An enemy is going to {0} you ", move_get_target_tags(_enemy.name, _dice_number));
+		
+		if (move_is_attack(_enemy.name, _dice_number)) {
+			_enemy.bounce_off_player();
+		}
 	}
-	
-	enemy_update_move_number(_enemy);
+	// current_move_numbers
 	
 	show_debug_message("Enemy just made a move!");
 }
