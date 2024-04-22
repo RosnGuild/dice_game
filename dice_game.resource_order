@@ -1,6 +1,10 @@
 {
   "FolderOrderSettings": [],
   "ResourceOrderSettings": [
+    {"name":"Loot_Room_2","order":2,"path":"rooms/Loot_Room_2/Loot_Room_2.yy",},
+    {"name":"Loot_Room_3","order":3,"path":"rooms/Loot_Room_3/Loot_Room_3.yy",},
+    {"name":"Overworld_Room","order":4,"path":"rooms/Overworld_Room/Overworld_Room.yy",},
+    {"name":"Loot_Room_1","order":1,"path":"rooms/Loot_Room_1/Loot_Room_1.yy",},
     {"name":"obj_text_display","order":1,"path":"objects/obj_text_display/obj_text_display.yy",},
   ],
 }
