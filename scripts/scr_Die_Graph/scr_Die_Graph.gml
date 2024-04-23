@@ -4,7 +4,7 @@ function get_current_player_face_number(){
 }
 
 function set_random_player_face() {
-	global.pending_player_face_number = irandom_range(1, 21);
+	global.pending_player_face_number = irandom_range(1, 20);
 	update_current_face_number();
 	global.current_player_face_move = global.die_graph_array[global.current_player_face_number-1];
 }
