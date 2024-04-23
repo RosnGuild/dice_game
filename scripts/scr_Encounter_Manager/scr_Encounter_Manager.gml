@@ -1,13 +1,5 @@
 // Functions used to manage encounters.
-function end_turn_script() {	
-	// Decrements statuses that decrease during the end of the turn.
-	for (var i = 0; i < instance_number(obj_Enemy); i++;) {
-	    current_enemy = instance_find(obj_Enemy, i);
-		clear_block(current_enemy);
-		decrement_bolster(current_enemy);
-		decrement_vulnerable(current_enemy);
-		show_debug_message("An enemy's bolster has been decreased to {0}", current_enemy.status_bolster_value);
-	}
+function end_turn_script() {
 	
 	// Makes all enemies perform their selected moves, based on their current_move_numbers.
 	for (var i = 0; i < instance_number(obj_Enemy); i++;) {
@@ -20,7 +12,16 @@ function end_turn_script() {
 		decrement_bleed(instance_find(obj_Enemy, i));
 	}
 	
-	update_enemy_move_numbers(); //ATTEMPINTG TO MOVE THIS INTO THE MOVE PARSING
+	// Decrements statuses that decrease during the end of the turn.
+	for (var i = 0; i < instance_number(obj_Enemy); i++;) {
+	    current_enemy = instance_find(obj_Enemy, i);
+		clear_block(current_enemy);
+		decrement_bolster(current_enemy);
+		decrement_vulnerable(current_enemy);
+		show_debug_message("An enemy's bolster has been decreased to {0}", current_enemy.status_bolster_value);
+	}
+	
+	update_enemy_move_numbers();
 	
 	// Resets player energy and block.
 	if (layer_has_instance("Instances", instance_find(obj_Player, 0))) {
