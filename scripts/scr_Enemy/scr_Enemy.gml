@@ -91,26 +91,31 @@ function get_enemy_upcoming_description() {
 	    _description = _description + "\n\n--Scrying--\n";
 	}
 	for (var i = 0; i < status_scry_value; ++i) {
-	    _description = _description + enemy_describe_upcoming_one_round(upcoming_move_numbers[i], true)
+	    _description = _description + enemy_describe_upcoming_one_round(upcoming_move_numbers[i], i+1)
 	}
 	return _description;
 }
 
 /// @function						enemy_describe_upcoming_one_round(_dice_values);
 /// @param {Array}	_dice_values	Array of rolled dice values, corresponding to enemy moves to be performed this round.
-/// @param {Bool}	_is_scry		Optional. Whether this is a description gotten via Scrying. If so, Bolster is ignored. False by default.
+/// @param {Real}	_is_scry		Optional. The number of rounds in the future that this description is for. If 1+, Bolster is ignored. 0 by default.
 /// @description					Returns a description of an enemy's actions for a single round.
-function enemy_describe_upcoming_one_round (_dice_values, _is_scry = false) {
+function enemy_describe_upcoming_one_round (_dice_values, _is_scry = 0) {
 	var _description = string("Rolled a " + string(_dice_values[0]));
 	for (var i = 1; i < array_length(_dice_values); ++i) {
 	    _description = _description + " & " + string(_dice_values[i]);
 	}
 	
-	if (status_bolster_value > 0 && !_is_scry) {
+	if (status_bolster_value > 0 && _is_scry == 0) {
 		_description = string(_description + " (+1, Bolstered)");
 	}
 	
-	_description = string(_description + "\n Next Turn: ");
+	if (_is_scry == 0) {
+	    _description = string(_description + "\n Next Turn: ");
+	}
+	else {
+	    _description = string(_description + "\n" + string(_is_scry) + " Turns from Now: ");
+	}
 	
 	for (var i = 0; i < array_length(_dice_values); ++i) {
 		_description = string(_description + enemy_move_get_description(id.name, _dice_values[i]) + "\n");
