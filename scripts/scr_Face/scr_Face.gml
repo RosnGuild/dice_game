@@ -11,5 +11,5 @@ function trigger_cooldown(_face_node) {
 }
 
 function reset_cooldown(_face_node) {
-	_face_node.face_cooldown_current = 0;
+	_face_node.cooldown = 0;
 }
