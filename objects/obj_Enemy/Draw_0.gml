@@ -21,16 +21,15 @@ draw_set_alpha(l65721A82_0 / $ff);
 /// @DnDVersion : 1.1
 /// @DnDHash : 792789A7
 /// @DnDArgument : "halign" "fa_center"
-/// @DnDArgument : "valign" "fa_bottom"
 draw_set_halign(fa_center);
-draw_set_valign(fa_bottom);
+draw_set_valign(fa_top);
 
 /// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
 /// @DnDVersion : 1
 /// @DnDHash : 6390EB8C
 /// @DnDArgument : "x_relative" "1"
-/// @DnDArgument : "y" "sprite_height/1.7"
+/// @DnDArgument : "y" "sprite_height/2.2"
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "caption" ""
-/// @DnDArgument : "text" "get_enemy_upcoming_description"
-draw_text_transformed(x + 0, y + sprite_height/1.7, "" + string(get_enemy_upcoming_description), 1, 1, 0);
+/// @DnDArgument : "text" "get_enemy_upcoming_description()"
+draw_text_transformed(x + 0, y + sprite_height/2.2, "" + string(get_enemy_upcoming_description()), 1, 1, 0);

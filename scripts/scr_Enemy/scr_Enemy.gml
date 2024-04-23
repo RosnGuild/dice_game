@@ -86,9 +86,10 @@ function decrement_scry(_enemy_id) {
 /// @description					Returns a full description of the upcoming enemy action(s).
 function get_enemy_upcoming_description() {
 	var _description = enemy_describe_upcoming_one_round(current_move_numbers);
-	
-	if (status_scry_value > 0) {
-	    _description = _description + "\n\n--Scrying--\n";
+	if (status_scry_value == 1 && actions_per_round == 1) {
+	    _description = _description + "\n--Scrying Next Roll--\n";
+	} else if (status_scry_value > 1) {
+		_description = _description + "\n--Scrying Next Rolls--\n";
 	}
 	for (var i = 0; i < status_scry_value; ++i) {
 	    _description = _description + enemy_describe_upcoming_one_round(upcoming_move_numbers[i], i+1)
@@ -101,7 +102,14 @@ function get_enemy_upcoming_description() {
 /// @param {Real}	_is_scry		Optional. The number of rounds in the future that this description is for. If 1+, Bolster is ignored. 0 by default.
 /// @description					Returns a description of an enemy's actions for a single round.
 function enemy_describe_upcoming_one_round (_dice_values, _is_scry = 0) {
-	var _description = string("Rolled a " + string(_dice_values[0]));
+	var _description = "";
+	if (_is_scry == 0) {
+	    _description = string("Rolled a " + string(_dice_values[0]));
+	}
+	else {
+	    _description = string("Rolls a " + string(_dice_values[0]));
+	}
+	
 	for (var i = 1; i < array_length(_dice_values); ++i) {
 	    _description = _description + " & " + string(_dice_values[i]);
 	}
@@ -114,7 +122,7 @@ function enemy_describe_upcoming_one_round (_dice_values, _is_scry = 0) {
 	    _description = string(_description + "\n Next Turn: ");
 	}
 	else {
-	    _description = string(_description + "\n" + string(_is_scry) + " Turns from Now: ");
+	    _description = string(_description + ": ");
 	}
 	
 	for (var i = 0; i < array_length(_dice_values); ++i) {
