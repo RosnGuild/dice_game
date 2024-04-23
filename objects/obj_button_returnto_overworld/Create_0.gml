@@ -1,9 +1,9 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 19C4BA29
-/// @DnDArgument : "expr" ""Enter Battle!""
+/// @DnDArgument : "expr" ""Return to Map""
 /// @DnDArgument : "var" "text"
-text = "Enter Battle!";
+text = "Return to Map";
 
 /// @DnDAction : YoYo Games.Common.Function
 /// @DnDVersion : 1
@@ -15,7 +15,7 @@ function activate_button()
 	/// @DnDVersion : 1
 	/// @DnDHash : 21144D15
 	/// @DnDParent : 56BE0477
-	/// @DnDArgument : "room" "Battle_Room"
-	/// @DnDSaveInfo : "room" "Battle_Room"
-	room_goto(Battle_Room);
+	/// @DnDArgument : "room" "Overworld_Room"
+	/// @DnDSaveInfo : "room" "Overworld_Room"
+	room_goto(Overworld_Room);
 }

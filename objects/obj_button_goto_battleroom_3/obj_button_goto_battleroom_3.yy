@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Goto_Room_Buttons",
-    "path": "folders/Objects/UI/Goto_Room_Buttons.yy",
+    "name": "Overworld_Buttons",
+    "path": "folders/Objects/UI/Goto_Room_Buttons/Overworld_UI/Overworld_Buttons.yy",
   },
   "parentObjectId": {
     "name": "obj_button_parent",
@@ -28,7 +28,10 @@
   "physicsShape": 1,
   "physicsShapePoints": [],
   "physicsStartAwake": true,
-  "properties": [],
+  "properties": [
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"step_number","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"3","varType":0,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"text","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"\"Enter Battle!\"","varType":2,},
+  ],
   "solid": false,
   "spriteId": {
     "name": "spr_button_nine_slice_GUI_Buttons_Visual_Base",
