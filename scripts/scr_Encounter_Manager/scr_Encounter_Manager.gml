@@ -18,6 +18,7 @@ function end_turn_script() {
 		clear_block(current_enemy);
 		decrement_bolster(current_enemy);
 		decrement_vulnerable(current_enemy);
+		decrement_scry(current_enemy)
 		show_debug_message("An enemy's bolster has been decreased to {0}", current_enemy.status_bolster_value);
 	}
 	
