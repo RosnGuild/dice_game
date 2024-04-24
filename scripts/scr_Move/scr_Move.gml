@@ -41,9 +41,23 @@ function enemy_move_get_description(_name, _dice_roll) {
 	return string(_target_tags_string + _self_tags_string);
 }
 
+/// @function						move_get_detailed_description(_name, _dice_roll);
+/// @param {string}	_name			The name of the move/enemy.
+/// @param {real}	_dice_roll		Optional: Dice roll associated with this move.
+/// @description					Generates and returns a String describing the effects of each tag in the move.
+function move_get_detailed_description(_name, _dice_roll = undefined) {
+	var _self_tags = move_get_self_tags(_name, _dice_roll);
+	var _target_tags = move_get_target_tags(_name, _dice_roll);
+	
+	var _self_tags_string = move_tags_get_detailed_description(_self_tags, _name);
+	var _target_tags_string = move_tags_get_detailed_description(_target_tags, _name);
+	
+	return string(_target_tags_string + _self_tags_string);
+}
+
 /// @function						move_tags_get_description(_tags);
 /// @param {struct}	_tags			A struct of a move's tags, either those directed at self or at a target.
-/// @param {String}	_name			The enemy's name.
+/// @param {String}	_name			Optional: The enemy's name.
 /// @description					HELPER FUNCTION for move description getters. Generates and returns a String describing a move's effects.
 function move_tags_get_description(_tags, _name = undefined) {
 	var _display_string = "";
@@ -80,6 +94,50 @@ function move_tags_get_description(_tags, _name = undefined) {
 		
 		if (i+1 != _tags_size) {
 			_display_string = string(_display_string + ", ");
+		}
+	}
+	return _display_string;
+}
+
+/// @function						move_tags_get_detailed_description(_tags);
+/// @param {struct}	_tags			A struct of a move's tags, either those directed at self or at a target.
+/// @param {String}	_name			Optional: The enemy's name.
+/// @description					HELPER FUNCTION for move detailed description getters. Generates and returns a String describing a move's tag's effects.
+function move_tags_get_detailed_description(_tags, _name = undefined) {
+	var _display_string = "";
+	var _tags_names = struct_get_names(_tags);
+	var _tags_size = struct_names_count(_tags);
+
+	var keys = struct_get_names(_tags);
+	for (var i = 0; i < _tags_size; i++) {
+		switch (keys[i]) {
+		    case tag_HIT:
+				_display_string = string_concat(_display_string, "Hit X: Deals X damage to a single target.\n");
+		        break;
+			case tag_BLOCK:
+				_display_string = string_concat(_display_string, "Block X: Reduces all damage by X for one round.\n");
+		        break;
+			case tag_BURN:
+				_display_string = string_concat(_display_string, "Burn X: Deals X damage each time target does something, then X decreases by 1.\n");
+		        break;
+			case tag_VULNERABLE:
+				_display_string = string_concat(_display_string, "Vulnerable X: Doubles damage target takes for X rounds.\n");
+		        break;
+			case tag_BLEED:
+				_display_string = string_concat(_display_string, "Bleed X: Deals X damage at the end of target's turn, then X decreases by 1.\n");
+		        break;
+			case tag_SCRY:
+		        _display_string = string_concat(_display_string, "Scry X: See what target will do for X future turns. Ignores Bolster.\n");
+		        break;
+			case tag_BOLSTER:
+				_display_string = string_concat(_display_string, "Bolster X: +1 to dice rolls for X rounds, making enemy more dangerous.\n");
+		        break;
+			case tag_REROLL:
+				_display_string = string_concat(_display_string, "Reroll: Rotates your dice to a random side.\n");
+		        break;
+		    default:
+				show_debug_message("ERROR: Attempted to parse tag ( {0} ) that doesn't exist!", keys[i]);
+		        break;
 		}
 	}
 	return _display_string;
