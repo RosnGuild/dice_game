@@ -60,6 +60,12 @@ function scr_parse_move_helper(_entity, _tags){
 			case tag_SCRY:
 				add_scry(_entity, _tags[$ keys[i]]);
 				break;
+			case tag_HIT_PER_IMP:
+				hit_per_enemy(_entity, "Imp", _tags[$ keys[i]]);
+				break;
+			case tag_HEAL_IMPS:
+				enemies_heal_all(_tags[$ keys[i]], "Imp");
+				break;
 		    default:
 		        // code here
 				show_debug_message("ERROR: Attempted to parse tag {0} that doesn't exist!", keys[i]);

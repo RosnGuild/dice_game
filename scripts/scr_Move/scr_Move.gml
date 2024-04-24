@@ -66,6 +66,7 @@ function move_tags_get_description(_tags, _name = undefined) {
 
 	var keys = struct_get_names(_tags);
 	for (var i = 0; i < _tags_size; i++) {
+		var _value = struct_get(_tags, keys[i])
 		switch (keys[i]) {
 		    case tag_HIT:
 			case tag_BLOCK:
@@ -81,11 +82,16 @@ function move_tags_get_description(_tags, _name = undefined) {
 			case tag_REROLL:
 				_display_string = string_concat(_display_string, "RerollFALSE");
 				break;
+			case tag_HIT_PER_IMP:
+				_display_string = string_concat(_display_string, "Hit " + string(_value) + " Per ImpFALSE");
+				break;
+			case tag_HEAL_IMPS:
+				_display_string = string_concat(_display_string, "Heal Imps");
+				break;
 		    default:
 				show_debug_message("ERROR: Attempted to parse tag ( {0} ) that doesn't exist!", keys[i]);
 		        break;
 		}
-		var _value = struct_get(_tags, keys[i])
 		if (string_ends_with(_display_string, "FALSE")) {
 			_display_string = string_replace(_display_string, "FALSE", "");
 		} else {
@@ -135,6 +141,12 @@ function move_tags_get_detailed_description(_tags, _name = undefined) {
 			case tag_REROLL:
 				_display_string = string_concat(_display_string, "Reroll: Rotates your dice to a random side.\n");
 		        break;
+			case tag_HIT_PER_IMP:
+				_display_string = string_concat(_display_string, "Hit Per Imp X: Deals X damage per alive Imp.");
+				break;
+			case tag_HEAL_IMPS:
+				_display_string = string_concat(_display_string, "Heal Imps X: All Imps recover X health.");
+				break;
 		    default:
 				show_debug_message("ERROR: Attempted to parse tag ( {0} ) that doesn't exist!", keys[i]);
 		        break;

@@ -3,6 +3,7 @@
 
 // Enemy definitions
 #macro enemyid_IMP "Imp"
+#macro enemyid_BIG_IMP "The Big Imp"
 #macro enemyid_ZOMBIE "Zombie"
 #macro enemyid_DUMMY "Dummy"
 
@@ -13,6 +14,9 @@
 // Use these as keys in a move struct to get its tags.
 #macro tag_REROLL "reroll"
 #macro tag_BOLSTER "bolster"
+#macro tag_CALL_IMP "call imp"
+#macro tag_HIT_PER_IMP "hit per imp" // currently unimplemented
+#macro tag_HEAL_IMPS "heal imps"
 
 global.enemy_move_data = ds_map_create(); // Creates the globally accessible enemy move map.
 
@@ -31,12 +35,16 @@ function enemy_move_create(_name, _dice_roll, _target_tags, _self_tags = {}) {
 }
 
 // Imp
-enemy_move_create("Imp", 1, {tag_HIT : 6});
-enemy_move_create("Imp", 2, {tag_HIT : 6, tag_REROLL: true});
-enemy_move_create("Imp", 3, {}, {tag_BOLSTER : true});
-enemy_move_create("Imp", 4, {tag_BURN : 1});
+enemy_move_create(enemyid_IMP, 1, {tag_HIT : 6});
+enemy_move_create(enemyid_IMP, 2, {tag_HIT : 6, tag_REROLL: true});
+enemy_move_create(enemyid_IMP, 3, {}, {tag_BOLSTER : true});
+enemy_move_create(enemyid_IMP, 4, {tag_BURN : 1});
 
-
+// Big Imp
+enemy_move_create(enemyid_BIG_IMP, 1, {tag_BLOCK : 6});
+enemy_move_create(enemyid_BIG_IMP, 2, {tag_HIT_PER_IMP : 5});
+enemy_move_create(enemyid_BIG_IMP, 3, {tag_HIT_PER_IMP : 5});
+enemy_move_create(enemyid_BIG_IMP, 4, {}, {tag_HEAL_IMPS : 3});
 
 //show_debug_message("FUCK: {0}", global.enemy_move_data);
 //show_debug_message("HEY SHITASS: {0}", global.enemy_move_data[? "Imp"]);

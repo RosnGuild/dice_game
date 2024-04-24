@@ -89,6 +89,7 @@
     {"id":{"name":"obj_Enemy_Imp","path":"objects/obj_Enemy_Imp/obj_Enemy_Imp.yy",},},
     {"id":{"name":"spr_yellow_pointy_halo_overlay","path":"sprites/spr_yellow_pointy_halo_overlay/spr_yellow_pointy_halo_overlay.yy",},},
     {"id":{"name":"scr_Initialize_Die_Graph","path":"scripts/scr_Initialize_Die_Graph/scr_Initialize_Die_Graph.yy",},},
+    {"id":{"name":"obj_Enemy_Big_Imp","path":"objects/obj_Enemy_Big_Imp/obj_Enemy_Big_Imp.yy",},},
     {"id":{"name":"scr_Encounter_Manager","path":"scripts/scr_Encounter_Manager/scr_Encounter_Manager.yy",},},
     {"id":{"name":"spr_2d4_big_imp","path":"sprites/spr_2d4_big_imp/spr_2d4_big_imp.yy",},},
     {"id":{"name":"spr_scry_tag_icon","path":"sprites/spr_scry_tag_icon/spr_scry_tag_icon.yy",},},

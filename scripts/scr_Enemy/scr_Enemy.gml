@@ -153,3 +153,31 @@ function enemy_update_upcoming_move(_enemy_id) {
 	
 	array_push(_enemy_id.upcoming_move_numbers, enemy_generate_round_numbers(_enemy_id));
 }
+
+/// @function							enemies_heal_all(_heal_value, _enemy_name);
+/// @param {Real}		_heal_value		The amount of healing.
+/// @param {string}		_enemy_name		Optional: Name of the enemy.
+/// @description						Heals all enemies, optionally only enemies with a certain name.
+function enemies_heal_all(_heal_value, _enemy_name = undefined) {
+	for (var i = 0; i < instance_number(obj_Enemy); i++;) {
+		var _current_enemy = instance_find(obj_Enemy, i);
+		if (_current_enemy.name == _enemy_name || _enemy_name = undefined) {
+		    entity_heal(_current_enemy, _heal_value);
+		}
+	}
+}
+
+/// @function								hit_per_enemy(_target_id, _enemy_name, _damage_value, _ignore_block);
+/// @param {Id.Instance}	_target_id		The id of the target.
+/// @param {String}			_enemy_name		The name of the enemy.
+/// @param {Real}			_damage_value	Amount of damage.
+/// @param {bool}			_ignore_block	Optional: Whether the damage should be reduced by the entity's Block status. (Defaults to false)
+/// @description							Hits entity for a certain amount of damage, for each enemy with a certain name.
+function hit_per_enemy(_target_id, _enemy_name, _damage_value, _ignore_block = false) {
+	for (var i = 0; i < instance_number(obj_Enemy); i++;) {
+		var _current_enemy = instance_find(obj_Enemy, i);
+		if (_current_enemy.name == _enemy_name) {
+		    take_damage(_target_id, _damage_value, _ignore_block);
+		}
+	}
+}

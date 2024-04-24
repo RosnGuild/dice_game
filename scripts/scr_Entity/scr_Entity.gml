@@ -4,7 +4,7 @@
 /// @param {Id.Instance}	_entity_id		The id of the entity.
 /// @param {Real}			_damage_value	Amount of damage.
 /// @param {bool}			_ignore_block	Whether the damage should be reduced by the entity's Block status. (Defaults to false)
-/// @description							Increases an entity's block value by an amount.
+/// @description							Decreases an entity's health value by an amount, accounting for Vulnerable and Block.
 function take_damage(_entity_id, _damage_value, _ignore_block = false){
 	if (variable_instance_exists(_entity_id, "current_hp")) {
 		var _final_damage_value = _damage_value;
@@ -21,6 +21,16 @@ function take_damage(_entity_id, _damage_value, _ignore_block = false){
 		show_debug_message("DOING {0} DAMAGE", _final_damage_value);
 		_entity_id.current_hp -= _final_damage_value;
 		check_death(_entity_id);
+	}
+}
+
+/// @function								entity_heal(_entity_id, _heal_value);
+/// @param {Id.Instance}	_entity_id		The id of the entity.
+/// @param {Real}			_heal_value		Amount of healing.
+/// @description							Increases an entity's health value by an amount.
+function entity_heal(_entity_id, _heal_value){
+	if (variable_instance_exists(_entity_id, "current_hp")) {
+		_entity_id.current_hp = min(_entity_id.max_hp, _entity_id.current_hp + _heal_value);
 	}
 }
 
