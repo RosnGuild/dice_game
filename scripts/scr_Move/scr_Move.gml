@@ -130,7 +130,7 @@ function move_tags_get_detailed_description(_tags, _name = undefined) {
 		        _display_string = string_concat(_display_string, "Scry X: See what target will do for X future turns. Ignores Bolster.\n");
 		        break;
 			case tag_BOLSTER:
-				_display_string = string_concat(_display_string, "Bolster X: +1 to dice rolls for X rounds, making enemy more dangerous.\n");
+				_display_string = string_concat(_display_string, "Bolster X: +1 to dice rolls for X rounds, making enemies more dangerous.\n");
 		        break;
 			case tag_REROLL:
 				_display_string = string_concat(_display_string, "Reroll: Rotates your dice to a random side.\n");

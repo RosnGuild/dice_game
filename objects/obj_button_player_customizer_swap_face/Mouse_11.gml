@@ -23,4 +23,11 @@ if(!(position_meeting(mouse_x, mouse_y, obj_button_player_customizer_die_face_pa
 	/// @DnDApplyTo : {obj_display_face_infocard}
 	/// @DnDParent : 444F8567
 	with(obj_display_face_infocard) instance_destroy();
+
+	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
+	/// @DnDVersion : 1
+	/// @DnDHash : 6CBCC32D
+	/// @DnDApplyTo : {obj_display_detailed_move_description}
+	/// @DnDParent : 444F8567
+	with(obj_display_detailed_move_description) instance_destroy();
 }

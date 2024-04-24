@@ -10,6 +10,7 @@
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},"propertyId":{"name":"current_hp","path":"objects/obj_Entity/obj_Entity.yy",},"value":"global.player_current_hp",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},"propertyId":{"name":"max_hp","path":"objects/obj_Entity/obj_Entity.yy",},"value":"global.player_max_hp",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},"propertyId":{"name":"name","path":"objects/obj_Entity/obj_Entity.yy",},"value":"Player",},
   ],
   "parent": {
     "name": "Entities",
