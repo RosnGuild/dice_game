@@ -9,6 +9,7 @@
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_button_playerdie_face_parent","path":"objects/obj_button_playerdie_face_parent/obj_button_playerdie_face_parent.yy",},"propertyId":{"name":"number","path":"objects/obj_button_playerdie_face_parent/obj_button_playerdie_face_parent.yy",},"value":"get_adjacent_player_faces()[1]",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_button_playerdie_face_parent","path":"objects/obj_button_playerdie_face_parent/obj_button_playerdie_face_parent.yy",},"propertyId":{"name":"text_rotation","path":"objects/obj_button_playerdie_face_parent/obj_button_playerdie_face_parent.yy",},"value":"300",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_button_playerdie_face_parent","path":"objects/obj_button_playerdie_face_parent/obj_button_playerdie_face_parent.yy",},"propertyId":{"name":"text_scale","path":"objects/obj_button_playerdie_face_parent/obj_button_playerdie_face_parent.yy",},"value":"0.7",},
   ],
   "parent": {
     "name": "Player_Die_Face_Buttons",

@@ -31,8 +31,8 @@
 #macro face_move_SLICE "Slice"
 #macro face_move_PORTENT "Portent"
 
-#macro face_move_COMBO "Combo"
-#macro face_move_BLOODY_BLOW "Bloody Blow"
+#macro face_move_SHIELD_BASH "Shield\nBash"
+#macro face_move_BLOODY_BLOW "Bloody\nBlow"
 
 // Use these to index into the list that each move name maps to.
 #macro movedata_RARITY 0
@@ -77,5 +77,5 @@ move_create(face_move_TRIP, RARITY.COMMON, 1, {tag_VULNERABLE : BASE_VULNERABLE}
 move_create(face_move_SLICE, RARITY.COMMON, 1, {tag_BLEED : BASE_BLEED});
 move_create(face_move_PORTENT, RARITY.COMMON, 1, {tag_SCRY : BASE_SCRY});
 
-move_create(face_move_COMBO, RARITY.UNCOMMON, 2, {tag_HIT : BASE_HIT},	{tag_BLOCK : BASE_BLOCK});
+move_create(face_move_SHIELD_BASH, RARITY.UNCOMMON, 2, {tag_HIT : BASE_HIT},	{tag_BLOCK : BASE_BLOCK});
 move_create(face_move_BLOODY_BLOW, RARITY.UNCOMMON, 2, {tag_HIT : BASE_HIT, tag_BLEED : BASE_BLEED});

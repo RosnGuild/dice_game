@@ -80,9 +80,9 @@ obj_display_face_infocard.display_footer_scale = 0.75;
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 23E6137A
-/// @DnDArgument : "expr" "string(face) + " " + "[" + string(number) + "]""
+/// @DnDArgument : "expr" "string(face)"
 /// @DnDArgument : "var" "obj_display_face_infocard.display_header_text"
-obj_display_face_infocard.display_header_text = string(face) + " " + "[" + string(number) + "]";
+obj_display_face_infocard.display_header_text = string(face);
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
