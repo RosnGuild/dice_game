@@ -113,6 +113,7 @@
     {"id":{"name":"obj_Tag_Block","path":"objects/obj_Tag_Block/obj_Tag_Block.yy",},},
     {"id":{"name":"spr_hit_tag_icon","path":"sprites/spr_hit_tag_icon/spr_hit_tag_icon.yy",},},
     {"id":{"name":"obj_Encounter_Test","path":"objects/obj_Encounter_Test/obj_Encounter_Test.yy",},},
+    {"id":{"name":"scr_Restart_Game_and_Rooms","path":"scripts/scr_Restart_Game_and_Rooms/scr_Restart_Game_and_Rooms.yy",},},
     {"id":{"name":"obj_button_goto_battleroom_3","path":"objects/obj_button_goto_battleroom_3/obj_button_goto_battleroom_3.yy",},},
     {"id":{"name":"scr_Move","path":"scripts/scr_Move/scr_Move.yy",},},
     {"id":{"name":"obj_Tag","path":"objects/obj_Tag/obj_Tag.yy",},},

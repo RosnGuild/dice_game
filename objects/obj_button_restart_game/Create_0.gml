@@ -11,6 +11,13 @@ text = "Restart Game";
 /// @DnDArgument : "funcName" "activate_button"
 function activate_button() 
 {
+	/// @DnDAction : YoYo Games.Common.Function_Call
+	/// @DnDVersion : 1
+	/// @DnDHash : 07779DD7
+	/// @DnDParent : 1F20CB09
+	/// @DnDArgument : "function" "Restart_Game_and_Rooms"
+	Restart_Game_and_Rooms();
+
 	/// @DnDAction : YoYo Games.Game.Restart_Game
 	/// @DnDVersion : 1
 	/// @DnDHash : 22C25AF1

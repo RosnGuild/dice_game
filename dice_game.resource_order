@@ -34,6 +34,7 @@
     {"name":"Battle_Room_4","order":3,"path":"rooms/Battle_Room_4/Battle_Room_4.yy",},
     {"name":"Dice_Jail_black_arrow_line","order":3,"path":"sprites/Dice_Jail_black_arrow_line/Dice_Jail_black_arrow_line.yy",},
     {"name":"obj_Encounter_Test","order":1,"path":"objects/obj_Encounter_Test/obj_Encounter_Test.yy",},
+    {"name":"scr_Restart_Game_and_Rooms","order":1,"path":"scripts/scr_Restart_Game_and_Rooms/scr_Restart_Game_and_Rooms.yy",},
     {"name":"obj_button_goto_battleroom_3","order":4,"path":"objects/obj_button_goto_battleroom_3/obj_button_goto_battleroom_3.yy",},
     {"name":"obj_button_instructions_popup","order":5,"path":"objects/obj_button_instructions_popup/obj_button_instructions_popup.yy",},
     {"name":"obj_Encounter_Manager","order":2,"path":"objects/obj_Encounter_Manager/obj_Encounter_Manager.yy",},
