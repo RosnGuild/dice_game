@@ -73,20 +73,6 @@ else
 
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
-/// @DnDHash : 5439C122
-/// @DnDInput : 2
-/// @DnDDisabled : 1
-/// @DnDArgument : "expr" "attacking"
-/// @DnDArgument : "expr_1" "move_is_attack(name, move_number)"
-/// @DnDAction : YoYo Games.Common.Function_Call
-/// @DnDVersion : 1
-/// @DnDHash : 034F50E7
-/// @DnDDisabled : 1
-/// @DnDParent : 5439C122
-/// @DnDArgument : "function" "bounce_off_player"
-
-/// @DnDAction : YoYo Games.Common.If_Expression
-/// @DnDVersion : 1
 /// @DnDHash : 377F044D
 /// @DnDInput : 4
 /// @DnDArgument : "expr" "x <= (start_x + 1) and x >= (start_x - 1)"
