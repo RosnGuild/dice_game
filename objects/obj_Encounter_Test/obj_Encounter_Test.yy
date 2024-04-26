@@ -5,7 +5,7 @@
   "eventList": [],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Encounter","path":"objects/obj_Encounter/obj_Encounter.yy",},"propertyId":{"name":"enemy_list","path":"objects/obj_Encounter/obj_Encounter.yy",},"value":"obj_Enemy_Test",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Encounter","path":"objects/obj_Encounter/obj_Encounter.yy",},"propertyId":{"name":"initial_enemy_1","path":"objects/obj_Encounter/obj_Encounter.yy",},"value":"obj_Enemy_Test",},
   ],
   "parent": {
     "name": "Objects",

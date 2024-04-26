@@ -22,3 +22,4 @@ selected_face = "";
 selected_tags = "";
 selected_face_node = 0;
 
+enemy_list = [];

@@ -70,3 +70,25 @@ function handle_enemy_moves(_enemy) {
 	show_debug_message("Enemy just made a move!");
 }
 
+/// @function							spawn_enemy(_enemy);
+/// @param {Asset.GMObject}	_enemy_type	The enemy object.
+/// @description						Places a given enemy in the room, positioning it accordingly.
+function spawn_enemy(_enemy_type) {
+	var _enemy = undefined;
+	switch (array_length(enemy_list)) {
+	    case 0:
+	        _enemy = instance_create_layer(700, 400, "Instances", _enemy_type);
+	        break;
+		case 1:
+	        _enemy = instance_create_layer(800, 400, "Instances", _enemy_type);
+	        break;
+		case 2:
+	        _enemy = instance_create_layer(900, 400, "Instances", _enemy_type);
+	        break;
+		case 3:
+	        _enemy = instance_create_layer(1000, 400, "Instances", _enemy_type);
+	        break;
+	    default:
+	        break;
+	}
+}
