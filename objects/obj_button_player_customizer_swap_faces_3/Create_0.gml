@@ -16,6 +16,6 @@ function activate_button()
 	/// @DnDHash : 0EBAB55E
 	/// @DnDParent : 56BE0477
 	/// @DnDArgument : "function" "under_swap"
-	/// @DnDArgument : "arg" "get_current_player_face_number()-1, global.room_loot_3"
-	under_swap(get_current_player_face_number()-1, global.room_loot_3);
+	/// @DnDArgument : "arg" "get_current_player_face_number()-1, 3"
+	under_swap(get_current_player_face_number()-1, 3);
 }

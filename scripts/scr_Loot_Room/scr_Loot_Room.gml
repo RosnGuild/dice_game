@@ -18,19 +18,21 @@ global.loot_table = [
 
 // Swaps the top face on the player die in the character customizer with the input _loot_face.
 function under_swap(_face_number, _loot_face){
-	var _swap_face = _loot_face;
 	
-	if (_loot_face == global.room_loot_1) {
+	if (_loot_face == 1) {
+		var _swap_face = global.room_loot_1;
 		global.room_loot_1 = global.die_graph_array[_face_number].move;
 		global.die_graph_array[_face_number].move = _swap_face;
 	}
 	
-	if (_loot_face == global.room_loot_2) {
+	else if (_loot_face == 2) {
+		var _swap_face = global.room_loot_2;
 		global.room_loot_2 = global.die_graph_array[_face_number].move;
 		global.die_graph_array[_face_number].move = _swap_face;
 	}
 	
-	if (_loot_face == global.room_loot_3) {
+	else if (_loot_face == 3) {
+		var _swap_face = global.room_loot_3;
 		global.room_loot_3 = global.die_graph_array[_face_number].move;
 		global.die_graph_array[_face_number].move = _swap_face;
 	}
