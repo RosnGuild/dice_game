@@ -6,6 +6,6 @@ event_inherited();
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 2FF4D9FC
-/// @DnDArgument : "expr" "global.current_stashed_face_move"
+/// @DnDArgument : "expr" "global.room_loot_2"
 /// @DnDArgument : "var" "face"
-face = global.current_stashed_face_move;
+face = global.room_loot_2;
