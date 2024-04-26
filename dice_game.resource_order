@@ -9,10 +9,10 @@
     {"name":"Goto_Room_Buttons","order":5,"path":"folders/Objects/UI/Goto_Room_Buttons.yy",},
     {"name":"Overworld_UI","order":4,"path":"folders/Objects/UI/Goto_Room_Buttons/Overworld_UI.yy",},
     {"name":"Player_Die_Face_Buttons","order":6,"path":"folders/Objects/UI/Player_Die_Face_Buttons.yy",},
-    {"name":"Map","order":1,"path":"folders/Sprites/Map.yy",},
     {"name":"Overworld_Rooms","order":14,"path":"folders/Rooms/Overworld_Rooms.yy",},
     {"name":"Battle_Rooms","order":8,"path":"folders/Rooms/Overworld_Rooms/Battle_Rooms.yy",},
     {"name":"Loot_Rooms","order":9,"path":"folders/Rooms/Overworld_Rooms/Loot_Rooms.yy",},
+    {"name":"Map","order":1,"path":"folders/Sprites/Map.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_button_restart_game","order":4,"path":"objects/obj_button_restart_game/obj_button_restart_game.yy",},

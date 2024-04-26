@@ -172,11 +172,11 @@ function enemies_heal_all(_heal_value, _enemy_name = undefined) {
 /// @param {String}			_enemy_name		The name of the enemy.
 /// @param {Real}			_damage_value	Amount of damage.
 /// @param {bool}			_ignore_block	Optional: Whether the damage should be reduced by the entity's Block status. (Defaults to false)
-/// @description							Hits entity for a certain amount of damage, for each enemy with a certain name.
+/// @description							Hits entity for a certain amount of damage, for each enemy with a general name (i.e. "Imp" counts both Imps and Big Imps).
 function hit_per_enemy(_target_id, _enemy_name, _damage_value, _ignore_block = false) {
 	for (var i = 0; i < instance_number(obj_Enemy); i++;) {
 		var _current_enemy = instance_find(obj_Enemy, i);
-		if (_current_enemy.name == _enemy_name) {
+		if (string_pos(_enemy_name, _current_enemy.name) != 0) {
 		    take_damage(_target_id, _damage_value, _ignore_block);
 		}
 	}
