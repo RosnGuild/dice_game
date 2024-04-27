@@ -58,9 +58,9 @@ draw_set_alpha(l224B3E45_0 / $ff);
 /// @DnDArgument : "xscale" "1.5*text_scale"
 /// @DnDArgument : "yscale" "1.5*text_scale"
 /// @DnDArgument : "caption" ""
-/// @DnDArgument : "text" "face"
+/// @DnDArgument : "text" "string_replace(face, " ", "\n")"
 /// @DnDArgument : "angle" "text_rotation"
-draw_text_transformed(x + -2 * dsin(text_rotation), y + 1 * dcos(text_rotation), "" + string(face), 1.5*text_scale, 1.5*text_scale, text_rotation);
+draw_text_transformed(x + -2 * dsin(text_rotation), y + 1 * dcos(text_rotation), "" + string(string_replace(face, " ", "\n")), 1.5*text_scale, 1.5*text_scale, text_rotation);
 
 /// @DnDAction : YoYo Games.Drawing.Set_Color
 /// @DnDVersion : 1

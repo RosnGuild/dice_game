@@ -1,5 +1,5 @@
 // Creates a globally accessible map that stores all player move data. 
-// Access a move and its components with ds_map_find_value(global.move_data, "move name")[movedata_DATA].
+// Access a move and its components with ds_map_find_value(global.move_data, face_move_NAME)[movedata_DATA].
 
 // Tag definitions. 
 #macro BASE_BLOCK 5
@@ -21,9 +21,9 @@
 #macro RARE_SCRY 3 * BASE_SCRY
 
 //---
-// Map and struct-based implementation of the move database. Accessed with ds_map_find_value(global.move_data_alternative, [move name string]
+// Map and struct-based implementation of the move database.
 
-// Use use these to access player moves.
+// Move name declarations. Use use these to access player moves.
 #macro face_move_DEFAULT "Default"
 #macro face_move_STRIKE "Strike"
 #macro face_move_BLOCK "Block"
@@ -31,8 +31,8 @@
 #macro face_move_SLICE "Slice"
 #macro face_move_PORTENT "Portent"
 
-#macro face_move_SHIELD_BASH "Shield\nBash"
-#macro face_move_BLOODY_BLOW "Bloody\nBlow"
+#macro face_move_SHIELD_BASH "Shield Bash"
+#macro face_move_BLOODY_BLOW "Bloody Blow"
 
 // Use these to index into the list that each move name maps to.
 #macro movedata_RARITY 0
@@ -70,6 +70,8 @@ function move_create(_name, _rarity, _cooldown, _target_tags = {}, _self_tags = 
 	ds_map_add(global.move_data, _name, [_rarity, _cooldown, _target_tags, _self_tags]);
 }
 
+// Move Definitions
+// Common Moves
 move_create(face_move_DEFAULT, RARITY.TESTING, 1, {}, {}); // TESTING MOVE
 move_create(face_move_STRIKE, RARITY.COMMON, 1, {tag_HIT : BASE_HIT});
 move_create(face_move_BLOCK, RARITY.COMMON, 1, {}, {tag_BLOCK : BASE_BLOCK});
@@ -77,5 +79,6 @@ move_create(face_move_TRIP, RARITY.COMMON, 1, {tag_VULNERABLE : BASE_VULNERABLE}
 move_create(face_move_SLICE, RARITY.COMMON, 1, {tag_BLEED : BASE_BLEED});
 move_create(face_move_PORTENT, RARITY.COMMON, 1, {tag_SCRY : BASE_SCRY});
 
+// Uncommon Moves
 move_create(face_move_SHIELD_BASH, RARITY.UNCOMMON, 2, {tag_HIT : BASE_HIT},	{tag_BLOCK : BASE_BLOCK});
 move_create(face_move_BLOODY_BLOW, RARITY.UNCOMMON, 2, {tag_HIT : BASE_HIT, tag_BLEED : BASE_BLEED});

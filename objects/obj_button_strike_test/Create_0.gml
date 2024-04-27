@@ -40,15 +40,6 @@ function activate_button()
 		/// @DnDArgument : "var" "obj_Encounter_Manager.selected_face"
 		obj_Encounter_Manager.selected_face = face;
 	
-		/// @DnDAction : YoYo Games.Common.Variable
-		/// @DnDVersion : 1
-		/// @DnDHash : 2A07CBC8
-		/// @DnDDisabled : 1
-		/// @DnDParent : 48463E3E
-		/// @DnDArgument : "expr" "obj_face_Strike.face_move.tag_list"
-		/// @DnDArgument : "var" "obj_Encounter_Manager.selected_tags"
-	
-	
 		/// @DnDAction : YoYo Games.Common.Function_Call
 		/// @DnDVersion : 1
 		/// @DnDHash : 6B09EF95
