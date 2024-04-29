@@ -2,10 +2,10 @@
 /// @DnDVersion : 1
 /// @DnDHash : 6059DAD0
 /// @DnDArgument : "xpos" "450"
-/// @DnDArgument : "ypos" "150"
+/// @DnDArgument : "ypos" "200"
 /// @DnDArgument : "objectid" "obj_display_detailed_move_description"
 /// @DnDSaveInfo : "objectid" "obj_display_detailed_move_description"
-instance_create_layer(450, 150, "Instances", obj_display_detailed_move_description);
+instance_create_layer(450, 200, "Instances", obj_display_detailed_move_description);
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
