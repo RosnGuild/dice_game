@@ -1,6 +1,6 @@
 # dice_game
  
-dice_game is a turn based deckbuilding game where your deck is composed of the faces of a d20. This readme assumes familiarity with the GameMaker UI.
+dice_game is a turn based deckbuilding game where your deck is composed of the faces of a d20. This readme assumes familiarity with the GameMaker UI, and is aimed at explaining how to add content to the game. For more detailed information on how each component works, look to the documentation in the code.
 
 ## Overworld_Map
 To edit the overworld map, you need to access files in several locations. First, open the rooms folder in the resource browser, and open the Overworld_Room. Inside, there are two types of objects. goto_Room buttons, and Overworld_Arrows. To change the layout of the overworld, there are a few steps:
@@ -8,7 +8,6 @@ To edit the overworld map, you need to access files in several locations. First,
 1. **create new goto_Room buttons** by duplicating the parent button for each new game room you want to place, and editing the onclick method in it's create event to point to your new room. See Rooms for information on creating new game rooms.
 2. **Place the buttons** in the shape you want in the Overworld room, and edit their step_number variables to match the order in which the player can access them. 1 is the first room, counting up as high as necessary. Rooms the same number of steps deep on different paths should share the same step_number.
 3. **Place overworld_arrows** between them as appropriate, and edit their step_number variables to match the button that they point *too*.
-Rooms
 
 ## Rooms
 There are three main types of rooms in the game. Battle_Rooms, Loot_Rooms, and Choice_Rooms.
@@ -24,9 +23,12 @@ Not yet implemented.
 
 ## Entities
 There are two types of entities: the player and enemies.
+In general, an entity is composed of an obj_Entity object, which contains a sprite, which is the visual representation on the entity, and a collection of variables that track the tags/statuses effecting the entity, with the format status_NAME_value. If a new tag is implemented, a new variable to track it should be added to obj_Entity, with the format status_NAME_value. It also has vaiables that track health.
 
 ### Player
-TEXT HERE.
+The player is composed of a few components. obj_Player holds the underlying player sprite, and it's primary unique function is to keep track of the energy a player has available to them, which is the number of moves they can make in one turn, as well as all the functions of an obj_Entity, which it inherits from. 
+There is also the global.die_graph_array, which stores the moves the player has access to, detailed below, and the global.player_current_health and global.player_max_health variables, which keep track of the players current and maximum health respectively. If the player's starting health needs to be edited, go to scr_Player and edit global.player_max_health.
+Finally there are the Player_Die_Face buttons, which allow interaction with the die for the player. These should not need to be touched, but are located int UI objects folder.
 
 ### Enemies
 All enemies consist of two components: an enemy object and several stored moves corresponding to that enemy, which are created and stored in the scr_Initialize_Enemy_moves script. To create a new enemy, first create its moves, as follows:
@@ -58,9 +60,7 @@ Second, create the enemy object itself. Create a new child object of obj_Enemy, 
 Finally, drag the enemy object into any battle rooms you want it to appear in.
 
 ## Faces
-Across the player dice, there are 20 faces. These are stored in an array. Each face contains a Move name: a string which corresponds to a move (an entry in a database that describes how the face behaves).
-    
-    KAI CHECK THIS
+The player face information is stored in the global.die_graph_array array. There are twenty zero indexed intries in the array, corresponding to each of the 20 sides of the player die. Each entry holds a Face_Node struct, which holds all the data necessary to interact with a face of the die (see scr_Face_Node for specifics). This does not need to be touched directly ever, unless you want to edit the players starting deck. Accesses to this array look like this: global.die_graph_array[n-1], where n is the face_number variable stored in the Face_Node at that location.
     
 To create new move options for the player to use, you must create the move data, add it to the move database, and then insert it into the potential pool of moves that faces generated in Loot Rooms can contain.
 
