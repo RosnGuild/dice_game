@@ -31,6 +31,8 @@ draw_set_valign(fa_middle);
 /// @DnDHash : 6F4DDE90
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y_relative" "1"
+/// @DnDArgument : "xscale" "1 * button_text_scale"
+/// @DnDArgument : "yscale" "1 * button_text_scale"
 /// @DnDArgument : "caption" ""
 /// @DnDArgument : "text" "text"
-draw_text_transformed(x + 0, y + 0, "" + string(text), 1, 1, 0);
+draw_text_transformed(x + 0, y + 0, "" + string(text), 1 * button_text_scale, 1 * button_text_scale, 0);
