@@ -108,11 +108,11 @@ obj_display_face_infocard.display_footer_text = get_hovered_adjacent_move_names(
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1
 /// @DnDHash : 03F5BE82
-/// @DnDArgument : "xpos" "475"
-/// @DnDArgument : "ypos" "300"
+/// @DnDArgument : "xpos" "450"
+/// @DnDArgument : "ypos" "150"
 /// @DnDArgument : "objectid" "obj_display_detailed_move_description"
 /// @DnDSaveInfo : "objectid" "obj_display_detailed_move_description"
-instance_create_layer(475, 300, "Instances", obj_display_detailed_move_description);
+instance_create_layer(450, 150, "Instances", obj_display_detailed_move_description);
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1

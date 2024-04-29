@@ -1,9 +1,9 @@
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
 /// @DnDHash : 0EABC52C
-/// @DnDArgument : "expr" "position_meeting(mouse_x, mouse_y, obj_button_playerdie_face_parent)"
+/// @DnDArgument : "expr" "position_meeting(mouse_x, mouse_y, obj_D20_map_triangle)"
 /// @DnDArgument : "not" "1"
-if(!(position_meeting(mouse_x, mouse_y, obj_button_playerdie_face_parent)))
+if(!(position_meeting(mouse_x, mouse_y, obj_D20_map_triangle)))
 {
 	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
 	/// @DnDVersion : 1
