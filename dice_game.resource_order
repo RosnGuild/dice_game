@@ -42,6 +42,7 @@
     {"name":"obj_button_goto_lootroom_1","order":5,"path":"objects/obj_button_goto_lootroom_1/obj_button_goto_lootroom_1.yy",},
     {"name":"obj_button_goto_lootroom_3","order":7,"path":"objects/obj_button_goto_lootroom_3/obj_button_goto_lootroom_3.yy",},
     {"name":"obj_button_goto_character_customizer_room","order":1,"path":"objects/obj_button_goto_character_customizer_room/obj_button_goto_character_customizer_room.yy",},
+    {"name":"obj_Enemy_Blue_Imp","order":2,"path":"objects/obj_Enemy_Blue_Imp/obj_Enemy_Blue_Imp.yy",},
     {"name":"obj_button_block_test","order":1,"path":"objects/obj_button_block_test/obj_button_block_test.yy",},
     {"name":"obj_Startup","order":3,"path":"objects/obj_Startup/obj_Startup.yy",},
     {"name":"Overworld_Room","order":7,"path":"rooms/Overworld_Room/Overworld_Room.yy",},

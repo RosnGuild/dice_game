@@ -8,6 +8,7 @@
 #macro enemyid_BLUE_IMP "Blue Imp"
 #macro enemyid_DR_D6 "Dr. d6"
 #macro enemyid_ZOMBIE "Zombie"
+#macro enemyid_GEORGE "George the Ogre"
 #macro enemyid_DUMMY "Dummy"
 
 // Use these to index into the list that each move name maps to.
@@ -51,15 +52,15 @@ enemy_move_create(enemyid_BIG_IMP, 4, {}, {tag_HEAL_IMPS : 3});
 
 // Purple Imp
 enemy_move_create(enemyid_PURPLE_IMP, 1, {}, {tag_BLOCK : 4});
-enemy_move_create(enemyid_PURPLE_IMP, 2, {tag_VULNERABLE : 1});
-enemy_move_create(enemyid_PURPLE_IMP, 3, {tag_HIT_PER_IMP : 5});
+enemy_move_create(enemyid_PURPLE_IMP, 2, {}, {tag_BLOCK : 4});
+enemy_move_create(enemyid_PURPLE_IMP, 3, {tag_HIT : 6});
 enemy_move_create(enemyid_PURPLE_IMP, 4, {}, {tag_HEAL_IMPS : 3});
 
 // Blue Imp
 enemy_move_create(enemyid_BLUE_IMP, 1, {}, {tag_BLOCK : 10});
-enemy_move_create(enemyid_BLUE_IMP, 2, {tag_VULNERABLE : 1});
-enemy_move_create(enemyid_BLUE_IMP, 3, {tag_VULNERABLE : 2});
-enemy_move_create(enemyid_BLUE_IMP, 4, {tag_HIT : 8});
+enemy_move_create(enemyid_BLUE_IMP, 2, {}, {tag_BLOCK : 10});
+enemy_move_create(enemyid_BLUE_IMP, 3, {}, {tag_BLOCK : 10});
+enemy_move_create(enemyid_BLUE_IMP, 4, {tag_BLEED : 8});
 
 // Doctor d6
 enemy_move_create(enemyid_DR_D6, 1, {}, {tag_BOLSTER : true});
@@ -68,6 +69,10 @@ enemy_move_create(enemyid_DR_D6, 3, {}, {tag_BOLSTER : true});
 enemy_move_create(enemyid_DR_D6, 4, {}, {tag_HEAL_IMPS : 6});
 enemy_move_create(enemyid_DR_D6, 5, {}, {tag_HEAL_IMPS : 6});
 enemy_move_create(enemyid_DR_D6, 6, {}, {tag_HEAL_IMPS : 6});
+
+// George the Ogre
+enemy_move_create(enemyid_GEORGE, 1, {}, {tag_BOLSTER : 1});
+enemy_move_create(enemyid_GEORGE, 2, {}, {tag_HIT : 10});
 
 
 //show_debug_message("FUCK: {0}", global.enemy_move_data);

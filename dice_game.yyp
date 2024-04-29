@@ -132,6 +132,7 @@
     {"id":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},},
     {"id":{"name":"obj_button_goto_character_customizer_room","path":"objects/obj_button_goto_character_customizer_room/obj_button_goto_character_customizer_room.yy",},},
     {"id":{"name":"spr_d20_topface","path":"sprites/spr_d20_topface/spr_d20_topface.yy",},},
+    {"id":{"name":"obj_Enemy_Blue_Imp","path":"objects/obj_Enemy_Blue_Imp/obj_Enemy_Blue_Imp.yy",},},
     {"id":{"name":"obj_button_block_test","path":"objects/obj_button_block_test/obj_button_block_test.yy",},},
     {"id":{"name":"scr_Entity","path":"scripts/scr_Entity/scr_Entity.yy",},},
     {"id":{"name":"obj_Startup","path":"objects/obj_Startup/obj_Startup.yy",},},
