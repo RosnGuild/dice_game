@@ -4,6 +4,7 @@
     {"name":"Tags","order":6,"path":"folders/Objects/Tags.yy",},
     {"name":"UI","order":7,"path":"folders/Objects/UI.yy",},
     {"name":"Character_Customizer","order":2,"path":"folders/Objects/UI/Character_Customizer.yy",},
+    {"name":"D20_Map_Display","order":7,"path":"folders/Objects/UI/D20_Map_Display.yy",},
     {"name":"Displays","order":3,"path":"folders/Objects/UI/Displays.yy",},
     {"name":"Game_Buttons","order":4,"path":"folders/Objects/UI/Game_Buttons.yy",},
     {"name":"Goto_Room_Buttons","order":5,"path":"folders/Objects/UI/Goto_Room_Buttons.yy",},
@@ -13,7 +14,6 @@
     {"name":"Battle_Rooms","order":8,"path":"folders/Rooms/Overworld_Rooms/Battle_Rooms.yy",},
     {"name":"Loot_Rooms","order":9,"path":"folders/Rooms/Overworld_Rooms/Loot_Rooms.yy",},
     {"name":"Map","order":1,"path":"folders/Sprites/Map.yy",},
-    {"name":"D20_Map_Display","order":7,"path":"folders/Objects/UI/D20_Map_Display.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_button_restart_game","order":4,"path":"objects/obj_button_restart_game/obj_button_restart_game.yy",},
