@@ -51,7 +51,7 @@ Replace YOUR_NAME and "Your Display Name" with your enemy name.
 For information on formatting tag structs, see the Move Tags section.
             
 Second, create the enemy object itself. Create a new child object of obj_Enemy, and give it a sprite. In its variable definitions, configure the following:
-1. **name.** Enter the enemyid macro you created earlier.
+1. **name.** Enter the string that you set the enemyid macro (that you created earlier) equal to.
 2. **current_hp and max_hp.** These should be identical, and represent the enemy's health. The baseline is between 14-50.
 3. **actions_per_round.** The number of actions/moves the enemy should do each round. Usually this should be 1, but stronger enemies and boss do several actions each round. In game terms, this is how many dice the enemy rolls and checks against their move list.
 
