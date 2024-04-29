@@ -142,10 +142,10 @@ function move_tags_get_detailed_description(_tags, _name = undefined) {
 				_display_string = string_concat(_display_string, "Reroll: Rotates your dice to a random side.\n");
 		        break;
 			case tag_HIT_PER_IMP:
-				_display_string = string_concat(_display_string, "Hit Per Imp X: Deals X damage per alive Imp.");
+				_display_string = string_concat(_display_string, "Hit Per Imp X: Deals X damage per alive Imp.\n");
 				break;
 			case tag_HEAL_IMPS:
-				_display_string = string_concat(_display_string, "Heal Imps X: All Imps recover X health.");
+				_display_string = string_concat(_display_string, "Heal Imps X: All Imps recover X health.\n");
 				break;
 		    default:
 				show_debug_message("ERROR: Attempted to parse tag ( {0} ) that doesn't exist!", keys[i]);
