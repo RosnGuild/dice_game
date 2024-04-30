@@ -14,9 +14,9 @@ function parse_move(_move, _self, _target = undefined, _enemy_dice_roll = undefi
 	var _self_tags = move_get_self_tags(_move, _enemy_dice_roll);
 	var _target_tags = move_get_target_tags(_move, _enemy_dice_roll);
 	
-	scr_parse_move_helper(_self, _self_tags);
+	parse_move_helper(_self, _self_tags);
 	if (_target != undefined) {
-		scr_parse_move_helper(_target, _target_tags);
+		parse_move_helper(_target, _target_tags);
 	}
 	
 	update_current_face_number();
@@ -28,11 +28,11 @@ function parse_move(_move, _self, _target = undefined, _enemy_dice_roll = undefi
 	}
 }
 
-/// @function						scr_parse_move_helper(_entity, _tags);
+/// @function						parse_move_helper(_entity, _tags);
 /// @param {ID.Instance} _entity	Target of the tags.
 /// @param {struct}	_tags			Tags.
 /// @description					Processes a move's tags on a specific entity. HELPER FUNCTION, DO NOT CALL.
-function scr_parse_move_helper(_entity, _tags){
+function parse_move_helper(_entity, _tags){
 	keys = struct_get_names(_tags);
 	for (var i = 0; i < struct_names_count(_tags); i++) {
 		switch (keys[i]) {

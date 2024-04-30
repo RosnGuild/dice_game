@@ -118,4 +118,15 @@ When an enemy performs a move, the move is parsed without any further checking.
 When a move is run through parse_move, each struct is iterated through. For each tag, a function is called, passing in the id of whatever entity that tag was applied to. As such, most of these functions are stored in scr_Entity, but some are in scr_Enemy if only enemies could be targeted by them.
 
 ### Creating Tags
-Each tag has a corresponding macro declared in either 
+Each tag consists of:
+- a string macro declared in either scr_Initialize_Enemy_Moves or scr_Initialize_Face_Moves.
+- a function which executes the effects of the tag, and typically contains arguments for a target and a value (if the tag can have a value, like the six in Hit 6).
+
+    *Created in either scr_Enemy (if the tag is only a component of enemy moves) or scr_Entity (if the tag is a component of both player and enemy moves).*
+- an entry in the parse_move_helper function, calling the function created above.
+- a switch case in the move_tags_get_description function, which configures how tags are displayed.
+- a switch case in the move_tags_get_detailed_description function, which configures the help text for this tag.
+
+If the tag requires the implementation of a new status effect, see below.
+
+### Creating Status Effects
