@@ -123,13 +123,13 @@ function move_tags_get_detailed_description(_tags, _name = undefined) {
 				_display_string = string_concat(_display_string, "Block X: Reduces all damage by X for one round.\n");
 		        break;
 			case tag_BURN:
-				_display_string = string_concat(_display_string, "Burn X: Deals X damage each time target does something, then X decreases by 1.\n");
+				_display_string = string_concat(_display_string, "Burn X: Deals X damage each time target does something, \nthen X decreases by 1.\n");
 		        break;
 			case tag_VULNERABLE:
 				_display_string = string_concat(_display_string, "Vulnerable X: Doubles damage target takes for X rounds.\n");
 		        break;
 			case tag_BLEED:
-				_display_string = string_concat(_display_string, "Bleed X: Deals X damage at the end of target's turn, then X decreases by 1.\n");
+				_display_string = string_concat(_display_string, "Bleed X: Deals X damage at the end of target's turn, \nthen X decreases by 1.\n");
 		        break;
 			case tag_SCRY:
 		        _display_string = string_concat(_display_string, "Scry X: See what target will do for X future turns. Ignores Bolster.\n");
