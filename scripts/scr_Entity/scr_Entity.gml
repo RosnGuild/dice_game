@@ -148,3 +148,4 @@ function apply_purge(_entity_id, _purge_value) {
 		decrement_burn(_entity_id);
 	}
 }
+
