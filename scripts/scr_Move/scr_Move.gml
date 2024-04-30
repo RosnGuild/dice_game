@@ -149,6 +149,9 @@ function move_tags_get_detailed_description(_tags, _name = undefined) {
 			case tag_PURGE:
 				_display_string = string_concat(_display_string, "Purge X: Decreases Burn and Bleed by X.\n");
 				break;
+			case tag_STUN:
+				_display_string = string_concat(_display_string, "Stun X: Delays enemy action by X turns.\n");
+				break;
 		    default:
 				show_debug_message("ERROR: Attempted to parse tag ( {0} ) that doesn't exist!", keys[i]);
 		        break;
