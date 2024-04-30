@@ -2,9 +2,8 @@
 /// @DnDVersion : 1
 /// @DnDHash : 2B10D936
 /// @DnDArgument : "var" "step_number"
-/// @DnDArgument : "op" "4"
-/// @DnDArgument : "value" "global.overworld_step_number"
-if(step_number >= global.overworld_step_number)
+/// @DnDArgument : "value" "global.current_overworld_node"
+if(step_number == global.current_overworld_node)
 {
 	/// @DnDAction : YoYo Games.Instances.Set_Sprite
 	/// @DnDVersion : 1
@@ -22,8 +21,8 @@ if(step_number >= global.overworld_step_number)
 /// @DnDHash : 1070D100
 /// @DnDArgument : "var" "step_number"
 /// @DnDArgument : "op" "1"
-/// @DnDArgument : "value" "global.overworld_step_number"
-if(step_number < global.overworld_step_number)
+/// @DnDArgument : "value" "global.current_overworld_node"
+if(step_number < global.current_overworld_node)
 {
 	/// @DnDAction : YoYo Games.Instances.Set_Sprite
 	/// @DnDVersion : 1
@@ -40,8 +39,8 @@ if(step_number < global.overworld_step_number)
 /// @DnDHash : 0D11A999
 /// @DnDArgument : "var" "step_number"
 /// @DnDArgument : "op" "2"
-/// @DnDArgument : "value" "global.overworld_step_number"
-if(step_number > global.overworld_step_number)
+/// @DnDArgument : "value" "global.current_overworld_node"
+if(step_number > global.current_overworld_node)
 {
 	/// @DnDAction : YoYo Games.Instances.Set_Sprite
 	/// @DnDVersion : 1

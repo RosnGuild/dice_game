@@ -4,28 +4,27 @@
 /// @DnDArgument : "funcName" "activate_button"
 function activate_button() 
 {
-	/// @DnDAction : YoYo Games.Common.If_Variable
+	/// @DnDAction : YoYo Games.Common.If_Expression
 	/// @DnDVersion : 1
-	/// @DnDHash : 3245FD08
+	/// @DnDHash : 6B7ED44C
 	/// @DnDParent : 14D311B9
-	/// @DnDArgument : "var" "step_number"
-	/// @DnDArgument : "value" "global.overworld_step_number"
-	if(step_number == global.overworld_step_number)
+	/// @DnDArgument : "expr" "array_contains(global.overworld_array[global.current_overworld_node].adjacency_array, step_number)"
+	if(array_contains(global.overworld_array[global.current_overworld_node].adjacency_array, step_number))
 	{
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 0F7C9760
-		/// @DnDParent : 3245FD08
-		/// @DnDArgument : "expr" "global.overworld_step_number + 1"
-		/// @DnDArgument : "var" "global.overworld_step_number"
-		global.overworld_step_number = global.overworld_step_number + 1;
+		/// @DnDParent : 6B7ED44C
+		/// @DnDArgument : "expr" "step_number"
+		/// @DnDArgument : "var" "global.current_overworld_node"
+		global.current_overworld_node = step_number;
 	
 		/// @DnDAction : YoYo Games.Rooms.Go_To_Room
 		/// @DnDVersion : 1
 		/// @DnDHash : 3E1A147F
-		/// @DnDParent : 3245FD08
-		/// @DnDArgument : "room" "Loot_Room_1"
-		/// @DnDSaveInfo : "room" "Loot_Room_1"
-		room_goto(Loot_Room_1);
+		/// @DnDParent : 6B7ED44C
+		/// @DnDArgument : "room" "Loot_Room_2"
+		/// @DnDSaveInfo : "room" "Loot_Room_2"
+		room_goto(Loot_Room_2);
 	}
 }
