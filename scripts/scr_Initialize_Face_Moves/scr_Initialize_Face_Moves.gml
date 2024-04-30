@@ -11,7 +11,7 @@
 #macro BASE_STUN 1 // Scales 1:1:2
 
 #macro UNCOMMON_BLOCK 2 * BASE_BLOCK
-#macro UNCOMMON_STRIKE 2 * BASE_HIT
+#macro UNCOMMON_HIT 2 * BASE_HIT
 #macro UNCOMMON_VULNERABLE 2 * BASE_VULNERABLE
 #macro UNCOMMON_BLEED 2 * BASE_BLEED
 #macro UNCOMMON_SCRY 2 * BASE_SCRY
@@ -19,7 +19,7 @@
 #macro UNCOMMON_STUN BASE_STUN
 
 #macro RARE_BLOCK 3 * BASE_BLOCK
-#macro RARE_STRIKE 3 * BASE_HIT
+#macro RARE_HIT 3 * BASE_HIT
 #macro RARE_VULNERABLE 3 * BASE_VULNERABLE
 #macro RARE_BLEED 3 * BASE_BLEED
 #macro RARE_SCRY 3 * BASE_SCRY
@@ -39,6 +39,11 @@
 #macro face_move_ANTIDOTE "Antidote"
 #macro face_move_DAZE "Daze"
 
+#macro face_move_SMASH "Smash"
+#macro face_move_BRACE "Brace"
+#macro face_move_OPENER "Opener"
+#macro face_move_DEEP_CUT "Deep Cut"
+#macro face_move_DIVINATION "Divination"
 #macro face_move_SHIELD_BASH "Shield Bash"
 #macro face_move_BLOODY_BLOW "Bloody Blow"
 #macro face_move_CLEANSE "Cleanse"
@@ -95,7 +100,13 @@ move_create(face_move_ANTIDOTE, RARITY.COMMON, 2, {tag_PURGE : BASE_PURGE});
 move_create(face_move_DAZE, RARITY.COMMON, 5, {tag_STUN : BASE_STUN});
 
 // Uncommon Moves
+move_create(face_move_SMASH, RARITY.UNCOMMON, 3, {tag_HIT : UNCOMMON_HIT});
+move_create(face_move_BRACE, RARITY.UNCOMMON, 5, {tag_BLOCK : UNCOMMON_BLOCK});
+move_create(face_move_OPENER, RARITY.UNCOMMON, 3, {tag_VULNERABLE : UNCOMMON_VULNERABLE});
+move_create(face_move_DEEP_CUT, RARITY.UNCOMMON, 3, {tag_BLEED : UNCOMMON_BLEED});
+move_create(face_move_DIVINATION, RARITY.UNCOMMON, 3, {tag_SCRY : UNCOMMON_SCRY});
+move_create(face_move_CLEANSE, RARITY.UNCOMMON, 3, {tag_PURGE : UNCOMMON_PURGE});
+move_create(face_move_STAGGER, RARITY.UNCOMMON, 3, {tag_STUN : UNCOMMON_STUN});
+
 move_create(face_move_SHIELD_BASH, RARITY.UNCOMMON, 3, {tag_HIT : BASE_HIT}, {tag_BLOCK : BASE_BLOCK});
 move_create(face_move_BLOODY_BLOW, RARITY.UNCOMMON, 3, {tag_HIT : BASE_HIT, tag_BLEED : BASE_BLEED});
-move_create(face_move_ANTIDOTE, RARITY.UNCOMMON, 3, {tag_PURGE : UNCOMMON_PURGE});
-move_create(face_move_STAGGER, RARITY.UNCOMMON, 3, {tag_STUN : UNCOMMON_STUN});
