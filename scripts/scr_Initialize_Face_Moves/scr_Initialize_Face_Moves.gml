@@ -61,6 +61,7 @@
 #macro tag_STUN "stun"
 
 enum RARITY {
+	STARTER,
 	COMMON,
 	UNCOMMON,
 	RARE,
@@ -85,8 +86,8 @@ function move_create(_name, _rarity, _cooldown, _target_tags = {}, _self_tags = 
 // Move Definitions
 // Common Moves
 move_create(face_move_DEFAULT, RARITY.TESTING, 2, {}, {}); // TESTING MOVE
-move_create(face_move_STRIKE, RARITY.COMMON, 2, {tag_HIT : BASE_HIT});
-move_create(face_move_BLOCK, RARITY.COMMON, 2, {}, {tag_BLOCK : BASE_BLOCK});
+move_create(face_move_STRIKE, RARITY.STARTER, 2, {tag_HIT : BASE_HIT});
+move_create(face_move_BLOCK, RARITY.STARTER, 2, {}, {tag_BLOCK : BASE_BLOCK});
 move_create(face_move_TRIP, RARITY.COMMON, 2, {tag_VULNERABLE : BASE_VULNERABLE});
 move_create(face_move_SLICE, RARITY.COMMON, 2, {tag_BLEED : BASE_BLEED});
 move_create(face_move_PORTENT, RARITY.COMMON, 2, {tag_SCRY : BASE_SCRY});
