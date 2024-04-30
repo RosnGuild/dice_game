@@ -136,3 +136,14 @@ function decrement_bleed(_entity_id, _take_damage = true) {
 function decrement_status(_entity_id, _status_name) {
 	_entity_id._status_name = max(_entity_id._status_name - 1, 0);
 }
+
+/// @function								apply_purge(_entity_id);
+/// @param {Id.Instance}	_entity_id		The id of the entity.
+/// @param {Bool}			_purge_value	The amount to decreases statuses by.
+/// @description							Decreases given entity's Bleed and Burn value by a given amount.
+function apply_purge(_entity_id, _purge_value) {
+	for (var i = 0; i < _purge_value; ++i) {
+	    decrement_bleed(_entity_id, false);
+		decrement_burn(_entity_id);
+	}
+}

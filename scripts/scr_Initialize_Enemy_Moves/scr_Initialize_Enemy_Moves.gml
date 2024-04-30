@@ -57,10 +57,10 @@ enemy_move_create(enemyid_PURPLE_IMP, 3, {tag_HIT : 6});
 enemy_move_create(enemyid_PURPLE_IMP, 4, {}, {tag_HEAL_IMPS : 3});
 
 // Blue Imp
-enemy_move_create(enemyid_BLUE_IMP, 1, {}, {tag_BLOCK : 10});
-enemy_move_create(enemyid_BLUE_IMP, 2, {}, {tag_BLOCK : 10});
+enemy_move_create(enemyid_BLUE_IMP, 1, {}, {tag_BLOCK : 5});
+enemy_move_create(enemyid_BLUE_IMP, 2, {}, {tag_BLOCK : 8});
 enemy_move_create(enemyid_BLUE_IMP, 3, {}, {tag_BLOCK : 10});
-enemy_move_create(enemyid_BLUE_IMP, 4, {tag_BLEED : 8});
+enemy_move_create(enemyid_BLUE_IMP, 4, {tag_BLEED : 4});
 
 // Doctor d6
 enemy_move_create(enemyid_DR_D6, 1, {}, {tag_BOLSTER : true});
@@ -75,18 +75,5 @@ enemy_move_create(enemyid_GEORGE, 1, {}, {tag_BOLSTER : 1});
 enemy_move_create(enemyid_GEORGE, 2, {}, {tag_HIT : 10});
 
 
-//show_debug_message("FUCK: {0}", global.enemy_move_data);
-//show_debug_message("HEY SHITASS: {0}", global.enemy_move_data[? "Imp"]);
-//show_debug_message("HEY SHITASS: {0}", global.enemy_move_data[? "Imp"][? 1]); //this one
-//show_debug_message("HEY SHITASS: {0}", array_get(global.enemy_move_data[? "Imp"][? 1], 0));
-//show_debug_message("HEY SHITASS: {0}", array_get(global.enemy_move_data[? "Imp"][? 1], 1));
-
 //Dummy
 enemy_move_create("Dummy", 1, {});
-
-// show_debug_message("FUCK: " + string(enemy_move_get_description("Imp", 2)));
-
-//show_debug_message("DOES THE LINE WORK for 1?: {0}", move_is_attack("Imp", 1));
-//show_debug_message("DOES THE LINE WORK for 2?: {0}", move_is_attack("Imp", 2));
-//show_debug_message("DOES THE LINE WORK for 3?: {0}", move_is_attack("Imp", 3));
-//show_debug_message("DOES THE LINE WORK for 4?: {0}", move_is_attack("Imp", 4));

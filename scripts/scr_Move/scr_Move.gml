@@ -74,6 +74,7 @@ function move_tags_get_description(_tags, _name = undefined) {
 			case tag_VULNERABLE:
 			case tag_BLEED:
 			case tag_SCRY:
+			case tag_PURGE:
 		        _display_string = string_concat(_display_string, string_upper_case_first(keys[i]));
 		        break;
 			case tag_BOLSTER:
@@ -146,6 +147,9 @@ function move_tags_get_detailed_description(_tags, _name = undefined) {
 				break;
 			case tag_HEAL_IMPS:
 				_display_string = string_concat(_display_string, "Heal Imps X: All Imps recover X health.\n");
+				break;
+			case tag_PURGE:
+				_display_string = string_concat(_display_string, "Purge X: Decreases Burn and Bleed by X.\n");
 				break;
 		    default:
 				show_debug_message("ERROR: Attempted to parse tag ( {0} ) that doesn't exist!", keys[i]);

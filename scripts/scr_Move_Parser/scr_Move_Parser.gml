@@ -66,6 +66,9 @@ function parse_move_helper(_entity, _tags){
 			case tag_HEAL_IMPS:
 				enemies_heal_all(_tags[$ keys[i]], "Imp");
 				break;
+			case tag_PURGE:
+				apply_purge(_entity, _tags[$ keys[i]]);
+				break;
 		    default:
 		        // code here
 				show_debug_message("ERROR: Attempted to parse tag {0} that doesn't exist!", keys[i]);
