@@ -9,7 +9,7 @@
 #macro BASE_SCRY 1
 #macro BASE_PURGE 1
 #macro BASE_STUN 1 // Scales 1:1:2
-#macro BASE_BURN 7
+#macro BASE_BURN 6
 
 #macro UNCOMMON_BLOCK 2 * BASE_BLOCK
 #macro UNCOMMON_HIT 2 * BASE_HIT

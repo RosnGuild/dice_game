@@ -16,7 +16,7 @@ function take_damage(_entity_id, _damage_value, _ignore_block = false){
 		
 		// Decrements damage by block value.
 		if (_ignore_block == false) {
-			_final_damage_value = max(_damage_value - _entity_id.status_block_value, 0);
+			_final_damage_value = max(_final_damage_value - _entity_id.status_block_value, 0);
 		}
 		
 		show_debug_message("DOING {0} DAMAGE", _final_damage_value);

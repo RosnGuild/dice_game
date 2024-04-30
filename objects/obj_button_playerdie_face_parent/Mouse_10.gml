@@ -94,9 +94,9 @@ obj_display_face_infocard.display_body_text = string(player_move_get_description
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 6B119578
-/// @DnDArgument : "expr" ""\n" + "Max Cooldown: " + string(ds_map_find_value(global.move_data, global.die_graph_array[number - 1].move)[movedata_COOLDOWN])"
+/// @DnDArgument : "expr" ""\n" + "Cooldown: " + string(ds_map_find_value(global.move_data, global.die_graph_array[number - 1].move)[movedata_COOLDOWN])"
 /// @DnDArgument : "var" "obj_display_face_infocard.display_body2_text"
-obj_display_face_infocard.display_body2_text = "\n" + "Max Cooldown: " + string(ds_map_find_value(global.move_data, global.die_graph_array[number - 1].move)[movedata_COOLDOWN]);
+obj_display_face_infocard.display_body2_text = "\n" + "Cooldown: " + string(ds_map_find_value(global.move_data, global.die_graph_array[number - 1].move)[movedata_COOLDOWN]);
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1

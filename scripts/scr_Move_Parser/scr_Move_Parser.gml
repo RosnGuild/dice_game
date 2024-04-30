@@ -21,7 +21,6 @@ function parse_move(_move, _self, _target = undefined, _enemy_dice_roll = undefi
 	
 	update_current_face_number();
 	take_damage(_self, _self.status_burn_value, true);
-	show_debug_message("HAS {0} TAKEN BURN!", _self.status_burn_value);
 	
 	if (instance_exists(_self)) {
 		decrement_burn(_self);
