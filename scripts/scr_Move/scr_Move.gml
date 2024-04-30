@@ -76,6 +76,7 @@ function move_tags_get_description(_tags, _name = undefined) {
 			case tag_SCRY:
 			case tag_PURGE:
 			case tag_BOLSTER:
+			case tag_STUN:
 		        _display_string = string_concat(_display_string, string_upper_case_first(keys[i]));
 		        break;
 			case tag_REROLL:
