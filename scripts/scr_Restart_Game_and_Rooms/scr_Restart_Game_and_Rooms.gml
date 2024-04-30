@@ -4,7 +4,7 @@ function Restart_Game_and_Rooms(){
 	global.player_current_hp = global.player_max_hp;
 	initialize_die_graph();
 	set_random_player_face();
-	global.overworld_step_number = 1;
+	global.current_overworld_node = 0;
 	
 	room_goto(room_first);
 	for (var _i = 0; _i <= room_last; _i++) {

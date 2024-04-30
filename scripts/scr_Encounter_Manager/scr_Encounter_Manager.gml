@@ -69,6 +69,10 @@ function handle_enemy_moves(_enemy) {
 	for (var i = 0; i < _enemy.actions_per_round; ++i) {
 		var _dice_number = _enemy.current_move_numbers[i];
 	    parse_move(_enemy.name, _enemy, obj_Player, _dice_number);
+		if (!instance_exists(_enemy) || !instance_exists(obj_Player)) {
+			return;
+		}
+		
 		show_debug_message("An enemy is going to {0} itself", move_get_self_tags(_enemy.name, _dice_number));
 		show_debug_message("An enemy is going to {0} you ", move_get_target_tags(_enemy.name, _dice_number));
 		
