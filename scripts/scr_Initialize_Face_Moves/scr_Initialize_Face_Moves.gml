@@ -8,6 +8,7 @@
 #macro BASE_BLEED 5
 #macro BASE_SCRY 1
 #macro BASE_PURGE 1
+#macro BASE_STUN 1 // Scales 1:1:2
 
 #macro UNCOMMON_BLOCK 2 * BASE_BLOCK
 #macro UNCOMMON_STRIKE 2 * BASE_HIT
@@ -15,6 +16,7 @@
 #macro UNCOMMON_BLEED 2 * BASE_BLEED
 #macro UNCOMMON_SCRY 2 * BASE_SCRY
 #macro UNCOMMON_PURGE 2 * BASE_PURGE
+#macro UNCOMMON_STUN BASE_STUN
 
 #macro RARE_BLOCK 3 * BASE_BLOCK
 #macro RARE_STRIKE 3 * BASE_HIT
@@ -22,6 +24,7 @@
 #macro RARE_BLEED 3 * BASE_BLEED
 #macro RARE_SCRY 3 * BASE_SCRY
 #macro RARE_PURGE 3 * BASE_PURGE
+#macro RARE_STUN 2 * BASE_STUN
 
 //---
 // Map and struct-based implementation of the move database.
@@ -34,10 +37,12 @@
 #macro face_move_SLICE "Slice"
 #macro face_move_PORTENT "Portent"
 #macro face_move_ANTIDOTE "Antidote"
+#macro face_move_DAZE "Daze"
 
 #macro face_move_SHIELD_BASH "Shield Bash"
 #macro face_move_BLOODY_BLOW "Bloody Blow"
 #macro face_move_CLEANSE "Cleanse"
+#macro face_move_STAGGER "Stagger"
 
 // Use these to index into the list that each move name maps to.
 #macro movedata_RARITY 0
@@ -53,6 +58,7 @@
 #macro tag_BLEED "bleed"
 #macro tag_SCRY "scry"
 #macro tag_PURGE "purge"
+#macro tag_STUN "stun"
 
 enum RARITY {
 	COMMON,
@@ -85,8 +91,10 @@ move_create(face_move_TRIP, RARITY.COMMON, 2, {tag_VULNERABLE : BASE_VULNERABLE}
 move_create(face_move_SLICE, RARITY.COMMON, 2, {tag_BLEED : BASE_BLEED});
 move_create(face_move_PORTENT, RARITY.COMMON, 2, {tag_SCRY : BASE_SCRY});
 move_create(face_move_ANTIDOTE, RARITY.COMMON, 2, {tag_PURGE : BASE_PURGE});
+move_create(face_move_DAZE, RARITY.COMMON, 5, {tag_STUN : BASE_STUN});
 
 // Uncommon Moves
-move_create(face_move_SHIELD_BASH, RARITY.UNCOMMON, 3, {tag_HIT : BASE_HIT},	{tag_BLOCK : BASE_BLOCK});
+move_create(face_move_SHIELD_BASH, RARITY.UNCOMMON, 3, {tag_HIT : BASE_HIT}, {tag_BLOCK : BASE_BLOCK});
 move_create(face_move_BLOODY_BLOW, RARITY.UNCOMMON, 3, {tag_HIT : BASE_HIT, tag_BLEED : BASE_BLEED});
 move_create(face_move_ANTIDOTE, RARITY.UNCOMMON, 3, {tag_PURGE : UNCOMMON_PURGE});
+move_create(face_move_STAGGER, RARITY.UNCOMMON, 3, {tag_STUN : UNCOMMON_STUN});

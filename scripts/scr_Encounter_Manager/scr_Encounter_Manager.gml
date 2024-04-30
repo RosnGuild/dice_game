@@ -2,15 +2,17 @@
 function end_turn_script() {
 	// Decrements enemy status applied by themselves.
 	for (var i = 0; i < instance_number(obj_Enemy); i++;) {
-	    current_enemy = instance_find(obj_Enemy, i);
-		clear_block(current_enemy);
-		decrement_bolster(current_enemy);
+	    var _current_enemy = instance_find(obj_Enemy, i);
+		clear_block(_current_enemy);
+		decrement_bolster(_current_enemy);
 	}
 	
 	// Makes all enemies perform their selected moves, based on their current_move_numbers.
 	for (var i = 0; i < instance_number(obj_Enemy); i++;) {
-	    current_enemy = instance_find(obj_Enemy, i);
-		handle_enemy_moves(current_enemy);
+	    var _current_enemy = instance_find(obj_Enemy, i);
+		if (_current_enemy.status_stun_value == 0) {
+		    handle_enemy_moves(_current_enemy);
+		}
 	}
 	
 	// Decrements Bleed and inflicts Bleed damage to all enemies.
@@ -20,9 +22,9 @@ function end_turn_script() {
 	
 	// Decrements enemy statuses applied by the player.
 	for (var i = 0; i < instance_number(obj_Enemy); i++;) {
-	    current_enemy = instance_find(obj_Enemy, i);
-		decrement_vulnerable(current_enemy);
-		decrement_scry(current_enemy)
+	    var _current_enemy = instance_find(obj_Enemy, i);
+		decrement_vulnerable(_current_enemy);
+		decrement_scry(_current_enemy)
 	}
 	
 	update_enemy_move_numbers();
@@ -52,7 +54,11 @@ function end_turn_script() {
 function update_enemy_move_numbers() {
 	for (var i = 0; i < instance_number(obj_Enemy); i++;) {
 	    var _current_enemy = instance_find(obj_Enemy, i);
-		enemy_update_upcoming_move(_current_enemy);
+		if (_current_enemy.status_stun_value == 0) {
+		    enemy_update_upcoming_move(_current_enemy);
+		} else {
+		    decrement_stun(_current_enemy);
+		}
 	}
 }
 
