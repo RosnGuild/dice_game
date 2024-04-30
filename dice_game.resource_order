@@ -13,8 +13,8 @@
     {"name":"Overworld_Rooms","order":14,"path":"folders/Rooms/Overworld_Rooms.yy",},
     {"name":"Battle_Rooms","order":8,"path":"folders/Rooms/Overworld_Rooms/Battle_Rooms.yy",},
     {"name":"Loot_Rooms","order":9,"path":"folders/Rooms/Overworld_Rooms/Loot_Rooms.yy",},
-    {"name":"Map","order":1,"path":"folders/Sprites/Map.yy",},
     {"name":"Backgrounds","order":10,"path":"folders/Sprites/Backgrounds.yy",},
+    {"name":"Map","order":1,"path":"folders/Sprites/Map.yy",},
     {"name":"Misc","order":11,"path":"folders/Sprites/Misc.yy",},
   ],
   "ResourceOrderSettings": [

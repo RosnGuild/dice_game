@@ -16,7 +16,6 @@
 #macro enemymovedata_SELF_TAGS 1
 
 // Use these as keys in a move struct to get its tags.
-#macro tag_REROLL "reroll"
 #macro tag_BOLSTER "bolster"
 #macro tag_CALL_IMP "call imp"
 #macro tag_HIT_PER_IMP "hit per imp" // currently unimplemented
