@@ -35,8 +35,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_d4_imp",
-    "path": "sprites/spr_d4_imp/spr_d4_imp.yy",
+    "name": "Dice_Jail_d4_blue_imp_sprite",
+    "path": "sprites/Dice_Jail_d4_blue_imp_sprite/Dice_Jail_d4_blue_imp_sprite.yy",
   },
   "spriteMaskId": null,
   "visible": true,
