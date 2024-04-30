@@ -1,6 +1,8 @@
-# dice_game
+![Dice Jail logo](https://github.com/RosnGuild/dice_game/assets/123116659/978e792f-efd4-4bc3-aece-96aa3134fcc2)
+
+# Escape from Dice Jail
  
-dice_game is a turn based deckbuilding game where your deck is composed of the faces of a d20. This readme assumes familiarity with the GameMaker UI, and is aimed at explaining how to add content to the game. For more detailed information on how each component works, look to the documentation in the code.
+Escape from Dice Jail is a turn based deckbuilding game where your deck is composed of the faces of a d20. This readme assumes familiarity with the GameMaker UI, and is aimed at explaining how to add content to the game. For more detailed information on how each component works, look to the documentation in the code.
 
 ## Overworld_Map
 To edit the overworld map, you need to access files in several locations. First, open the rooms folder in the resource browser, and open the Overworld_Room. Inside, there are two types of objects. goto_Room buttons, and Overworld_Arrows. To change the layout of the overworld, there are a few steps:
