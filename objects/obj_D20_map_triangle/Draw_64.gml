@@ -66,11 +66,12 @@ if(keyboard_check(vk_tab))
 	/// @DnDArgument : "x_relative" "1"
 	/// @DnDArgument : "y_relative" "1"
 	/// @DnDArgument : "xscale" "1.5"
+	/// @DnDArgument : "xscale_relative" "1"
 	/// @DnDArgument : "yscale" "1.5"
 	/// @DnDArgument : "caption" ""
 	/// @DnDArgument : "text" "triangle_number"
 	/// @DnDArgument : "angle" "image_angle"
-	draw_text_transformed(x + 0, y + 0, "" + string(triangle_number), 1.5, 1.5, image_angle);
+	draw_text_transformed(x + 0, y + 0, "" + string(triangle_number), image_xscale + 1.5, 1.5, image_angle);
 
 	/// @DnDAction : YoYo Games.Drawing.Set_Color
 	/// @DnDVersion : 1

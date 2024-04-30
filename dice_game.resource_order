@@ -1,4 +1,16 @@
 {
   "FolderOrderSettings": [],
-  "ResourceOrderSettings": [],
+  "ResourceOrderSettings": [
+    {"name":"obj_button_player_customizer_swap_faces_1","order":11,"path":"objects/obj_button_player_customizer_swap_faces_1/obj_button_player_customizer_swap_faces_1.yy",},
+    {"name":"obj_button_player_customizer_swap_faces_2","order":10,"path":"objects/obj_button_player_customizer_swap_faces_2/obj_button_player_customizer_swap_faces_2.yy",},
+    {"name":"obj_button_player_customizer_swap_face_1","order":9,"path":"objects/obj_button_player_customizer_swap_face_1/obj_button_player_customizer_swap_face_1.yy",},
+    {"name":"obj_button_player_customizer_die_top","order":8,"path":"objects/obj_button_player_customizer_die_top/obj_button_player_customizer_die_top.yy",},
+    {"name":"obj_button_player_customizer_die_down","order":7,"path":"objects/obj_button_player_customizer_die_down/obj_button_player_customizer_die_down.yy",},
+    {"name":"obj_button_player_customizer_swap_face_2","order":6,"path":"objects/obj_button_player_customizer_swap_face_2/obj_button_player_customizer_swap_face_2.yy",},
+    {"name":"obj_button_player_customizer_swap_face_3","order":5,"path":"objects/obj_button_player_customizer_swap_face_3/obj_button_player_customizer_swap_face_3.yy",},
+    {"name":"obj_text_display","order":4,"path":"objects/obj_text_display/obj_text_display.yy",},
+    {"name":"obj_button_player_customizer_die_left","order":2,"path":"objects/obj_button_player_customizer_die_left/obj_button_player_customizer_die_left.yy",},
+    {"name":"obj_button_player_customizer_die_face_parent","order":3,"path":"objects/obj_button_player_customizer_die_face_parent/obj_button_player_customizer_die_face_parent.yy",},
+    {"name":"obj_button_player_customizer_swap_faces_3","order":1,"path":"objects/obj_button_player_customizer_swap_faces_3/obj_button_player_customizer_swap_faces_3.yy",},
+  ],
 }
