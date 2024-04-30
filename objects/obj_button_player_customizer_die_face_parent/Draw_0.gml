@@ -36,9 +36,9 @@ draw_set_valign(fa_middle);
 /// @DnDArgument : "yscale" "1.75"
 /// @DnDArgument : "yscale_relative" "1"
 /// @DnDArgument : "caption" ""
-/// @DnDArgument : "text" "text"
+/// @DnDArgument : "text" "string_replace(text, " ", "\n")"
 /// @DnDArgument : "angle" "text_rotation"
-draw_text_transformed(x + 0, y + 0, "" + string(text), image_xscale + 1.75, image_yscale + 1.75, text_rotation);
+draw_text_transformed(x + 0, y + 0, "" + string(string_replace(text, " ", "\n")), image_xscale + 1.75, image_yscale + 1.75, text_rotation);
 
 /// @DnDAction : YoYo Games.Drawing.Set_Color
 /// @DnDVersion : 1
@@ -58,9 +58,9 @@ draw_set_alpha(l224B3E45_0 / $ff);
 /// @DnDArgument : "xscale" "1.5"
 /// @DnDArgument : "yscale" "1.5"
 /// @DnDArgument : "caption" ""
-/// @DnDArgument : "text" "face"
+/// @DnDArgument : "text" "string_replace(face, " ", "\n")"
 /// @DnDArgument : "angle" "text_rotation"
-draw_text_transformed(x + -2 * dsin(text_rotation), y + -15 * dcos(text_rotation), "" + string(face), 1.5, 1.5, text_rotation);
+draw_text_transformed(x + -2 * dsin(text_rotation), y + -15 * dcos(text_rotation), "" + string(string_replace(face, " ", "\n")), 1.5, 1.5, text_rotation);
 
 /// @DnDAction : YoYo Games.Drawing.Set_Color
 /// @DnDVersion : 1
@@ -75,11 +75,11 @@ draw_set_alpha(l067E3317_0 / $ff);
 /// @DnDHash : 5CCD1229
 /// @DnDArgument : "x" "10 * dsin(text_rotation)"
 /// @DnDArgument : "x_relative" "1"
-/// @DnDArgument : "y" "sprite_height/5 + 60 * dcos(text_rotation)"
+/// @DnDArgument : "y" "sprite_height/5 + 20 * dcos(text_rotation)"
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "xscale" "0.7"
 /// @DnDArgument : "yscale" "0.7"
 /// @DnDArgument : "caption" ""Cooldown: ""
 /// @DnDArgument : "text" "global.die_graph_array[number - 1].cooldown"
 /// @DnDArgument : "angle" "text_rotation"
-draw_text_transformed(x + 10 * dsin(text_rotation), y + sprite_height/5 + 60 * dcos(text_rotation), string("Cooldown: ") + string(global.die_graph_array[number - 1].cooldown), 0.7, 0.7, text_rotation);
+draw_text_transformed(x + 10 * dsin(text_rotation), y + sprite_height/5 + 20 * dcos(text_rotation), string("Cooldown: ") + string(global.die_graph_array[number - 1].cooldown), 0.7, 0.7, text_rotation);

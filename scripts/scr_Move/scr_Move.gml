@@ -75,11 +75,9 @@ function move_tags_get_description(_tags, _name = undefined) {
 			case tag_BLEED:
 			case tag_SCRY:
 			case tag_PURGE:
+			case tag_BOLSTER:
 		        _display_string = string_concat(_display_string, string_upper_case_first(keys[i]));
 		        break;
-			case tag_BOLSTER:
-				_display_string = string_concat(_display_string, "Bolster EnemiesFALSE");
-				break;
 			case tag_REROLL:
 				_display_string = string_concat(_display_string, "RerollFALSE");
 				break;
