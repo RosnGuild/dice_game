@@ -1,9 +1,9 @@
 // Functions and variables related to loot_rooms.
 
 // Variables that hold room loot.
-global.room_loot_1 = face_move_TRIP;
-global.room_loot_2 = face_move_SHIELD_BASH;
-global.room_loot_3 = face_move_PORTENT;
+global.room_loot_1 = face_move_DEFAULT;
+global.room_loot_2 = face_move_DEFAULT;
+global.room_loot_3 = face_move_DEFAULT;
 
 // Arrays of all lootable faces, grouped by rarity.
 loot_table = ds_map_keys_to_array(global.move_data);
