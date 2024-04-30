@@ -183,3 +183,18 @@ function hit_per_enemy(_target_id, _enemy_name, _damage_value, _ignore_block = f
 	}
 	take_damage(_target_id, _damage_value * _enemy_count, _ignore_block);
 }
+
+/// @function								add_stun(_enemy_id, _stun_value);
+/// @param {Id.Instance}	_enemy_id		The id of the enemy.
+/// @param {Bool}			_stun_value		The amount of turns to delay the enemy's current action by.
+/// @description							Increases given enemy's Stun value by a given amount.
+function add_stun(_enemy_id, _stun_value) {
+	_enemy_id.status_stun_value += _stun_value;
+}
+
+/// @function								decrement_stun(_enemy_id);
+/// @param {Id.Instance}	_enemy_id		The id of the enemy.
+/// @description							Decreases given entity's Stun value by 1, to a minimum of 0.
+function decrement_stun(_enemy_id) {
+	_enemy_id.status_stun_value = max(_enemy_id.status_stun_value - 1, 0);
+}

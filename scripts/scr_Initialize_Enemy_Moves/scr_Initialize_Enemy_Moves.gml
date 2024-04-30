@@ -72,7 +72,7 @@ enemy_move_create(enemyid_DR_D6, 6, {}, {tag_HEAL_IMPS : 6});
 
 // George the Ogre
 enemy_move_create(enemyid_GEORGE, 1, {}, {tag_BOLSTER : 1});
-enemy_move_create(enemyid_GEORGE, 2, {}, {tag_HIT : 10});
+enemy_move_create(enemyid_GEORGE, 2, {}, {tag_HIT : 20});
 
 
 //Dummy

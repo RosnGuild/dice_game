@@ -33,3 +33,15 @@ draw_set_valign(fa_top);
 /// @DnDArgument : "caption" ""
 /// @DnDArgument : "text" "get_enemy_upcoming_description()"
 draw_text_transformed(x + 0, y + sprite_height/2.2, "" + string(get_enemy_upcoming_description()), 1, 1, 0);
+
+/// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
+/// @DnDVersion : 1
+/// @DnDHash : 41BECB6B
+/// @DnDArgument : "x_relative" "1"
+/// @DnDArgument : "y" "-sprite_height/1.65"
+/// @DnDArgument : "y_relative" "1"
+/// @DnDArgument : "xscale" "1.5"
+/// @DnDArgument : "yscale" "1.4"
+/// @DnDArgument : "caption" ""
+/// @DnDArgument : "text" "name"
+draw_text_transformed(x + 0, y + -sprite_height/1.65, "" + string(name), 1.5, 1.4, 0);
