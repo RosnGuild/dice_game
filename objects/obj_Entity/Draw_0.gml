@@ -56,6 +56,13 @@ draw_healthbar(x + -sprite_width/1.75, y + -sprite_height/1.45, x + sprite_width
 /// @DnDArgument : "text" "string(current_hp) + " / " + string(max_hp)"
 draw_text_transformed(x + 0, y + -sprite_height/1.675, string("HP: ") + string(string(current_hp) + " / " + string(max_hp)), image_xscale + sprite_width/1000, image_yscale + sprite_height/1000, 0);
 
+/// @DnDAction : YoYo Games.Drawing.Set_Color
+/// @DnDVersion : 1
+/// @DnDHash : 0FAE9AD8
+draw_set_colour($FFFFFFFF & $ffffff);
+var l0FAE9AD8_0=($FFFFFFFF >> 24);
+draw_set_alpha(l0FAE9AD8_0 / $ff);
+
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
 /// @DnDHash : 443B79B0
@@ -76,15 +83,6 @@ if(status_block_value > 0)
 	/// @DnDArgument : "sprite" "spr_block_tag_icon"
 	/// @DnDSaveInfo : "sprite" "spr_block_tag_icon"
 	draw_sprite_ext(spr_block_tag_icon, 0, x + -sprite_width/1.75, y + -sprite_height/1.2, 0.4, 0.4, 0, $FFFFFF & $ffffff, 1);
-
-	/// @DnDAction : YoYo Games.Drawing.Set_Color
-	/// @DnDVersion : 1
-	/// @DnDHash : 0FAE9AD8
-	/// @DnDParent : 443B79B0
-	/// @DnDArgument : "color" "$FF000000"
-	draw_set_colour($FF000000 & $ffffff);
-	var l0FAE9AD8_0=($FF000000 >> 24);
-	draw_set_alpha(l0FAE9AD8_0 / $ff);
 
 	/// @DnDAction : YoYo Games.Drawing.Draw_Value
 	/// @DnDVersion : 1
@@ -120,15 +118,6 @@ if(status_burn_value > 0)
 	/// @DnDSaveInfo : "sprite" "spr_burn_tag_icon"
 	draw_sprite_ext(spr_burn_tag_icon, 0, x + -sprite_width/1.5, y + -sprite_height/1.2, 0.7, 0.7, 0, $FFFFFF & $ffffff, 1);
 
-	/// @DnDAction : YoYo Games.Drawing.Set_Color
-	/// @DnDVersion : 1
-	/// @DnDHash : 0F0C4089
-	/// @DnDParent : 2C48F56C
-	/// @DnDArgument : "color" "$FF000000"
-	draw_set_colour($FF000000 & $ffffff);
-	var l0F0C4089_0=($FF000000 >> 24);
-	draw_set_alpha(l0F0C4089_0 / $ff);
-
 	/// @DnDAction : YoYo Games.Drawing.Draw_Value
 	/// @DnDVersion : 1
 	/// @DnDHash : 7C8B01E0
@@ -153,37 +142,28 @@ if(status_vulnerable_value > 0)
 	/// @DnDVersion : 1
 	/// @DnDHash : 59491AC1
 	/// @DnDParent : 742B0486
-	/// @DnDArgument : "x" "-sprite_width/2.75"
+	/// @DnDArgument : "x" "-sprite_width/3.2"
 	/// @DnDArgument : "x_relative" "1"
-	/// @DnDArgument : "y" "-sprite_height/1.4"
+	/// @DnDArgument : "y" "-sprite_height/1.2"
 	/// @DnDArgument : "y_relative" "1"
 	/// @DnDArgument : "xscale" "0.4"
 	/// @DnDArgument : "yscale" "0.4"
 	/// @DnDArgument : "rot_relative" "1"
 	/// @DnDArgument : "sprite" "spr_vulnerable_tag_icon_2"
 	/// @DnDSaveInfo : "sprite" "spr_vulnerable_tag_icon_2"
-	draw_sprite_ext(spr_vulnerable_tag_icon_2, 0, x + -sprite_width/2.75, y + -sprite_height/1.4, 0.4, 0.4, image_angle + 0, $FFFFFF & $ffffff, 1);
-
-	/// @DnDAction : YoYo Games.Drawing.Set_Color
-	/// @DnDVersion : 1
-	/// @DnDHash : 5D64715E
-	/// @DnDParent : 742B0486
-	/// @DnDArgument : "color" "$FF000000"
-	draw_set_colour($FF000000 & $ffffff);
-	var l5D64715E_0=($FF000000 >> 24);
-	draw_set_alpha(l5D64715E_0 / $ff);
+	draw_sprite_ext(spr_vulnerable_tag_icon_2, 0, x + -sprite_width/3.2, y + -sprite_height/1.2, 0.4, 0.4, image_angle + 0, $FFFFFF & $ffffff, 1);
 
 	/// @DnDAction : YoYo Games.Drawing.Draw_Value
 	/// @DnDVersion : 1
 	/// @DnDHash : 3B6E4EDF
 	/// @DnDParent : 742B0486
-	/// @DnDArgument : "x" "-sprite_width/5"
+	/// @DnDArgument : "x" "-sprite_width/5.25"
 	/// @DnDArgument : "x_relative" "1"
 	/// @DnDArgument : "y" "-sprite_height/1.2"
 	/// @DnDArgument : "y_relative" "1"
 	/// @DnDArgument : "caption" ""
 	/// @DnDArgument : "var" "status_vulnerable_value"
-	draw_text(x + -sprite_width/5, y + -sprite_height/1.2,  + string(status_vulnerable_value));
+	draw_text(x + -sprite_width/5.25, y + -sprite_height/1.2,  + string(status_vulnerable_value));
 }
 
 /// @DnDAction : YoYo Games.Common.If_Variable
@@ -207,15 +187,6 @@ if(status_bleed_value > 0)
 	/// @DnDArgument : "sprite" "spr_bleed_tag_icon"
 	/// @DnDSaveInfo : "sprite" "spr_bleed_tag_icon"
 	draw_sprite_ext(spr_bleed_tag_icon, 0, x + -sprite_width/10, y + -sprite_height/1.2, 0.4, 0.4, image_angle + 0, $FFFFFF & $ffffff, 1);
-
-	/// @DnDAction : YoYo Games.Drawing.Set_Color
-	/// @DnDVersion : 1
-	/// @DnDHash : 73FAC39D
-	/// @DnDParent : 1C146C6D
-	/// @DnDArgument : "color" "$FF000000"
-	draw_set_colour($FF000000 & $ffffff);
-	var l73FAC39D_0=($FF000000 >> 24);
-	draw_set_alpha(l73FAC39D_0 / $ff);
 
 	/// @DnDAction : YoYo Games.Drawing.Draw_Value
 	/// @DnDVersion : 1
@@ -241,6 +212,7 @@ if(status_stun_value > 0)
 	/// @DnDVersion : 1
 	/// @DnDHash : 13966216
 	/// @DnDParent : 5C2F2485
+	/// @DnDArgument : "x" "sprite_width/9"
 	/// @DnDArgument : "x_relative" "1"
 	/// @DnDArgument : "y" "-sprite_height/1.2"
 	/// @DnDArgument : "y_relative" "1"
@@ -249,28 +221,19 @@ if(status_stun_value > 0)
 	/// @DnDArgument : "rot_relative" "1"
 	/// @DnDArgument : "sprite" "spr_stun_tag_icon"
 	/// @DnDSaveInfo : "sprite" "spr_stun_tag_icon"
-	draw_sprite_ext(spr_stun_tag_icon, 0, x + 0, y + -sprite_height/1.2, 0.4, 0.4, image_angle + 0, $FFFFFF & $ffffff, 1);
-
-	/// @DnDAction : YoYo Games.Drawing.Set_Color
-	/// @DnDVersion : 1
-	/// @DnDHash : 5C9348E5
-	/// @DnDParent : 5C2F2485
-	/// @DnDArgument : "color" "$FF000000"
-	draw_set_colour($FF000000 & $ffffff);
-	var l5C9348E5_0=($FF000000 >> 24);
-	draw_set_alpha(l5C9348E5_0 / $ff);
+	draw_sprite_ext(spr_stun_tag_icon, 0, x + sprite_width/9, y + -sprite_height/1.2, 0.4, 0.4, image_angle + 0, $FFFFFF & $ffffff, 1);
 
 	/// @DnDAction : YoYo Games.Drawing.Draw_Value
 	/// @DnDVersion : 1
 	/// @DnDHash : 07731791
 	/// @DnDParent : 5C2F2485
-	/// @DnDArgument : "x" "sprite_width/7"
+	/// @DnDArgument : "x" "sprite_width/6"
 	/// @DnDArgument : "x_relative" "1"
 	/// @DnDArgument : "y" "-sprite_height/1.2"
 	/// @DnDArgument : "y_relative" "1"
 	/// @DnDArgument : "caption" ""
 	/// @DnDArgument : "var" "status_stun_value"
-	draw_text(x + sprite_width/7, y + -sprite_height/1.2,  + string(status_stun_value));
+	draw_text(x + sprite_width/6, y + -sprite_height/1.2,  + string(status_stun_value));
 }
 
 /// @DnDAction : YoYo Games.Common.If_Variable
@@ -284,7 +247,7 @@ if(status_scry_value > 0)
 	/// @DnDVersion : 1
 	/// @DnDHash : 2A983CA5
 	/// @DnDParent : 1DC68E85
-	/// @DnDArgument : "x" "sprite_width/8"
+	/// @DnDArgument : "x" "sprite_width/5"
 	/// @DnDArgument : "x_relative" "1"
 	/// @DnDArgument : "y" "-sprite_height/1.2"
 	/// @DnDArgument : "y_relative" "1"
@@ -293,16 +256,7 @@ if(status_scry_value > 0)
 	/// @DnDArgument : "rot_relative" "1"
 	/// @DnDArgument : "sprite" "spr_scry_tag_icon"
 	/// @DnDSaveInfo : "sprite" "spr_scry_tag_icon"
-	draw_sprite_ext(spr_scry_tag_icon, 0, x + sprite_width/8, y + -sprite_height/1.2, 0.4, 0.4, image_angle + 0, $FFFFFF & $ffffff, 1);
-
-	/// @DnDAction : YoYo Games.Drawing.Set_Color
-	/// @DnDVersion : 1
-	/// @DnDHash : 1ACB1C6A
-	/// @DnDParent : 1DC68E85
-	/// @DnDArgument : "color" "$FF000000"
-	draw_set_colour($FF000000 & $ffffff);
-	var l1ACB1C6A_0=($FF000000 >> 24);
-	draw_set_alpha(l1ACB1C6A_0 / $ff);
+	draw_sprite_ext(spr_scry_tag_icon, 0, x + sprite_width/5, y + -sprite_height/1.2, 0.4, 0.4, image_angle + 0, $FFFFFF & $ffffff, 1);
 
 	/// @DnDAction : YoYo Games.Drawing.Draw_Value
 	/// @DnDVersion : 1

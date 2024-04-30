@@ -132,7 +132,17 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_382B448A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Enemy_Big_Imp","path":"objects/obj_Enemy_Big_Imp/obj_Enemy_Big_Imp.yy",},"properties":[],"rotation":0.0,"scaleX":0.466457,"scaleY":0.4646409,"x":1272.0957,"y":402.0177,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_300C6D5E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Enemy_Imp","path":"objects/obj_Enemy_Imp/obj_Enemy_Imp.yy",},"properties":[],"rotation":0.0,"scaleX":0.64622736,"scaleY":0.6410885,"x":1720.1226,"y":402.00003,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
-    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":0.0,"animationSpeedType":0,"colour":4286680631,"depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
+    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":200,"effectEnabled":true,"effectType":"_filter_colour_balance","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
+        {"name":"g_ColourBalanceShadows","type":0,"value":"-0.6",},
+        {"name":"g_ColourBalanceShadows","type":0,"value":"-1",},
+        {"name":"g_ColourBalanceShadows","type":0,"value":"-0.95",},
+        {"name":"g_ColourBalanceMidtones","type":0,"value":"0.7",},
+        {"name":"g_ColourBalanceMidtones","type":0,"value":"-1",},
+        {"name":"g_ColourBalanceMidtones","type":0,"value":"-1",},
+        {"name":"g_ColourBalanceHighlights","type":0,"value":"0.8",},
+        {"name":"g_ColourBalanceHighlights","type":0,"value":"-0.4",},
+        {"name":"g_ColourBalanceHighlights","type":0,"value":"-0.65",},
+      ],"spriteId":{"name":"spr_blue_crumpled_jail_room_background","path":"sprites/spr_blue_crumpled_jail_room_background/spr_blue_crumpled_jail_room_background.yy",},"stretch":true,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "parent": {
     "name": "Battle_Rooms",

@@ -62,11 +62,10 @@
           ],"rotation":0.0,"scaleX":2.0034842,"scaleY":1.0,"x":640.00006,"y":192.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6603F806","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_display_clickenemy","path":"objects/obj_display_clickenemy/obj_display_clickenemy.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1408.0,"y":544.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
-    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":200,"effectEnabled":true,"effectType":"_effect_recursive_blur","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
-        {"name":"g_RecursiveBlurRadius","type":0,"value":"64",},
-        {"name":"g_RecursiveBlurQuality","type":0,"value":"5",},
-        {"name":"g_RecursiveBlurGamma","type":0,"value":"0",},
-      ],"spriteId":{"name":"spr_battle_wip_screenshot","path":"sprites/spr_battle_wip_screenshot/spr_battle_wip_screenshot.yy",},"stretch":true,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
+    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":200,"effectEnabled":true,"effectType":"_filter_contrast","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
+        {"name":"g_ContrastIntensity","type":0,"value":"1",},
+        {"name":"g_ContrastBrightness","type":0,"value":"0.65",},
+      ],"spriteId":{"name":"spr_blue_crumpled_jail_room_background","path":"sprites/spr_blue_crumpled_jail_room_background/spr_blue_crumpled_jail_room_background.yy",},"stretch":true,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "parent": {
     "name": "Battle_Rooms",
