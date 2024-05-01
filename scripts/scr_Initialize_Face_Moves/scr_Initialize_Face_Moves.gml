@@ -101,7 +101,7 @@ function move_create(_name, _rarity, _cooldown, _target_tags = {}, _self_tags = 
 
 // Move Definitions
 // Common Moves
-move_create(face_move_DEFAULT, RARITY.TESTING, 2, {}, {}); // TESTING MOVE
+move_create(face_move_DEFAULT, RARITY.TESTING, 2, {tag_BLEED : 1, tag_BURN : 1, tag_BOLSTER : 1, tag_BLOCK : 1, tag_SCRY : 1, tag_BLEED : 1, tag_VULNERABLE : 1, tag_STUN : 1}, {}); // TESTING MOVE
 move_create(face_move_STRIKE, RARITY.STARTER, 2, {tag_HIT : BASE_HIT});
 move_create(face_move_BLOCK, RARITY.STARTER, 2, {}, {tag_BLOCK : BASE_BLOCK});
 move_create(face_move_TRIP, RARITY.COMMON, 2, {tag_VULNERABLE : BASE_VULNERABLE});

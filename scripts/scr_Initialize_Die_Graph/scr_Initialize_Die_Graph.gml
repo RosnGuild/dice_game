@@ -29,10 +29,10 @@ die_graph_array[17].adjacent_nodes = [2, 4, 5];
 die_graph_array[18].adjacent_nodes = [1, 3, 9];			
 die_graph_array[19].adjacent_nodes = [2, 8, 14];
 
-/// @function						initialize_die_graph();
-/// @description					Resets all dice faces at the start of a game.
+/// @function		initialize_die_graph();
+/// @description	Resets all dice faces at the start of a game.
 function initialize_die_graph() {
-	global.die_graph_array[0].move = face_move_SLICE;
+	global.die_graph_array[0].move = face_move_DEFAULT; //face_move_SLICE
 	global.die_graph_array[1].move = face_move_DAZE;
 	global.die_graph_array[2].move = face_move_STRIKE;
 	global.die_graph_array[3].move = face_move_STRIKE;
