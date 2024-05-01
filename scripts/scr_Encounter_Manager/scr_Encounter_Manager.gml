@@ -1,6 +1,9 @@
 // Functions used to manage encounters.
+
+/// @function		end_turn_script();
+/// @description	Called at the end of each turn. Consists of a series of loops that, in order: decrement some enemy status conditions, perform the enemy turn, decrement other enemy status conditions, update enemy move numbers, decrement player status conditions, handle player energy and cooldowns.
 function end_turn_script() {
-	// Decrements enemy status applied by themselves.
+	// Decrements enemy status applied by enemies.
 	for (var i = 0; i < instance_number(obj_Enemy); i++;) {
 	    var _current_enemy = instance_find(obj_Enemy, i);
 		clear_block(_current_enemy);
@@ -29,7 +32,7 @@ function end_turn_script() {
 	
 	update_enemy_move_numbers();
 	
-	// Resets player energy and block.
+	// Resets player energy and block, and decrements status effects on the player.
 	if (layer_has_instance("Instances", instance_find(obj_Player, 0))) {
 		clear_block(instance_find(obj_Player, 0));
 		decrement_vulnerable(instance_find(obj_Player, 0));

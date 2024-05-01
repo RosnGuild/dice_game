@@ -84,7 +84,7 @@ To create new move options for the player to use, you must create the move data,
     
     _rarity: the move's rarity, which is a rating of its general power. Currently most moves are either common or uncommon. Use the RARITY enum, so enter RARITY.COMMON for Common moves, RARITY.UNCOMMON for Uncommon moves, etc.
 
-    _cooldown: how many turns before the move can be used again. Usually 1 (which means it can't be used until the next turn).
+    _cooldown: how many turns before the move can be used again. Usually 2 (which means it can't be used until after the next turn).
     
     _target_tags: a struct of all tags to be applied to a target
     
@@ -117,9 +117,15 @@ When an enemy performs a move, the move is parsed without any further checking.
 
 When a move is run through parse_move, each struct is iterated through. For each tag, a function is called, passing in the id of whatever entity that tag was applied to. As such, most of these functions are stored in scr_Entity, but some are in scr_Enemy if only enemies could be targeted by them.
 
+## Tags
+### Writing a Tag Struct
+The format for a tag struct is {tag_TAGAME1 : value, tag_TAGAME2 : value, ... tag_TAGAMEN : value}.
+
+For example, a struct that deals 6 damage is written as {tag_HIT : 6}.
+
 ### Creating Tags
 Each tag consists of:
-- a string macro declared in either scr_Initialize_Enemy_Moves or scr_Initialize_Face_Moves.
+- a string macro declared in either scr_Initialize_Enemy_Moves or scr_Initialize_Face_Moves (depending on who can perform it, see below).
 - a function which executes the effects of the tag, and typically contains arguments for a target and a value (if the tag can have a value, like the six in Hit 6).
 
     *Created in either scr_Enemy (if the tag is only a component of enemy moves) or scr_Entity (if the tag is a component of both player and enemy moves).*
@@ -127,6 +133,44 @@ Each tag consists of:
 - a switch case in the move_tags_get_description function, which configures how tags are displayed.
 - a switch case in the move_tags_get_detailed_description function, which configures the help text for this tag.
 
-If the tag requires the implementation of a new status effect, see below.
+If the tag requires the implementation of a new status condition (such as Block, Burn, or Bolstered), see below.
 
-### Creating Status Effects
+### Generalized Tag Values
+For tags intended to be used in player moves, it is good practice to create three macros, each storing an integer, in scr_Initialize_Face_Moves.
+
+- #macro BASE_TAGNAME #
+- #macro UNCOMMON_TAGNAME 2 * BASE_TAGNAME
+- #macro RARE_TAGNAME 3 * BASE_TAGNAME
+
+The base value should be used in Common moves, the Uncommon value in Uncommon moves, and the Rare value in Uncommon moves with some drawback.
+
+This allows you to easily tweak the "strength" of a tag across all moves that use it, just by changing the base macro.
+
+### Creating Status Conditions
+To create a new status condition:
+- an integer instance variable in the obj_Entity parent object named "status_[STATUS NAME]_value". By default, this should be set to 0.
+- two functions in scr_Entity (or scr_Enemy if only enemies can have the status condition):
+    - one which increases the status condition. *Typical Arguments: an entity'd id and a value to increase it by.*
+    - one which decrements the status condition, without letting it decrease below 0. *Typical Arguments: an entity'd id.*
+    
+    If something should happen when a status condition is increased or decremented, that functionally should go here. *For examples for normal status conditions, see the add_vulnerable() and decrement_vulnerable(). For examples for something else happening when a status condition is decremented, see decrement_bleed().*
+
+ #### Inceasing Status Conditions
+ The function that increases a status condition is typically called in the parse_move_helper() function in scr_Move_Parser, like any other tag.
+
+ #### Decrementing Status Conditions
+ Typically, this happens in the end_turn_script() in scr_Encounter_Manager. Some advice:
+- end_turn_script() consists of a series of loops that, in order: 
+    1. decrement enemy status conditions applied by enemies.
+    2. perform the enemy turn, including all actions.
+    3. decrement enemy status conditions applied by the player.
+    4. update enemy move numbers.
+    5. decrement player status conditions.
+    6. reset the number of actions the player can perform (called energy).
+    7. decrement player cooldowns.
+- most status condition handlers should be inserted somewhere in there, **especially** status condition that should decrement each turn!
+- status conditions that deal damage should be contained within a seperate loop (through all enemies) from other status conditions, in the case that they kill the enemy and cause an error where subsequent status conditions try to interact with a nonexistent object. *For example, see Bleed.*
+
+If the status condition alters the game beyond when it is increased and decreased, that functionally needs to be inserted into the game somewhere.
+- status conditions that interact with other events should be implemented as modifications to existing functions. *Example: the Vulnerable status doubles damage an entity takes by modifying the take_damage() function.*
+- status conditions with complex logic for their effects (or that should be compartmentalized for ease of use by developers) might benefit from a specific handler function. *Example: enemy_handle_bolster(), which handles changing dice results to the Bolstered status.*

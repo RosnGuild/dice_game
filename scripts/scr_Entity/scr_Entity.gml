@@ -128,14 +128,6 @@ function decrement_bleed(_entity_id, _take_damage = true) {
 	}
 }
 
-/// @function								decrement_status(_entity_id, _status_name);
-/// @param {Id.Instance}	_entity_id		The id of the entity.
-/// @param {string}			_status_name	Name of the status.
-/// @description							DOESN'T WORK CURRENTLY. CRASHES THE GAME.
-function decrement_status(_entity_id, _status_name) {
-	_entity_id._status_name = max(_entity_id._status_name - 1, 0);
-}
-
 /// @function								apply_purge(_entity_id, _purge_value);
 /// @param {Id.Instance}	_entity_id		The id of the entity.
 /// @param {Bool}			_purge_value	The amount to decreases statuses by.
