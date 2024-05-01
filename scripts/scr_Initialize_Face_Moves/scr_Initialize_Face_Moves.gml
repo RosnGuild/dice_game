@@ -114,7 +114,7 @@ move_create(face_move_FIREBOLT, RARITY.COMMON, 1, {tag_BURN : BASE_BURN});
 
 // Uncommon Moves
 move_create(face_move_SMASH, RARITY.UNCOMMON, 3, {tag_HIT : UNCOMMON_HIT});
-move_create(face_move_BRACE, RARITY.UNCOMMON, 5, {tag_BLOCK : UNCOMMON_BLOCK});
+move_create(face_move_BRACE, RARITY.UNCOMMON, 5, {}, {tag_BLOCK : UNCOMMON_BLOCK});
 move_create(face_move_OPENER, RARITY.UNCOMMON, 3, {tag_VULNERABLE : UNCOMMON_VULNERABLE});
 move_create(face_move_DEEP_CUT, RARITY.UNCOMMON, 3, {tag_BLEED : UNCOMMON_BLEED});
 move_create(face_move_DIVINATION, RARITY.UNCOMMON, 3, {tag_SCRY : UNCOMMON_SCRY});
@@ -126,5 +126,5 @@ move_create(face_move_SHIELD_BASH, RARITY.UNCOMMON, 3, {tag_HIT : BASE_HIT}, {ta
 move_create(face_move_BLOODY_BLOW, RARITY.UNCOMMON, 3, {tag_HIT : BASE_HIT, tag_BLEED : BASE_BLEED});
 move_create(face_move_BURNING_BLOW, RARITY.UNCOMMON, 3, {tag_HIT : BASE_HIT, tag_BURN : BASE_BURN});
 move_create(face_move_STUNNING_STRIKE, RARITY.UNCOMMON, 3, {tag_HIT : BASE_HIT, tag_STUN : BASE_STUN})
-move_create(face_move_REBALANCE, RARITY.UNCOMMON, 3, {tag_PURGE : RARE_PURGE}, {tag_HIT : 1});
+move_create(face_move_REBALANCE, RARITY.UNCOMMON, 3, {}, {tag_PURGE : RARE_PURGE, tag_HIT : 1});
 move_create(face_move_RISKY_BLOW, RARITY.UNCOMMON, 3, {tag_HIT : RARE_HIT}, {tag_HIT : BASE_HIT});

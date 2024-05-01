@@ -15,7 +15,7 @@ function parse_move(_move, _self, _target = undefined, _enemy_dice_roll = undefi
 	var _target_tags = move_get_target_tags(_move, _enemy_dice_roll);
 	
 	parse_move_helper(_self, _self_tags);
-	if (_target != undefined) {
+	if (_target != undefined && instance_exists(_target)) {
 		parse_move_helper(_target, _target_tags);
 	}
 	
