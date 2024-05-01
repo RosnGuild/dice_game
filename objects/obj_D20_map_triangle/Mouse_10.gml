@@ -82,9 +82,9 @@ if(keyboard_check(vk_tab))
 	/// @DnDVersion : 1
 	/// @DnDHash : 6B119578
 	/// @DnDParent : 55B2264A
-	/// @DnDArgument : "expr" ""\n" + "Current Cooldown: " + string(global.die_graph_array[triangle_number - 1].cooldown)"
+	/// @DnDArgument : "expr" ""\n" + "Current Cooldown: " + string(global.die_graph_array[triangle_number - 1].cooldown) + "\n" + "Cooldown: " + string(ds_map_find_value(global.move_data, global.die_graph_array[triangle_number - 1].move)[movedata_COOLDOWN])"
 	/// @DnDArgument : "var" "obj_display_face_infocard.display_body2_text"
-	obj_display_face_infocard.display_body2_text = "\n" + "Current Cooldown: " + string(global.die_graph_array[triangle_number - 1].cooldown);
+	obj_display_face_infocard.display_body2_text = "\n" + "Current Cooldown: " + string(global.die_graph_array[triangle_number - 1].cooldown) + "\n" + "Cooldown: " + string(ds_map_find_value(global.move_data, global.die_graph_array[triangle_number - 1].move)[movedata_COOLDOWN]);
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
