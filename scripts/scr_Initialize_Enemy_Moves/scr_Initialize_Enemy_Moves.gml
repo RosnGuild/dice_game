@@ -56,7 +56,7 @@ enemy_move_create(enemyid_PURPLE_IMP, 3, {tag_HIT : 6});
 enemy_move_create(enemyid_PURPLE_IMP, 4, {}, {tag_HEAL_IMPS : 3});
 
 // Blue Imp
-enemy_move_create(enemyid_BLUE_IMP, 1, {}, {tag_BLOCK : 5});
+enemy_move_create(enemyid_BLUE_IMP, 1, {tag_HIT: 2}, {tag_BLOCK : 5});
 enemy_move_create(enemyid_BLUE_IMP, 2, {}, {tag_BLOCK : 8});
 enemy_move_create(enemyid_BLUE_IMP, 3, {}, {tag_BLOCK : 10});
 enemy_move_create(enemyid_BLUE_IMP, 4, {tag_BLEED : 4});
