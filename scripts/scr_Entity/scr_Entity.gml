@@ -136,7 +136,7 @@ function decrement_status(_entity_id, _status_name) {
 	_entity_id._status_name = max(_entity_id._status_name - 1, 0);
 }
 
-/// @function								apply_purge(_entity_id);
+/// @function								apply_purge(_entity_id, _purge_value);
 /// @param {Id.Instance}	_entity_id		The id of the entity.
 /// @param {Bool}			_purge_value	The amount to decreases statuses by.
 /// @description							Decreases given entity's Bleed and Burn value by a given amount.
@@ -144,5 +144,15 @@ function apply_purge(_entity_id, _purge_value) {
 	for (var i = 0; i < _purge_value; ++i) {
 	    decrement_bleed(_entity_id, false);
 		decrement_burn(_entity_id);
+	}
+}
+
+/// @function						apply_splash(_damage_value);
+/// @param {Bool}	_damage_value	The amount of damage.
+/// @description					Deals given damage to all enemies.
+function apply_splash(_damage_value) {
+	for (var i = 0; i < instance_number(obj_Enemy); i++;) {
+		var _current_enemy = instance_find(obj_Enemy, i);
+		take_damage(_current_enemy, _damage_value);
 	}
 }

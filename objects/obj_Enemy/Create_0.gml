@@ -59,5 +59,13 @@ function bounce_off_player()
 		/// @DnDArgument : "dir" "direction"
 		/// @DnDArgument : "speed" "speed"
 		motion_add(direction, speed);
+	
+		/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 5DD7AA9E
+		/// @DnDParent : 6130A062
+		/// @DnDArgument : "expr" "[]"
+		/// @DnDArgument : "var" "current_move_numbers"
+		current_move_numbers = [];
 	}
 }

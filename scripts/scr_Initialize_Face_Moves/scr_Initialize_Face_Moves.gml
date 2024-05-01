@@ -10,6 +10,7 @@
 #macro BASE_PURGE 1
 #macro BASE_STUN 1 // Scales 1:1:2
 #macro BASE_BURN 6
+#macro BASE_SPLASH 2
 
 #macro UNCOMMON_BLOCK 2 * BASE_BLOCK
 #macro UNCOMMON_HIT 2 * BASE_HIT
@@ -19,6 +20,7 @@
 #macro UNCOMMON_PURGE 2 * BASE_PURGE
 #macro UNCOMMON_STUN BASE_STUN
 #macro UNCOMMON_BURN 2 * BASE_BURN
+#macro UNCOMMON_SPLASH 2 * BASE_SPLASH
 
 #macro RARE_BLOCK 3 * BASE_BLOCK
 #macro RARE_HIT 3 * BASE_HIT
@@ -28,6 +30,7 @@
 #macro RARE_PURGE 3 * BASE_PURGE
 #macro RARE_STUN 2 * BASE_STUN
 #macro RARE_BURN 3 * BASE_BURN
+#macro RARE_SPLASH 3 * BASE_SPLASH
 
 //---
 // Map and struct-based implementation of the move database.
@@ -43,6 +46,7 @@
 #macro face_move_DAZE "Daze"				// 7
 #macro face_move_RANDOMIZE "Randomize"		// 8
 #macro face_move_FIREBOLT "Firebolt"		// 9
+#macro face_move_COMBO "Combo"				// 10
 
 #macro face_move_SMASH "Smash"				// 1
 #macro face_move_BRACE "Brace"				// 2
@@ -52,12 +56,13 @@
 #macro face_move_CLEANSE "Cleanse"			// 6
 #macro face_move_STAGGER "Stagger"			// 7
 #macro face_move_FIREBALL "Fireball"		// 8
-#macro face_move_SHIELD_BASH "Shield Bash"	// 9
-#macro face_move_BLOODY_BLOW "Bloody Blow"	// 10
-#macro face_move_BURNING_BLOW "Burning Blow"// 11
-#macro face_move_STUNNING_STRIKE "Stunning Strike"// 12
-#macro face_move_REBALANCE "Rebalance"		// 13
-#macro face_move_RISKY_BLOW "Risky Blow"	// 14
+#macro face_move_SPINNING_STRIKE "Spinning Strike"// 9		
+#macro face_move_SHIELD_BASH "Shield Bash"	// 10
+#macro face_move_BLOODY_BLOW "Bloody Blow"	// 11
+#macro face_move_BURNING_BLOW "Burning Blow"// 12
+#macro face_move_STUNNING_STRIKE "Stunning Strike"// 13
+#macro face_move_REBALANCE "Rebalance"		// 14
+#macro face_move_RISKY_BLOW "Risky Blow"	// 15
 
 // Use these to index into the list that each move name maps to.
 #macro movedata_RARITY 0
@@ -75,6 +80,7 @@
 #macro tag_PURGE "purge"
 #macro tag_STUN "stun"
 #macro tag_REROLL "reroll"
+#macro tag_SPLASH "splash"
 
 enum RARITY {
 	STARTER,
@@ -111,6 +117,7 @@ move_create(face_move_ANTIDOTE, RARITY.COMMON, 2, {}, {tag_PURGE : BASE_PURGE});
 move_create(face_move_DAZE, RARITY.COMMON, 5, {tag_STUN : BASE_STUN});
 move_create(face_move_RANDOMIZE, RARITY.COMMON, 1, {tag_REROLL : true});
 move_create(face_move_FIREBOLT, RARITY.COMMON, 2, {tag_BURN : BASE_BURN});
+move_create(face_move_COMBO, RARITY.COMMON, 2, {}, {tag_SPLASH : BASE_SPLASH});
 
 // Uncommon Moves
 move_create(face_move_SMASH, RARITY.UNCOMMON, 2, {tag_HIT : UNCOMMON_HIT});
@@ -121,6 +128,7 @@ move_create(face_move_DIVINATION, RARITY.UNCOMMON, 3, {tag_SCRY : UNCOMMON_SCRY}
 move_create(face_move_CLEANSE, RARITY.UNCOMMON, 3, {}, {tag_PURGE : UNCOMMON_PURGE});
 move_create(face_move_STAGGER, RARITY.UNCOMMON, 3, {tag_STUN : UNCOMMON_STUN});
 move_create(face_move_FIREBALL, RARITY.UNCOMMON, 3, {tag_BURN : UNCOMMON_BURN});
+move_create(face_move_SPINNING_STRIKE, RARITY.UNCOMMON, 3, {}, {tag_SPLASH : UNCOMMON_SPLASH});
 
 move_create(face_move_SHIELD_BASH, RARITY.UNCOMMON, 3, {tag_HIT : BASE_HIT}, {tag_BLOCK : BASE_BLOCK});
 move_create(face_move_BLOODY_BLOW, RARITY.UNCOMMON, 3, {tag_HIT : BASE_HIT, tag_BLEED : BASE_BLEED});
