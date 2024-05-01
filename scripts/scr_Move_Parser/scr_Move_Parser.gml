@@ -71,6 +71,8 @@ function parse_move_helper(_entity, _tags){
 			case tag_STUN:
 				add_stun(_entity, _tags[$ keys[i]]);
 				break;
+			case tag_SPLASH:
+				apply_splash(_tags[$ keys[i]]);
 		    default:
 		        // code here
 				show_debug_message("ERROR: Attempted to parse tag {0} that doesn't exist!", keys[i]);

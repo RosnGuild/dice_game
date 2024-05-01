@@ -77,6 +77,7 @@ function move_tags_get_description(_tags, _name = undefined) {
 			case tag_PURGE:
 			case tag_BOLSTER:
 			case tag_STUN:
+			case tag_SPLASH:
 		        _display_string = string_concat(_display_string, string_upper_case_first(keys[i]));
 		        break;
 			case tag_REROLL:
@@ -152,6 +153,9 @@ function move_tags_get_detailed_description(_tags, _name = undefined) {
 				break;
 			case tag_STUN:
 				_display_string = string_concat(_display_string, "Stun X: Delays enemy action by X turns.\n");
+				break;
+			case tag_SPLASH:
+				_display_string = string_concat(_display_string, "Splash X: Deals X damage to all enemies.\n");
 				break;
 		    default:
 				show_debug_message("ERROR: Attempted to parse tag ( {0} ) that doesn't exist!", keys[i]);
