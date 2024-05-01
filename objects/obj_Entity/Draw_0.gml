@@ -74,27 +74,28 @@ if(status_block_value > 0)
 	/// @DnDVersion : 1
 	/// @DnDHash : 1AB31806
 	/// @DnDParent : 443B79B0
-	/// @DnDArgument : "x" "-sprite_width/1.75"
+	/// @DnDArgument : "x" "-sprite_width/1.7"
 	/// @DnDArgument : "x_relative" "1"
-	/// @DnDArgument : "y" "-sprite_height/1.2"
+	/// @DnDArgument : "y" "-sprite_height/1.5"
 	/// @DnDArgument : "y_relative" "1"
-	/// @DnDArgument : "xscale" "0.4"
-	/// @DnDArgument : "yscale" "0.4"
+	/// @DnDArgument : "xscale" "0.5"
+	/// @DnDArgument : "yscale" "0.5"
+	/// @DnDArgument : "rot_relative" "1"
 	/// @DnDArgument : "sprite" "spr_block_tag_icon"
 	/// @DnDSaveInfo : "sprite" "spr_block_tag_icon"
-	draw_sprite_ext(spr_block_tag_icon, 0, x + -sprite_width/1.75, y + -sprite_height/1.2, 0.4, 0.4, 0, $FFFFFF & $ffffff, 1);
+	draw_sprite_ext(spr_block_tag_icon, 0, x + -sprite_width/1.7, y + -sprite_height/1.5, 0.5, 0.5, image_angle + 0, $FFFFFF & $ffffff, 1);
 
 	/// @DnDAction : YoYo Games.Drawing.Draw_Value
 	/// @DnDVersion : 1
 	/// @DnDHash : 5BAE120C
 	/// @DnDParent : 443B79B0
-	/// @DnDArgument : "x" "-sprite_width/2.5"
+	/// @DnDArgument : "x" "-sprite_width/1.7"
 	/// @DnDArgument : "x_relative" "1"
-	/// @DnDArgument : "y" "-sprite_height/1.2"
+	/// @DnDArgument : "y" "-sprite_height/1.59"
 	/// @DnDArgument : "y_relative" "1"
 	/// @DnDArgument : "caption" ""
 	/// @DnDArgument : "var" "status_block_value"
-	draw_text(x + -sprite_width/2.5, y + -sprite_height/1.2,  + string(status_block_value));
+	draw_text(x + -sprite_width/1.7, y + -sprite_height/1.59,  + string(status_block_value));
 }
 
 /// @DnDAction : YoYo Games.Common.If_Variable
@@ -108,27 +109,28 @@ if(status_burn_value > 0)
 	/// @DnDVersion : 1
 	/// @DnDHash : 4EBF11D2
 	/// @DnDParent : 2C48F56C
-	/// @DnDArgument : "x" "-sprite_width/1.5"
+	/// @DnDArgument : "x" "-sprite_width/2.35"
 	/// @DnDArgument : "x_relative" "1"
 	/// @DnDArgument : "y" "-sprite_height/1.2"
 	/// @DnDArgument : "y_relative" "1"
-	/// @DnDArgument : "xscale" "0.7"
-	/// @DnDArgument : "yscale" "0.7"
+	/// @DnDArgument : "xscale" "0.45"
+	/// @DnDArgument : "yscale" "0.45"
+	/// @DnDArgument : "rot_relative" "1"
 	/// @DnDArgument : "sprite" "spr_burn_tag_icon"
 	/// @DnDSaveInfo : "sprite" "spr_burn_tag_icon"
-	draw_sprite_ext(spr_burn_tag_icon, 0, x + -sprite_width/1.5, y + -sprite_height/1.2, 0.7, 0.7, 0, $FFFFFF & $ffffff, 1);
+	draw_sprite_ext(spr_burn_tag_icon, 0, x + -sprite_width/2.35, y + -sprite_height/1.2, 0.45, 0.45, image_angle + 0, $FFFFFF & $ffffff, 1);
 
 	/// @DnDAction : YoYo Games.Drawing.Draw_Value
 	/// @DnDVersion : 1
 	/// @DnDHash : 7C8B01E0
 	/// @DnDParent : 2C48F56C
-	/// @DnDArgument : "x" "-sprite_width/1.8"
+	/// @DnDArgument : "x" "-sprite_width/2.5"
 	/// @DnDArgument : "x_relative" "1"
 	/// @DnDArgument : "y" "-sprite_height/1.2"
 	/// @DnDArgument : "y_relative" "1"
 	/// @DnDArgument : "caption" ""
 	/// @DnDArgument : "var" "status_burn_value"
-	draw_text(x + -sprite_width/1.8, y + -sprite_height/1.2,  + string(status_burn_value));
+	draw_text(x + -sprite_width/2.5, y + -sprite_height/1.2,  + string(status_burn_value));
 }
 
 /// @DnDAction : YoYo Games.Common.If_Variable
@@ -142,28 +144,28 @@ if(status_vulnerable_value > 0)
 	/// @DnDVersion : 1
 	/// @DnDHash : 59491AC1
 	/// @DnDParent : 742B0486
-	/// @DnDArgument : "x" "-sprite_width/3.2"
+	/// @DnDArgument : "x" "-sprite_width/3.8"
 	/// @DnDArgument : "x_relative" "1"
 	/// @DnDArgument : "y" "-sprite_height/1.2"
 	/// @DnDArgument : "y_relative" "1"
-	/// @DnDArgument : "xscale" "0.4"
-	/// @DnDArgument : "yscale" "0.4"
+	/// @DnDArgument : "xscale" "0.3"
+	/// @DnDArgument : "yscale" "0.3"
 	/// @DnDArgument : "rot_relative" "1"
 	/// @DnDArgument : "sprite" "spr_vulnerable_tag_icon_2"
 	/// @DnDSaveInfo : "sprite" "spr_vulnerable_tag_icon_2"
-	draw_sprite_ext(spr_vulnerable_tag_icon_2, 0, x + -sprite_width/3.2, y + -sprite_height/1.2, 0.4, 0.4, image_angle + 0, $FFFFFF & $ffffff, 1);
+	draw_sprite_ext(spr_vulnerable_tag_icon_2, 0, x + -sprite_width/3.8, y + -sprite_height/1.2, 0.3, 0.3, image_angle + 0, $FFFFFF & $ffffff, 1);
 
 	/// @DnDAction : YoYo Games.Drawing.Draw_Value
 	/// @DnDVersion : 1
 	/// @DnDHash : 3B6E4EDF
 	/// @DnDParent : 742B0486
-	/// @DnDArgument : "x" "-sprite_width/5.25"
+	/// @DnDArgument : "x" "-sprite_width/5.75"
 	/// @DnDArgument : "x_relative" "1"
 	/// @DnDArgument : "y" "-sprite_height/1.2"
 	/// @DnDArgument : "y_relative" "1"
 	/// @DnDArgument : "caption" ""
 	/// @DnDArgument : "var" "status_vulnerable_value"
-	draw_text(x + -sprite_width/5.25, y + -sprite_height/1.2,  + string(status_vulnerable_value));
+	draw_text(x + -sprite_width/5.75, y + -sprite_height/1.2,  + string(status_vulnerable_value));
 }
 
 /// @DnDAction : YoYo Games.Common.If_Variable
@@ -247,26 +249,26 @@ if(status_scry_value > 0)
 	/// @DnDVersion : 1
 	/// @DnDHash : 2A983CA5
 	/// @DnDParent : 1DC68E85
-	/// @DnDArgument : "x" "sprite_width/5"
+	/// @DnDArgument : "x" "sprite_width/4.8"
 	/// @DnDArgument : "x_relative" "1"
-	/// @DnDArgument : "y" "-sprite_height/1.2"
+	/// @DnDArgument : "y" "-sprite_height/1.1"
 	/// @DnDArgument : "y_relative" "1"
 	/// @DnDArgument : "xscale" "0.4"
 	/// @DnDArgument : "yscale" "0.4"
 	/// @DnDArgument : "rot_relative" "1"
 	/// @DnDArgument : "sprite" "spr_scry_tag_icon"
 	/// @DnDSaveInfo : "sprite" "spr_scry_tag_icon"
-	draw_sprite_ext(spr_scry_tag_icon, 0, x + sprite_width/5, y + -sprite_height/1.2, 0.4, 0.4, image_angle + 0, $FFFFFF & $ffffff, 1);
+	draw_sprite_ext(spr_scry_tag_icon, 0, x + sprite_width/4.8, y + -sprite_height/1.1, 0.4, 0.4, image_angle + 0, $FFFFFF & $ffffff, 1);
 
 	/// @DnDAction : YoYo Games.Drawing.Draw_Value
 	/// @DnDVersion : 1
 	/// @DnDHash : 114E8CBD
 	/// @DnDParent : 1DC68E85
-	/// @DnDArgument : "x" "sprite_width/3"
+	/// @DnDArgument : "x" "sprite_width/2.4"
 	/// @DnDArgument : "x_relative" "1"
 	/// @DnDArgument : "y" "-sprite_height/1.2"
 	/// @DnDArgument : "y_relative" "1"
 	/// @DnDArgument : "caption" ""
 	/// @DnDArgument : "var" "status_scry_value"
-	draw_text(x + sprite_width/3, y + -sprite_height/1.2,  + string(status_scry_value));
+	draw_text(x + sprite_width/2.4, y + -sprite_height/1.2,  + string(status_scry_value));
 }
