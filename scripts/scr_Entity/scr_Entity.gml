@@ -121,13 +121,11 @@ function add_bleed(_entity_id, _bleed_value) {
 /// @description							Decreases given entity's Bleed value by 1, to a minimum of 0.
 function decrement_bleed(_entity_id, _take_damage = true) {
 	if (_take_damage) {
-		if (_entity_id.current_hp <= _entity_id.status_bleed_value) {
-			take_damage(_entity_id, _entity_id.status_bleed_value, true);
-			return;
-		}
 		take_damage(_entity_id, _entity_id.status_bleed_value, true);
 	}
-	_entity_id.status_bleed_value = max(_entity_id.status_bleed_value - 1, 0);
+	if (instance_exists(_entity_id)) {
+		_entity_id.status_bleed_value = max(_entity_id.status_bleed_value - 1, 0);
+	}
 }
 
 /// @function								decrement_status(_entity_id, _status_name);
