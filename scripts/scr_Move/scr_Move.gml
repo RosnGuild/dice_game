@@ -55,6 +55,25 @@ function move_get_detailed_description(_name, _dice_roll = undefined) {
 	return string(_target_tags_string + _self_tags_string);
 }
 
+/// @function						enemy_moves_get_detailed_description(_enemy, _dice_rolls);
+/// @param {string}	_enemy			The name of the enemy.
+/// @param {Array}	_dice_rolls		Dice rolls associated with this round.
+/// @description					Generates and returns a String describing the effects of each tag in the move(s).
+function enemy_moves_get_detailed_description(_enemy, _dice_rolls) {
+	var _number_of_rolls = array_length(_dice_rolls);
+	var _self_tags_string = "";
+	var _target_tags_string = "";
+	for (var i = 0; i < _number_of_rolls; ++i) {
+	    var _self_tags = move_get_self_tags(_enemy, _dice_rolls[i]);
+		var _target_tags = move_get_target_tags(_enemy, _dice_rolls[i]);
+	
+		_self_tags_string = _self_tags_string + move_tags_get_detailed_description(_self_tags, _enemy);
+		_target_tags_string = _target_tags_string + move_tags_get_detailed_description(_target_tags, _enemy);
+	}
+	
+	return string(_target_tags_string + _self_tags_string);
+}
+
 /// @function						move_tags_get_description(_tags);
 /// @param {struct}	_tags			A struct of a move's tags, either those directed at self or at a target.
 /// @param {String}	_name			Optional: The enemy's name.

@@ -59,9 +59,9 @@ obj_display_detailed_move_description.display_header_text = "";
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 16B7C8F3
-/// @DnDArgument : "expr" "move_get_detailed_description(name, current_move_numbers[0])"
+/// @DnDArgument : "expr" "enemy_moves_get_detailed_description(name, current_move_numbers)"
 /// @DnDArgument : "var" "obj_display_detailed_move_description.display_body_text"
-obj_display_detailed_move_description.display_body_text = move_get_detailed_description(name, current_move_numbers[0]);
+obj_display_detailed_move_description.display_body_text = enemy_moves_get_detailed_description(name, current_move_numbers);
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
