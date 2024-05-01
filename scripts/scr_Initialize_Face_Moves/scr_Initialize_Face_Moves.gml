@@ -6,7 +6,7 @@
 #macro BASE_HIT 6
 #macro BASE_VULNERABLE 1
 #macro BASE_BLEED 5
-#macro BASE_SCRY 1
+#macro BASE_SCRY 2
 #macro BASE_PURGE 1
 #macro BASE_STUN 1 // Scales 1:1:2
 #macro BASE_BURN 6
@@ -110,17 +110,17 @@ move_create(face_move_PORTENT, RARITY.COMMON, 2, {tag_SCRY : BASE_SCRY});
 move_create(face_move_ANTIDOTE, RARITY.COMMON, 2, {}, {tag_PURGE : BASE_PURGE});
 move_create(face_move_DAZE, RARITY.COMMON, 5, {tag_STUN : BASE_STUN});
 move_create(face_move_RANDOMIZE, RARITY.COMMON, 1, {tag_REROLL : true});
-move_create(face_move_FIREBOLT, RARITY.COMMON, 1, {tag_BURN : BASE_BURN});
+move_create(face_move_FIREBOLT, RARITY.COMMON, 2, {tag_BURN : BASE_BURN});
 
 // Uncommon Moves
-move_create(face_move_SMASH, RARITY.UNCOMMON, 3, {tag_HIT : UNCOMMON_HIT});
+move_create(face_move_SMASH, RARITY.UNCOMMON, 2, {tag_HIT : UNCOMMON_HIT});
 move_create(face_move_BRACE, RARITY.UNCOMMON, 5, {}, {tag_BLOCK : UNCOMMON_BLOCK});
 move_create(face_move_OPENER, RARITY.UNCOMMON, 3, {tag_VULNERABLE : UNCOMMON_VULNERABLE});
 move_create(face_move_DEEP_CUT, RARITY.UNCOMMON, 3, {tag_BLEED : UNCOMMON_BLEED});
 move_create(face_move_DIVINATION, RARITY.UNCOMMON, 3, {tag_SCRY : UNCOMMON_SCRY});
 move_create(face_move_CLEANSE, RARITY.UNCOMMON, 3, {}, {tag_PURGE : UNCOMMON_PURGE});
 move_create(face_move_STAGGER, RARITY.UNCOMMON, 3, {tag_STUN : UNCOMMON_STUN});
-move_create(face_move_FIREBALL, RARITY.COMMON, 1, {tag_BURN : UNCOMMON_BURN});
+move_create(face_move_FIREBALL, RARITY.UNCOMMON, 3, {tag_BURN : UNCOMMON_BURN});
 
 move_create(face_move_SHIELD_BASH, RARITY.UNCOMMON, 3, {tag_HIT : BASE_HIT}, {tag_BLOCK : BASE_BLOCK});
 move_create(face_move_BLOODY_BLOW, RARITY.UNCOMMON, 3, {tag_HIT : BASE_HIT, tag_BLEED : BASE_BLEED});
