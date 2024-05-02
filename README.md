@@ -7,9 +7,12 @@ Escape from Dice Jail is a turn based deckbuilding game where your deck is compo
 ## Overworld_Map
 To edit the overworld map, you need to access files in several locations. First, open the rooms folder in the resource browser, and open the Overworld_Room. Inside, there are two types of objects. goto_Room buttons, and Overworld_Arrows. To change the layout of the overworld, there are a few steps:
 
-1. **create new goto_Room buttons** by duplicating the parent button for each new game room you want to place, and editing the onclick method in it's create event to point to your new room. See Rooms for information on creating new game rooms.
-2. **Place the buttons** in the shape you want in the Overworld room, and edit their step_number variables to match the order in which the player can access them. 1 is the first room, counting up as high as necessary. Rooms the same number of steps deep on different paths should share the same step_number.
-3. **Place overworld_arrows** between them as appropriate, and edit their step_number variables to match the button that they point *too*.
+First, you must edit the overworld graph in scr_Overworld. Each node is a room, creat nodes for every room you desire, and adjacency links in the adjacency array for that node to create connections to other rooms. Remember that this is a directed graph, so only create links moving in one direction. 
+Next is realising that graph in the UI. Make sure that their is 0 indexed vertex in the graph that has an edge to the first real vertex indexed 1, this is to make sure the arrows highlight properly.
+
+1. **create new goto_Room buttons** by duplicating the parent button for each new game room you want to place, and editing the onclick method in it's create event to point to your new room. See Rooms for information on creating new game rooms if necessary. Set it's step_number equal to the node number of the room you want it to point too.
+2. **Place the buttons** in the shape you want in the Overworld room to match the overworld graph.
+3. **Place overworld_arrows** between them as appropriate to represent edges, and edit their step_number variables to match the button that they point *from*.
 
 ## Rooms
 There are three main types of rooms in the game. Battle_Rooms, Loot_Rooms, and Choice_Rooms.
