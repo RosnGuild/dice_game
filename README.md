@@ -1,5 +1,7 @@
 ![Dice Jail logo](https://github.com/RosnGuild/dice_game/assets/123116659/978e792f-efd4-4bc3-aece-96aa3134fcc2)
 
+This is a GML (Gamemaker) project file. Open it with Gamemaker, which can be downloaded at https://gamemaker.io/en.
+
 # Escape from Dice Jail
  
 Escape from Dice Jail is a turn based deckbuilding game where your deck is composed of the faces of a d20. This readme assumes familiarity with the GameMaker UI, and is aimed at explaining how to add content to the game. For more detailed information on how each component works, look to the documentation in the code.
